@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>UC Davis Graduate School of Management</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMFV1NVGwAAUFVTBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:19,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:19,2:20,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:20,2:19,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:20,2:19,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:20,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&u&&u.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=l.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document,f="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};u[f]?(u[f]("DOMContentLoaded",o,!1),c[f]("load",n,!1)):(u[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:18,handle:"D5DuLP"}],18:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],19:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],20:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:19,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">// Add way back to mobile.
+var ddMobileGetBackToMobile = false;
+
+/**
+ * Quickly redirect to mobile if a mobile browser is detected.
+ */
+(function() {
+  // TODO: Somehow move this logic into dd_webwrap, it doesn't belong here.
+  // Never engage mobile on WebWrapped pages.
+  if (typeof ddWebWrap != 'undefined' && ddWebWrap.enabled) {
+    return;
+  }
+
+  // Never engage when #skipmobile is appended, useful when you want to force
+  // the desktop site without changing the cookies.
+  if (window.location.hash === '#skipmobile') {
+    return;
+  }
+
+  // Cookie reader.
+  function readCookie(key) {
+    var result;
+    return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+  }
+
+  // Cookie creator.
+  function createCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toGMTString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+
+  // Mobile device detection.
+  // @ref http://www.useragentstring.com/pages/Mobile%20Browserlist/
+  var isMobileDevice = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
+
+  //  Show view in mobile btn.
+  if (isMobileDevice) {
+    ddMobileGetBackToMobile = true;
+  }
+
+  // If viewmobile hash is set, unset nomobile cookie.
+  if (window.location.hash === '#viewmobile') {
+    createCookie('nomobile', 0, -5);
+  }
+
+  // If nomobile hash is set, set nomobile cookie.
+  if (window.location.hash === '#nomobile') {
+    createCookie('nomobile', 1, 30);
+  }
+  else if (isMobileDevice && readCookie('nomobile') != '1') {
+    // TODO: Remove hardcoded mobile path.
+    var uri = '/m';
+    if (window.location.pathname != '/') {
+      uri += '#' + window.location.pathname;
+    }
+    if (window.location.search) {
+      uri += window.location.search;
+    }
+    // Switch user to mobile site at this uri.
+    window.location = uri;
+  }
+})();
+</script><link rel="shortcut icon" href="/sites/main/files/dtheme_favicon.png" type="image/x-icon">
+<meta name="og:site_name" content="UC Davis Graduate School of Management">
+<meta name="og:title" content="UC Davis Graduate School of Management">
+<meta name="og:description" content="Preparing Innovative Leaders for Global Impact. Full time and part-time MBA and executive education programs in Davis, Sacramento, in San Francisco.">
+<meta name="og:type" content="article">
+<meta name="og:image" content="http://gsm.ucdavis.edu/sites/main/files/dtheme_favicon.png">
+<meta name="og:url" content="http://gsm.ucdavis.edu/home">
+<link rel="canonical" href="http://gsm.ucdavis.edu/">
+<meta name="description" content="Preparing Innovative Leaders for Global Impact. Full time and part-time MBA and executive education programs in Davis, Sacramento, in San Francisco.">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_2a228025768e313d9fd167b38865d41b_3.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_fa2aa40ab9e912bc863c5cb9f274d4b4_5.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_925258c35fc1de25e71b656fd421a5e0_1.css">
+<link type="text/css" rel="stylesheet" media="print" href="/sites/main/files/advagg_css/css_138bd610de57bd633c34ded8b230ac79_27.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/dtheme-direct.css?T">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/ie.css?T" />
+<![endif]--><!--[if IE 8]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie8.css?T" />
+<![endif]--><!--[if IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie7.css?T" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/ie7.css?T" />
+<![endif]--><!--[if lt IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/ie6.css?T" />
+<![endif]--><script type="text/javascript" src="/sites/main/files/advagg_js/js_a25cab73b0072b5f60094d1971c520b2_4.js"></script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"/","lightbox2":{"rtl":0,"file_path":"/(\w\w/)sites/main/files","default_image":"/sites/all/modules/lightbox2/images/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":1,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":1,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press <a href="#" onclick="hideLightbox(); return FALSE;"><kbd>x to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":640,"iframe_height":385,"iframe_border":0,"enable_video":0},"nice_menus_options":{"delay":800,"speed":"fast"},"ddCaptcha":1971,"ddMobile":{"path":"m","enabled":1},"ddPoll":{"resultsURI":"/sites/all/modules/_dd/dd_poll/dd_poll_results.php"},"ddTwitterFeed":{"getTweetsURI":"/dd_twitter_feed/get_tweets"},"extlink":{"extTarget":"_blank","extClass":"ext","extSubdomains":1,"extExclude":"","extInclude":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto"},"ddCreate":{"addDateToCalendarWidget":true},"cssInit":{"node.css":true,"defaults.css":true,"system.css":true,"system-menus.css":true,"user.css":true,"content-module.css":true,"ctools.css":true,"date.css":true,"datepicker.css":true,"jquery.timeentry.css":true,"filefield.css":true,"lightbox_alt.css":true,"logintoboggan.css":true,"nice_menus.css":true,"nice_menus_default.css":true,"dd_captcha.css":true,"dd_classes.css":true,"dd_classes.do_timeout.css":true,"dd_classes.gallery.css":true,"dd_classes.calfilters.css":true,"dd_create.css":true,"compiled-classes.css":true,"dd_login.css":true,"dd_mobile.view_mobile.css":true,"dd_poll.css":true,"dd_sharethis.css":true,"dd_twitter_feed.css":true,"dd_user_roles.css":true,"farbtastic.css":true,"calendar.css":true,"extlink.css":true,"fieldgroup.css":true,"views.css":true,"dtheme-direct.css":true,"html-elements.css":true,"tabs.css":true,"messages.css":true,"block-editing.css":true,"wireframes.css":true,"zen.css":true,"dmodel-layout.css":true,"dmodel.css":true,"dtheme.css":true},"jsInit":{"misc/jquery.js":true,"misc/drupal.js":true,"sites/all/modules/nice_menus/superfish/js/superfish.js":true,"sites/all/modules/nice_menus/superfish/js/jquery.bgiframe.min.js":true,"sites/all/modules/nice_menus/superfish/js/jquery.hoverIntent.minified.js":true,"sites/all/modules/nice_menus/nice_menus.js":true,"sites/all/modules/_dd/dd_captcha/dd_captcha.js":true,"sites/all/modules/_dd/dd_classes/dd_classes.js":true,"sites/all/modules/_dd/dd_classes/plugins/do_timeout/dd_classes.do_timeout.js":true,"sites/all/modules/_dd/dd_classes/plugins/gallery/dd_classes.gallery.js":true,"sites/all/modules/_dd/dd_classes/plugins/calfilters/dd_classes.calfilters.js":true,"sites/all/modules/_dd/dd_create/dd_create.js":true,"sites/all/modules/_dd/dd_login/dd_login.js":true,"sites/all/modules/_dd/dd_mobile/js/dd_mobile.js":true,"sites/all/modules/_dd/dd_poll/dd_poll.js":true,"sites/all/modules/_dd/dd_sharethis/dd_sharethis.js":true,"sites/all/modules/_dd/dd_twitter_feed/dd_twitter_feed.js":true,"sites/all/modules/extlink/extlink.js":true,"sites/all/modules/_dd/digitaldcore/digitaldcore.js":true,"sites/all/modules/_dd/digitaldcore/modernizr.js":true,"sites/all/modules/_dd/digitaldcore/browser-detect.js":true,"sites/all/modules/_dd/digitaldcore/dd-search.js":true,"sites/all/modules/jquery_ui/jquery.ui/ui/minified/ui.core.min.js":true,"sites/all/modules/jquery_ui/jquery.ui/ui/minified/ui.dialog.min.js":true,"sites/all/modules/_dd/digitaldcore/digitaldcore.monkey-patch.js":true,"sites/all/modules/_dd/dd_analytics/dd_analytics_universal.js":true,"sites/all/themes/dmodel/dmodel.js":true,"sites/default/themes/dtheme/dtheme.js":true}});
+//--><!]]>
+</script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-1266842-1','gsm.ucdavis.edu');ga('require','linkid','linkid.js');ga('set','contentGroup2','Home');ga('set','dimension1','Anonymous user');ga('send','pageview')
+//--><!]]>
+</script><script type="text/javascript" src="http://use.typekit.com/amy6omo.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><script src="//nexus.ensighten.com/mogointeractive/1003/Bootstrap.js"></script>
+</head>
+<body class="front not-logged-in no-sidebars dd-cache user-not-admin live launched tt51 t51 wt51 wt0 has-content-top has-content-bottom ttv2 ttv-front t role-anonymous-user role-not-admin">
+        <div class="accessibility-utility-links">
+<a id="navigation-top"></a>
+              <div id="skip-to-nav">
+<a href="#navigation">Skip to Navigation</a> | 
+        <a href="#content-header">Skip to Content</a>
+</div>
+          </div>
+        <div id="page" class="region-page no-sidebars  col6 dd"><div id="page-inner">
+    <div id="header"><div id="header-inner" class="clear-block">
+              <div id="theme-logo">
+                      <div class="logo"><a href="/" title="Home" rel="home"><img src="/sites/default/themes/dtheme/logo.png" alt="Home"></a></div>
+                                              <div class="site-name">
+                <a href="/" title="Home" rel="home">UC Davis Graduate School of Management</a>
+              </div>
+                                                  </div> <!-- /#page-logo -->
+                    <div id="header-blocks" class="region region-header">
+          <div id="block-digitaldcore-logo" class="   dd block block-digitaldcore region-odd odd region-count-1 count-1"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <a href="/" title="UC Davis Graduate School of Management home page" id="block-logo" class="active"><span class="logo-text">UC Davis Graduate School of Management</span></a>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-block-1" class="block block-block region-even even region-count-2 count-2"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <a id="ucd-link" title="Go to the UC Davis Home Page" href="http://www.ucdavis.edu/">University of California, Davis</a> 
+<a id="fb-link" title="Find us on Facebook" href="http://www.facebook.com/ucdavismba"></a>
+<a id="twitter-link" title="Follow us on Twitter" href="http://www.twitter.com/ucdavismba"></a>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-search" class="block block-digitaldcore region-odd odd region-count-3 count-3  search-keywords  "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div id="dd-search" class="dd-search">
+<form action="/" accept-charset="UTF-8" method="post" id="faceted-search-ui-form-1" class=" dd-search-clear">
+<div>
+<div class="dd-search-keywords">
+<div title="Search keywords" class=" form-item type-textfield" id="edit-keywords-wrapper">
+ <input type="text" maxlength="255" name="keywords" id="edit-keywords" size="20" value="" title="Search keywords" class="form-text">
+</div>
+</div>
+<input type="hidden" name="stage" id="edit-stage" value="results"><input type="hidden" name="facet-key" id="edit-facet-key" value=""><input type="hidden" name="facet-id" id="edit-facet-id" value=""><input type="hidden" name="facet-sort" id="edit-facet-sort" value=""><div class="dd-search-submit">
+<button class="dd-search-submit-button" type="submit">Go</button><div class="legacy-button"><input type="submit" name="op" id="edit-submit" value="Go" class="form-submit"></div>
+</div>
+<div class="dd-search-more"><a href="/find/" class="faceted-search-more">More options</a></div>
+<input type="hidden" name="form_build_id" id="form-_Ab8DGFHvJAu9635nXApY6w_6wliEjIJQPpsoODKl-w" value="form-_Ab8DGFHvJAu9635nXApY6w_6wliEjIJQPpsoODKl-w"><input type="hidden" name="form_id" id="edit-faceted-search-ui-form-1" value="faceted_search_ui_form_1"><input type="hidden" name="box_text" id="edit-box-text" value="Search the site">
+</div>
+</form>
+</div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div> <!-- /#header-blocks -->
+          </div></div> <!-- /#header-inner, /#header -->
+    <div id="main" class=""><div id="main-inner" class="region-main clear-block with-navbar">
+      <div id="content"><div id="content-inner" class="region-content">
+                  <div id="content-header">
+                          <h1 class="title">Home</h1>
+                                                          </div> <!-- /#content-header -->
+                          <div id="content-top" class="region region-content-top">
+            <div id="block-views_blocks-term-block_1-3" class="  nhlc-c8 nstlc-c7 nllc-c8 six-col-wide six-col-n mt-n10 te-pad-20 te-unpad-img te-bpad-0 te-bm-0 icp-carousel ip-above float-images-right pod-mode title-margin-bottom te-title-162 te-t-f1 te-sub-62 te-st-f2 te-links-mar10t te-show-readmore-always fouc switch-carousel-fade show-carousel-pager-dots cas-c8 casbg-c8 s-img-old  dd block block-views_blocks region-odd odd region-count-1 count-5  views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+        <div class="view-header">
+      <div id="carousel-overlay"></div>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-7837-teaser" class="node node-teaser node-type-post node-7837 pt-show-social-block no-event-date t294 wt294 wt0 t902 wt902 wt901 wt694 wt954 wt147 wt0 t79 wt79 wt51 wt0 access-normal has-image no-more pt294 has-2-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="http://innovator.gsm.ucdavis.edu/big-data" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/screen_shot_2015-01-22_at_3.44.32_pm.png" alt="Image of Big Data Means Big Opportunity" title="" width="620" height="280"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousels">Carousel</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://innovator.gsm.ucdavis.edu/big-data" title="Big Data Means Big Opportunity"><span class="title">Big Data Means Big Opportunity</span>
+      <br class="accessible-break"><span class="subtitle">Big data has forever altered the way businesses operate, from marketing and supply chains, to competitive strategy and human resources. Today's big challenge: Harnessing the flood.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Dec 2, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://innovator.gsm.ucdavis.edu/big-data"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+    <div id="node-7134-teaser" class=" te-hide-pt  dd node node-teaser node-type-post node-7134 pt-show-social-block no-event-date t294 wt294 wt0 t213 wt213 wt207 wt0 t212 wt212 wt213 wt207 wt0 t79 wt79 wt51 wt0 access-normal has-image no-more pt294 has-3-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/uc-davis-annual-study-california-women-business-leaders" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/women-in-business.jpg" alt="Image of California: First in U.S. to Urge More Women on Corporate Boards" title="" width="620" height="280"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousels">Carousel</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/uc-davis-annual-study-california-women-business-leaders" title="California: First in U.S. to Urge More Women on Corporate Boards"><span class="title">California: First in U.S. to Urge More Women on Corporate Boards</span>
+      <br class="accessible-break"><span class="subtitle">Public Policy Impact: Legislature approves resolution, prompted by our UC Davis Study of California Women Business Leaders.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Aug 26, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/uc-davis-annual-study-california-women-business-leaders"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+          </div> <!-- /#content-top -->
+                <div id="content-area">
+          <div id="block-views_blocks-term-block_1-4" class="  nhlc-c3 nstlc-c13 four-col-wide two-col-n force-rows te-pad-10 te-bpad-0 te-bm-0 icp-featurebox ip-above te-img-pad-b-10 iautow pod-mode title-margin-bottom te-title-127 te-t-f1 te-sub-79 te-st-f2 te-links-mar5t te-show-readmore-always  dd block block-views_blocks region-odd even region-count-1 count-6 col-s views-block channel context-template "><div class="block-inner">
+
+    
+      <div class="block-prefix">
+<div class="highlight-shadow"></div>
+<div class="highlight-tabs">
+<span class="show-t80 active">Highlights</span> 
+<span class="divider"></span>
+<span class="show-t291">Full-Time MBA</span> 
+<span class="divider"></span>
+<span class="show-t292">Sacramento MBA</span> 
+<span class="divider"></span>
+<span class="show-t293">Bay Area MBA</span> 
+</div>
+</div>
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-10133-teaser" class="node node-teaser node-type-post node-10133 pt-show-social-block no-event-date t6 wt6 wt0 t80 wt80 wt51 wt0 access-normal has-image no-more pt6 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="http://poetsandquants.com/2015/06/10/2015-mba-to-watch-venita-sivamani/" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/venita.jpg" alt="Image of 2015 MBA To Watch: Venita Sivamani" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Highlights">Highlight</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://poetsandquants.com/2015/06/10/2015-mba-to-watch-venita-sivamani/" title="2015 MBA To Watch: Venita Sivamani"><span class="title">2015 MBA To Watch: Venita Sivamani</span>
+      <br class="accessible-break"><span class="subtitle">Dancer…Teacher…Volunteer…Entrepreneur…Leader. Venita Sivamani named one of Poets &amp; Quants top MBAs to watch.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Jun 11, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://poetsandquants.com/2015/06/10/2015-mba-to-watch-venita-sivamani/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-2161-teaser" class="node node-teaser node-type-post node-2161 pt-show-social-block no-event-date t97 wt97 wt2 wt0 t80 wt80 wt51 wt0 access-normal has-image no-more pt97 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/master-professional-accountancy-mpac" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/mpac_event.jpg" alt="Image of Master of Professional Accountancy (MPAc)" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="General informations">General information</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/master-professional-accountancy-mpac" title="Master of Professional Accountancy (MPAc)"><span class="title">Master of Professional Accountancy (MPAc)</span>
+      <br class="accessible-break"><span class="subtitle">Career Accelerator: Our graduates have the No. 1 CPA Exam pass rate in California. Apply now for the fall.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 27, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/master-professional-accountancy-mpac"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-2163-teaser" class="node node-teaser node-type-post node-2163 pt-show-social-block no-event-date t97 wt97 wt2 wt0 t80 wt80 wt51 wt0 access-normal has-image no-more pt97 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="http://ucdavis.edu/ucdavis-today/2015/may/18-farmer-preneurs-improve-crops-in-southern-africa.html" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/monica-in-the-african-field.jpg" alt="Image of MBAs Help ‘Farmer-preneurs’ Improve Crops in Southern Africa" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="General informations">General information</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://ucdavis.edu/ucdavis-today/2015/may/18-farmer-preneurs-improve-crops-in-southern-africa.html" title="MBAs Help ‘Farmer-preneurs’ Improve Crops in Southern Africa"><span class="title">MBAs Help ‘Farmer-preneurs’ Improve Crops in Southern Africa</span>
+      <br class="accessible-break"><span class="subtitle">Team of UC Davis MBAs, grads and Zambian colleagues has built Zasaka to help farmers to avoid losses and grow more crops.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://ucdavis.edu/ucdavis-today/2015/may/18-farmer-preneurs-improve-crops-in-southern-africa.html"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-10190-teaser" class="node node-teaser node-type-post node-10190 pt-show-social-block no-event-date t97 wt97 wt2 wt0 t508 wt508 wt829 wt827 wt479 wt139 wt363 wt119 wt0 t828 wt828 wt827 wt479 wt139 wt363 wt119 wt0 t830 wt830 wt827 wt479 wt139 wt363 wt119 wt0 t80 wt80 wt51 wt0 access-normal status-new has-image no-more pt97 has-4-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/news/innovations-food-sweep-2015-big-bang-business-competition" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/fullsizerender.jpg" alt="Image of Food and Ag Innovations Sweep 2015 Big Bang! Business Competition, $40K awarded" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="General informations">General information</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news/innovations-food-sweep-2015-big-bang-business-competition" title="Food and Ag Innovations Sweep 2015 Big Bang! Business Competition, $40K awarded"><span class="title">Food and Ag Innovations Sweep 2015 Big Bang! Business Competition, $40K awarded</span>
+      <br class="accessible-break"><span class="subtitle">Scrumpt's healthy lunches service lands $10,000 first prize.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Jul 1, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news/innovations-food-sweep-2015-big-bang-business-competition"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-2175-teaser" class="node node-teaser node-type-post node-2175 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t293 wt293 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/spotlight-story/bay-area-mba-students-trisha-durant-quicksteps-new-success-gap" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/trisha-durrant.jpeg" alt="Image of Bay Area MBA Trisha Durant Fashions New Career at the Gap" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/spotlight-story/bay-area-mba-students-trisha-durant-quicksteps-new-success-gap" title="Bay Area MBA Trisha Durant Fashions New Career at the Gap"><span class="title">Bay Area MBA Trisha Durant Fashions New Career at the Gap</span>
+      <br class="accessible-break"><span class="subtitle">Making the leap from Ernst &amp; Young consulting to global supply chain management for apparel retailer.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/spotlight-story/bay-area-mba-students-trisha-durant-quicksteps-new-success-gap"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-2167-teaser" class="node node-teaser node-type-post node-2167 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t291 wt291 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/mba-ambassadors" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/ambassadors_007.jpg" alt="Image of Meet Our MBA Ambassadors" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-ambassadors" title="Meet Our MBA Ambassadors"><span class="title">Meet Our MBA Ambassadors</span>
+      <br class="accessible-break"><span class="subtitle">Ambassadors offer a real-life perspective on being a UC Davis MBA student and an insider's view of life in the classroom and beyond.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Nov 7, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-ambassadors"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-2176-teaser" class="node node-teaser node-type-post node-2176 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t293 wt293 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/highlight/leadership-fellows-program" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/ba_group_web.jpg" alt="Image of Leadership Fellows Program" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/highlight/leadership-fellows-program" title="Leadership Fellows Program"><span class="title">Leadership Fellows Program</span>
+      <br class="accessible-break"><span class="subtitle">Our intensive, year-long training series gives you additional tools to boost your leadership skills and professional achievement.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/highlight/leadership-fellows-program"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-2174-teaser" class="node node-teaser node-type-post node-2174 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t293 wt293 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/bay-area-working-professional-mba-impact-curriculum" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/yasuda_web_0.jpg" alt="Image of Our New Curriculum Has IMPACT" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/bay-area-working-professional-mba-impact-curriculum" title="Our New Curriculum Has IMPACT"><span class="title">Our New Curriculum Has IMPACT</span>
+      <br class="accessible-break"><span class="subtitle">We've further integrated globalization, business ethics and sustainability. You'll gain practice, skills and training necessary for success.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/bay-area-working-professional-mba-impact-curriculum"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-2173-teaser" class="node node-teaser node-type-post node-2173 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t292 wt292 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/highlight/leadership-fellows-program" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/sacramentombacover_0.jpg" alt="Image of Leadership Fellows Program" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/highlight/leadership-fellows-program" title="Leadership Fellows Program"><span class="title">Leadership Fellows Program</span>
+      <br class="accessible-break"><span class="subtitle">Our intensive, year-long training series gives you additional tools to boost your leadership skills and professional achievement.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/highlight/leadership-fellows-program"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-2172-teaser" class="node node-teaser node-type-post node-2172 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t292 wt292 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/spotlight-story/working-smarter-not-harder-genentech" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/makal-joshua.jpg" alt="Image of Working Smarter, Not Harder at Genentech" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/spotlight-story/working-smarter-not-harder-genentech" title="Working Smarter, Not Harder at Genentech"><span class="title">Working Smarter, Not Harder at Genentech</span>
+      <br class="accessible-break"><span class="subtitle">Sacramento MBA student Josh Makal puts efficiencies into action at biotech pioneer, where he helps manufacture cancer fighting drugs.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/spotlight-story/working-smarter-not-harder-genentech"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-2170-teaser" class="node node-teaser node-type-post node-2170 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t292 wt292 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/sacramento-mba" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/perez2c20delia_007_opt.jpeg" alt="Image of Sacramento MBA Overview " title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/sacramento-mba" title="Sacramento MBA Overview"><span class="title">Sacramento MBA Overview</span>
+      <br class="accessible-break"><span class="subtitle">Our Part-Time MBA prepares you to be a more effective manager and an innovative leader.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/sacramento-mba"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-2171-teaser" class="node node-teaser node-type-post node-2171 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t292 wt292 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/sacramento-working-professional-impact-curriculum" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/braley_20100813_5121_opt.jpeg" alt="Image of Our New Curriculum Has IMPACT" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/sacramento-working-professional-impact-curriculum" title="Our New Curriculum Has IMPACT"><span class="title">Our New Curriculum Has IMPACT</span>
+      <br class="accessible-break"><span class="subtitle">We've further integrated globalization, business ethics and sustainability. You'll gain practice, skills and training necessary for success.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/sacramento-working-professional-impact-curriculum"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div id="node-2169-teaser" class="node node-teaser node-type-post node-2169 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t291 wt291 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/daytime-mba" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/dt_covershot.jpg" alt="Image of Full-Time MBA Program Overview" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/daytime-mba" title="Full-Time MBA Program Overview"><span class="title">Full-Time MBA Program Overview</span>
+      <br class="accessible-break"><span class="subtitle">Our MBA program provides the foundation, perspective and balance you need to be an effective manager and an innovative leader.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/daytime-mba"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-2166-teaser" class="node node-teaser node-type-post node-2166 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t291 wt291 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/daytime-mba-accelerate-your-career" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/tesla_jameschen_0.jpg" alt="Image of Accelerate Your Career" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/daytime-mba-accelerate-your-career" title="Accelerate Your Career"><span class="title">Accelerate Your Career</span>
+      <br class="accessible-break"><span class="subtitle">Known for innovative thinking, collaboration and driving results, UC Davis MBAs are in high demand across a range of industries.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/daytime-mba-accelerate-your-career"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-2165-teaser" class="node node-teaser node-type-post node-2165 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t291 wt291 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/daytime-mba-impact-curriculum" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/yasuda_web.jpg" alt="Image of Our New Curriculum Has IMPACT" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/daytime-mba-impact-curriculum" title="Our New Curriculum Has IMPACT"><span class="title">Our New Curriculum Has IMPACT</span>
+      <br class="accessible-break"><span class="subtitle">We've further integrated globalization, business ethics and sustainability. You'll gain practice, skills and training necessary for success.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/daytime-mba-impact-curriculum"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-16 views-row-even views-row-last">
+    <div id="node-2177-teaser" class="node node-teaser node-type-post node-2177 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t293 wt293 wt80 wt51 wt0 access-normal has-image no-more pt257 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-featurebox croppable  c1  c-1"><a href="/bay-area-mba" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/featurebox/main-images/bishopranch.jpg" alt="Image of Bay Area MBA Overview" title="" width="280" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/bay-area-mba" title="Bay Area MBA Overview"><span class="title">Bay Area MBA Overview</span>
+      <br class="accessible-break"><span class="subtitle">Our Nationally Ranked Part-TIme MBA program prepares you to be a more effective manager, innovative leader and change agent.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/bay-area-mba"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-11" class="  bg-c2 nhlc-c8 nhlh-c8 four-col-wide one-col-n mt-20 iml-20 imb-10 force-clear-left rounded-corners-n rounded-corners-top rounded-corners-bottom b-show-t bt-100 bt-f3 bt-p10 btlc-c9 te-pad-10 te-bpad-0 te-bm-0 te-rm-0 icp-squarecrop ip-above te-img-pad-b-10 i120w pod-mode te-light-title te-title-100 te-t-f1 te-hide-subtitle  dd block block-views_blocks region-even odd region-count-2 count-7 col-s2 views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Multimedia Gallery</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+        <div class="view-header">
+      <a href="http://gsm.ucdavis.edu/video">View All</a>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-7570-teaser" class="node node-teaser node-type-post node-7570 pt-show-social-block no-event-date t106 wt106 wt2 wt0 t288 wt288 wt51 wt0 access-normal has-image has-more pt106 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-squarecrop croppable  c1  c-1"><a href="/event/video-deans-distinguished-speaker-vivek-ranadive" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/squarecrop/main-images/vivekranadive.jpg" alt="Image of Dean’s Distinguished Speaker: Vivek Ranadivé, owner and chairman of the Sacramento Kings, on “Western Civilization 3.0”" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Videos">Video</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/event/video-deans-distinguished-speaker-vivek-ranadive" title="Dean’s Distinguished Speaker: Vivek Ranadivé, owner and chairman of the Sacramento Kings, on “Western Civilization 3.0”"><span class="title">Dean’s Distinguished Speaker: Vivek Ranadivé, owner and chairman of the Sacramento Kings, on “Western Civilization 3.0”</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Oct 14, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/event/video-deans-distinguished-speaker-vivek-ranadive"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-10038-teaser" class="node node-teaser node-type-post node-10038 pt-show-social-block has-video no-event-date t106 wt106 wt2 wt0 t288 wt288 wt51 wt0 access-normal has-more pt106 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-video field-image-preset-squarecrop  c1  c-1"><a href="https://www.youtube.com/embed/yPLWV8dnWf0?autoplay=1&amp;rel=0" class="video-lightframe provider-youtube" rel="lightframe"><span class="video-play"></span><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/squarecrop/emvideo-youtube-yPLWV8dnWf0.jpg" alt="Full-Time MBA student Amber Lewis shares how her student experience and scholarship support has helped her thrive" title="" class="imagecache imagecache-squarecrop"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Videos">Video</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://youtu.be/yPLWV8dnWf0" title="Full-Time MBA student Amber Lewis shares how her student experience and scholarship support has helped her thrive"><span class="title">Full-Time MBA student Amber Lewis shares how her student experience and scholarship support has helped her thrive</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Apr 30, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://youtu.be/yPLWV8dnWf0"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-7670-teaser" class="node node-teaser node-type-post node-7670 pt-show-social-block no-event-date t106 wt106 wt2 wt0 t488 wt488 wt342 wt194 wt0 t214 wt214 wt207 wt0 t276 wt276 wt214 wt207 wt0 t288 wt288 wt51 wt0 t342 wt342 wt194 wt0 access-normal has-image has-more pt106 has-5-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-squarecrop croppable  c1  c-1"><a href="/video/deans-distinguished-speaker-harold-schmitz-chief-science-officer-mars-incorporated-speaks" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/squarecrop/main-images/ddse_schmitz_053_0.jpg" alt="Image of Dean’s Distinguished Speaker: Harold Schmitz, Chief Science Officer, Mars, Incorporated speaks on “The Business of Chocolate”" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Videos">Video</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/video/deans-distinguished-speaker-harold-schmitz-chief-science-officer-mars-incorporated-speaks" title="Dean’s Distinguished Speaker: Harold Schmitz, Chief Science Officer, Mars, Incorporated speaks on “The Business of Chocolate”"><span class="title">Dean’s Distinguished Speaker: Harold Schmitz, Chief Science Officer, Mars, Incorporated speaks on “The Business of Chocolate”</span>
+      <br class="accessible-break"><span class="subtitle">"On a Mission From Mars: The Business of Chocolate"</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Oct 29, 2013</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/photo-gallery/deans-distinguished-speaker-harold-schmitz-chief-science-officer-mars-incorporated">Dean's Distinguished Speaker Harold Schmitz, Chief Science Officer, Mars, Incorporated</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <h4><span style="font-size:15px;line-height:1.3em;letter-spacing:.01em;">Harold Schmitz</span></h4>
+<p>For more than four decades, UC Davis and Mars have partnered on innovative research in food, agriculture, and health. A 20-year veteran at Mars, Harold Schmitz has been Chief Science Officer since 2005. He leads the strategic development, alignment and quality control of the company’s multidisciplinary internal and scientific research programs.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/video/deans-distinguished-speaker-harold-schmitz-chief-science-officer-mars-incorporated-speaks"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    <div id="node-7569-teaser" class="node node-teaser node-type-post node-7569 pt-show-social-block past-event has-event-date t106 wt106 wt2 wt0 t288 wt288 wt51 wt0 access-normal has-image no-more pt106 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-squarecrop croppable  c1  c-1"><a href="/event/angel-martinez" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/squarecrop/main-images/angel_martinez_41.jpg" alt="Image of Dean’s Distinguished Speaker: Angel R. Martinez Chairman, CEO &amp; President, Deckers Brands speaks on “Leadership: What Got You Here Won’t Get You There”" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Videos">Video</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/event/angel-martinez" title="Dean’s Distinguished Speaker: Angel R. Martinez Chairman, CEO &amp; President, Deckers Brands speaks on “Leadership: What Got You Here Won’t Get You There”"><span class="title">Dean’s Distinguished Speaker: Angel R. Martinez Chairman, CEO &amp; President, Deckers Brands speaks on “Leadership: What Got You Here Won’t Get You There”</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date event-date passed"><span class="date-display-single">February 27, 2013 - <span class="date-display-start">7:00pm</span><span class="date-display-separator"> - </span><span class="date-display-end">8:30pm</span></span></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/event/angel-martinez"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="media-gallery-bottom"> </div>    </div>
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+          <div class="no-main-channel"></div>                  </div>
+                          <div id="content-bottom" class="region region-content-bottom">
+            <div id="block-views_blocks-term-block_1-5" class="  nhlc-c9 nhlh-c1 nstlc-c13 two-col-wide two-col-n bt-127 bt-f1 bt-p0 bt-bm10 btlc-c4 te-pad-0 te-bpad-10 te-bm-10 te-bw-1b te-bb-s te-bb-c10 nob-last icp-logo ip-above float-images-left i40w pod-mode te-title-100 te-t-f3 te-st-f2  dd block block-views_blocks region-odd even region-count-1 count-8 col-1 views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Getting Started</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-1463-teaser" class="node node-teaser node-type-post node-1463 pt-show-social-block no-event-date t270 wt270 wt2 wt0 t81 wt81 wt51 wt0 access-normal has-image no-more pt270 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/mba-application-center" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/pencil.png" alt="Image of Application Center" title="" width="200" height="190"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Resources">Resource</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-application-center" title="Application Center"><span class="title">Application Center</span>
+      <br class="accessible-break"><span class="subtitle">Learn More &amp; Apply Online</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Aug 1, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-application-center"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-1462-teaser" class="node node-teaser node-type-post node-1462 pt-show-social-block no-event-date t401 wt401 wt0 t81 wt81 wt51 wt0 access-normal has-image no-more pt401 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/mba-admissions-events" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/event.png" alt="Image of Attend an Event" title="" width="200" height="190"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Call to action links">Call to action link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-admissions-events" title="Attend an Event"><span class="title">Attend an Event</span>
+      <br class="accessible-break"><span class="subtitle">Join us for an admissions session</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Aug 1, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-admissions-events"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    <div id="node-1461-teaser" class="node node-teaser node-type-post node-1461 pt-show-social-block no-event-date t401 wt401 wt0 t81 wt81 wt51 wt0 t333 wt333 wt165 wt122 wt0 access-normal has-image no-more pt401 has-2-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="https://ucdavisgrad.askadmissions.net/emtinterestpage.aspx?ip=webinquiry" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/arrows.png" alt="Image of Request information" title="" width="200" height="190"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Call to action links">Call to action link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://ucdavisgrad.askadmissions.net/emtinterestpage.aspx?ip=webinquiry" title="Request information"><span class="title">Request information</span>
+      <br class="accessible-break"><span class="subtitle">Learn more about our programs</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Oct 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://ucdavisgrad.askadmissions.net/emtinterestpage.aspx?ip=webinquiry"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-6" class="  s-img-old nhlc-c3 two-col-wide two-col-n mt-10 bt-127 bt-f1 bt-bm10 btlc-c4 te-pad-0-10 te-bpad-0 te-bm-0 icp-logo ip-above float-images-left te-img-pad-t-15 te-img-pad-b-20 i100w pod-mode te-title-100 te-t-f1 te-body-show-1p switch-carousel-fade show-carousel-pager-dots cas-c8 casbg-c9  dd block block-views_blocks region-even odd region-count-2 count-9 col-2 views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">New and Exciting</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-9984-teaser" class="node node-teaser node-type-post node-9984 pt-show-date pt-show-post-type pt-show-social-block no-event-date t58 wt58 wt2 wt0 t216 wt216 wt213 wt207 wt0 t82 wt82 wt51 wt0 access-normal has-image has-more pt58 has-2-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/news-release/uc-davis-accounting-grads-master-cpa-exam" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/cpa-1.jpg" alt="Image of UC Davis Accounting Grads Master CPA Exam" title="" width="200" height="150"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="News Releases">News Release</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-accounting-grads-master-cpa-exam" title="UC Davis Accounting Grads Master CPA Exam"><span class="title">UC Davis Accounting Grads Master CPA Exam</span>
+      <br class="accessible-break"><span class="subtitle">Master of Professional Accountancy has No. 1 pass rate in California</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Apr 9, 2015</span> <span class="meta-item meta-profile meta-profile-link"><a href="/master-professional-accountancy-mpac">Master of Professional Accountancy (MPAc)</a></span>   <span class="last meta-item meta-custom meta-custom-0">GSM News Release</span>       </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>(Davis, Calif.) – Master of Professional Accountancy graduates at the UC Davis Graduate School of Management are No. 1 in CPA exam performance among the 16 graduate accounting programs in California.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-accounting-grads-master-cpa-exam"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-9932-teaser" class="node node-teaser node-type-post node-9932 pt-show-date pt-show-post-type pt-show-social-block no-event-date t58 wt58 wt2 wt0 t213 wt213 wt207 wt0 t216 wt216 wt213 wt207 wt0 t82 wt82 wt51 wt0 t364 wt364 wt370 wt122 wt0 t389 wt389 wt51 wt0 access-normal has-image has-more pt58 has-5-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/news-release/uc-davis-part-time-mba-ranked-nations-top-9" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/part-time-us-news-graphic-800.jpg" alt="Image of UC Davis Part-Time MBA Ranked in Nation’s Top 9%" title="" width="200" height="113"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="News Releases">News Release</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-part-time-mba-ranked-nations-top-9" title="UC Davis Part-Time MBA Ranked in Nation’s Top 9%"><span class="title">UC Davis Part-Time MBA Ranked in Nation’s Top 9%</span>
+      <br class="accessible-break"><span class="subtitle">Fourth Consecutive Year among U.S News &amp; World Report's Premier Programs</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Mar 23, 2015</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/mba-program-rankings">MBA Program Rankings</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>(Davis, CA) — The UC Davis Part-Time MBA program offered in Sacramento and the San Francisco Bay Area is ranked among the top 9% in the U.S., according to U.S. News &amp; World Report’s latest graduate business school rankings.</p>
+
+<p>At No. 29, this is the fourth consecutive year the UC Davis Part-Time MBA program is among the top AACSB International-accredited part-time MBA programs surveyed. This year, there were 323 part-time MBA programs surveyed.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-part-time-mba-ranked-nations-top-9"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-9897-teaser" class="node node-teaser node-type-post node-9897 pt-show-date pt-show-post-type pt-show-social-block no-event-date t58 wt58 wt2 wt0 t82 wt82 wt51 wt0 access-normal has-image no-more pt58 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/news-release/uc-davis-full-time-mba-ranked-among-nations-premier-programs-20th-consecutive-year-0" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/top10-20yrs-flat-unbranded.jpg" alt="Image of UC Davis Full-Time MBA Ranked among Nation’s Premier Programs for 20th Consecutive Year " title="" width="200" height="133"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="News Releases">News Release</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-full-time-mba-ranked-among-nations-premier-programs-20th-consecutive-year-0" title="UC Davis Full-Time MBA Ranked among Nation’s Premier Programs for 20th Consecutive Year"><span class="title">UC Davis Full-Time MBA Ranked among Nation’s Premier Programs for 20th Consecutive Year</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Mar 11, 2015</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/mba-program-rankings">MBA Program Rankings</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>UC Davis MBA Programs rank among Top 10% in U.S. and post record figures for both salaries and bonuses.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-full-time-mba-ranked-among-nations-premier-programs-20th-consecutive-year-0"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-9543-teaser" class="node node-teaser node-type-post node-9543 pt-show-date pt-show-post-type pt-show-social-block no-event-date t271 wt271 wt2 wt0 t213 wt213 wt207 wt0 t212 wt212 wt213 wt207 wt0 t82 wt82 wt51 wt0 t364 wt364 wt370 wt122 wt0 access-normal has-image no-more pt271 has-4-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/news/full-time-mba-gains-10-spots-poets-quants-ranking" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/2014-ranking-logo.png" alt="Image of Full-Time MBA Gains 10 Spots in Poets &amp; Quants Ranking" title="" width="200" height="160"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="In the News Stories">In the News</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news/full-time-mba-gains-10-spots-poets-quants-ranking" title="Full-Time MBA Gains 10 Spots in Poets &amp; Quants Ranking"><span class="title">Full-Time MBA Gains 10 Spots in Poets &amp; Quants Ranking</span>
+      <br class="accessible-break"><span class="subtitle">UC Davis one of the "big winners" in rankings composite</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Dec 11, 2014</span>   <span class="last meta-item meta-custom meta-custom-0">Poets &amp; Quants</span>       </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>UC Davis one of the “big winners” in composite of five most influential business school rankings in the world: U.S.News &amp; World Report, Forbes, Bloomberg Business Week, The Financial Times and The Economist.</p>
+
+<p><a href="http://poetsandquants.com/2014/11/26/poetsquants-2014-best-business-school-ranking/">Read the article</a></p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news/full-time-mba-gains-10-spots-poets-quants-ranking"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+    <div id="node-9688-teaser" class="node node-teaser node-type-post node-9688 pt-show-social-block no-event-date t290 wt290 wt6 wt0 t82 wt82 wt51 wt0 access-normal has-image no-more pt290 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="/news-release/uc-davis-graduate-school-management-partners-lawrence-livermore-and-sandia-national" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/llnl.jpg" alt="Image of New Partnership with Lawrence Livermore and Sandia National Labs to Drive Technologies from Lab to Market" title="" width="200" height="110"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="New and Exciting Items">New and Exciting Item</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-graduate-school-management-partners-lawrence-livermore-and-sandia-national" title="New Partnership with Lawrence Livermore and Sandia National Labs to Drive Technologies from Lab to Market"><span class="title">New Partnership with Lawrence Livermore and Sandia National Labs to Drive Technologies from Lab to Market</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Jan 22, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>Lab-Corps will help national lab scientists and engineers further develop their entrepreneurial skills to move innovative technologies to market.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-graduate-school-management-partners-lawrence-livermore-and-sandia-national"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-7" class="  nhlc-c3 nstlc-c13 nllc-c4 two-col-wide two-col-n mt-20 bt-127 bt-f1 bt-bm10 btlc-c4 te-bpad-10 te-bm-10 te-bw-1b te-bb-s te-bb-c10 nob-last ip-none pod-mode title-margin-bottom te-title-100 te-t-f1 te-st-f2 te-show-only-event-date te-links-mar5t te-show-readmore-always  dd block block-views_blocks region-odd even region-count-3 count-10 events col-3 views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">What's Happening </span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-10136-teaser" class="node node-teaser node-type-post node-10136 pt-show-post-type pt-show-social-block has-event-date t680 wt680 wt60 wt0 t319 wt319 wt128 wt370 wt122 wt0 t334 wt334 wt165 wt122 wt0 t128 wt128 wt370 wt122 wt0 t83 wt83 wt51 wt0 access-normal has-more pt680 has-4-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Sacramento MBA Events">Sacramento MBA Event</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/sacramento-mba-event/personal-consultation-phone-call-0" title="Personal Consultation – Phone Call"><span class="title">Personal Consultation – Phone Call</span>
+      <br class="accessible-break"><span class="subtitle">MBA Part-Time Sacramento Program</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date event-date upcoming first-upcoming"><span class="date-display-single">July 7, 2015 - <span class="date-display-start">1:00pm</span><span class="date-display-separator"> - </span><span class="date-display-end">2:30pm</span></span></span> <span class="last meta-item meta-profile meta-profile-link"><a href="/staff-profile/abigail-carroll">Abigail Carroll</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <h3>UC Davis MBA Edge: Personal Consultation</h3>
+
+<p>This one-on-one meeting is a great opportunity to ask questions and get advice from admissions expert Abigail Carroll. You’ll gain an insider’s perspective from topics to student life, application questions, next steps and any and all topics that are important to you.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/sacramento-mba-event/personal-consultation-phone-call-0"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-10146-teaser" class="node node-teaser node-type-post node-10146 pt-show-post-type pt-show-social-block has-event-date t679 wt679 wt60 wt0 t127 wt127 wt370 wt122 wt0 t312 wt312 wt127 wt370 wt122 wt0 t334 wt334 wt165 wt122 wt0 t83 wt83 wt51 wt0 access-normal no-more pt679 has-4-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Full-time MBA Events">Full-time MBA Event</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/full-time-mba-event/mba-tour-san-francisco" title="The MBA Tour – San Francisco"><span class="title">The MBA Tour – San Francisco</span>
+      <br class="accessible-break"><span class="subtitle">Full-Time and Part-Time MBA Programs</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date event-date upcoming first-upcoming"><span class="date-display-single">July 18, 2015 - <span class="date-display-start">11:00am</span><span class="date-display-separator"> - </span><span class="date-display-end">5:00pm</span></span></span> <span class="meta-item meta-profile meta-profile-link"><a href="/staff-profile/amy-russell">Amy Russell</a></span> <span class="last meta-item meta-profile meta-profile-link"><a href="/staff-profile/andrew-walizer">Andrew Walizer</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <h3>MBA Fairs, MPAc Grad Fairs and Tours</h3>
+
+<p>Meet with alumni and our admissions experts face-to-face at this MBA event. Ask questions and get advice from admissions experts Amy Russell and Andrew Walizer. Speak with alumni and gain an insider’s perspective on any and all topics that are important to you.</p>
+
+<p><a href="http://www.thembatour.com/events/sanfrancisco.html">Register Now</a></p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/full-time-mba-event/mba-tour-san-francisco"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    <div id="node-10147-teaser" class="node node-teaser node-type-post node-10147 pt-show-post-type pt-show-social-block has-event-date t679 wt679 wt60 wt0 t127 wt127 wt370 wt122 wt0 t312 wt312 wt127 wt370 wt122 wt0 t334 wt334 wt165 wt122 wt0 t83 wt83 wt51 wt0 access-normal no-more pt679 has-4-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Full-time MBA Events">Full-time MBA Event</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/full-time-mba-event/mba-tour-los-angeles" title="The MBA Tour – Los Angeles"><span class="title">The MBA Tour – Los Angeles</span>
+      <br class="accessible-break"><span class="subtitle">Full-Time MBA Program</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date event-date upcoming first-upcoming"><span class="date-display-single">July 19, 2015 - <span class="date-display-start">11:00am</span><span class="date-display-separator"> - </span><span class="date-display-end">5:00pm</span></span></span> <span class="last meta-item meta-profile meta-profile-link"><a href="/staff-profile/earl-raehsler">Earl Raehsler </a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <h3>MBA Fairs, MPAc Grad Fairs and Tours</h3>
+
+<p>Meet with alumni and our admissions experts face-to-face at this MBA event. Ask questions and get advice from admissions expert Earl Raehsler. Speak with alumni and gain an insider’s perspective on any and all topics that are important to you.</p>
+
+<p><a href="http://www.thembatour.com/events/losangeles.html">Register Now</a></p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/full-time-mba-event/mba-tour-los-angeles"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <p><a href="http://gsm.ucdavis.edu/calendar">See more events</a></p>    </div>
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-10" class="  nhlc-c9 nstlc-c13 two-col-wide two-col-n bt-127 bt-f1 bt-bm10 btlc-c4 icp-logo ip-above i40w te-title-100 te-t-f3 te-st-f2  dd block block-views_blocks region-even odd region-count-4 count-11 col-4 views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Invest in the GSM</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <div id="node-1464-teaser" class="node node-teaser node-type-post node-1464 pt-show-social-block no-event-date t2 wt2 wt0 t289 wt289 wt51 wt0 access-normal has-image no-more pt2 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-logo not-croppable  c1  c-1"><a href="https://awc.ucdavis.edu/MakeAGift.aspx?alloccat=190000000&amp;appeal=14518" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/logo/main-images/picture_2011-08-01_at_2.35.53_pm.png" alt="Image of Invest in Our Vision" title="" width="200" height="182"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Posts">Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://awc.ucdavis.edu/MakeAGift.aspx?alloccat=190000000&amp;appeal=14518" title="Invest in Our Vision"><span class="title">Invest in Our Vision</span>
+      <br class="accessible-break"><span class="subtitle">Support our GSM Annual Giving Campaign</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Aug 1, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://awc.ucdavis.edu/MakeAGift.aspx?alloccat=190000000&amp;appeal=14518"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+          </div> <!-- /#content-bottom -->
+              </div></div> <!-- /#content-inner, /#content -->
+      <a id="navigation"></a>
+              <div id="navbar"><div id="navbar-inner" class="clear-block region region-navbar">
+          <div id="block-nice_menus-1" class=" mlcd1-c8 mlc-c1 mlh-c2  dd block block-nice_menus region-odd even region-count-1 count-4 navbar "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <ul class="nice-menu nice-menu-down" id="nice-menu-1">
+<li class="menu-4131 active-trail menuparent menu-path-taxonomy-term-51 first  odd "><ul>
+<li class="menu-8491 menu-path-taxonomy-term-289 first  odd ">
+<li class="menu-8490 menu-path-taxonomy-term-288 even ">
+<li class="menu-6018 menu-path-taxonomy-term-82 odd ">
+<li class="menu-6017 menu-path-taxonomy-term-81 even ">
+<li class="menu-6019 menu-path-taxonomy-term-83 odd ">
+<li class="menu-6015 menu-path-taxonomy-term-79 even ">
+<li class="menu-6016 menuparent menu-path-taxonomy-term-80 odd "><ul>
+<li class="menu-8494 menu-path-taxonomy-term-291 first  odd ">
+<li class="menu-8496 menu-path-taxonomy-term-293 even ">
+<li class="menu-8495 menu-path-taxonomy-term-292 odd  last ">
+</ul></li>
+<li class="menu-8847 menu-path-taxonomy-term-389 even ">
+<li class="menu-8650 menuparent menu-path-taxonomy-term-366 odd  last ">
+<a href="/ucd-footer-links" title="UCD Footer Links" class=" menu-link depth-2 tid-366"><span class="menu-title">UCD Footer Links</span></a><ul>
+<li class="menu-8651 menu-path-taxonomy-term-367 first  odd "><a href="/daytime-mba-links" title="Daytime MBA Links" class=" menu-link depth-3 tid-367"><span class="menu-title">Daytime MBA Links</span></a></li>
+<li class="menu-8653 menu-path-taxonomy-term-369 even "><a href="/current-student-links" title="Current Student Links" class=" menu-link depth-3 tid-369"><span class="menu-title">Current Student Links</span></a></li>
+<li class="menu-8652 menu-path-taxonomy-term-368 odd  last "><a href="/sacramento-mba-links" title="Sacramento MBA Links" class=" menu-link depth-3 tid-368"><span class="menu-title">Sacramento MBA Links</span></a></li>
+</ul>
+</li>
+</ul></li>
+<li class="menu-8092 menuparent menu-path-taxonomy-term-122 even ">
+<a href="/masters-programs" title="Prospective Students" class=" menu-link depth-1 tid-122"><span class="menu-title">Prospective Students</span></a><ul>
+<li class="menu-8654 menuparent menu-path-taxonomy-term-370 first  odd ">
+<a href="/masters-programs" title="Masters Programs" class=" menu-link depth-2 tid-370"><span class="menu-title">Masters Programs</span></a><ul>
+<li class="menu-8097 menu-path-taxonomy-term-127 first  odd "><a href="/daytime-mba" title="Daytime MBA" class=" menu-link depth-3 tid-127"><span class="menu-title">Full-Time MBA</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8099 menu-path-taxonomy-term-129 even "><a href="/bay-area-mba" title="Bay Area MBA" class=" menu-link depth-3 tid-129"><span class="menu-title">Bay Area MBA</span></a></li>
+<li class="menu-8098 menu-path-taxonomy-term-128 odd "><a href="/sacramento-mba" title="Sacramento MBA" class=" menu-link depth-3 tid-128"><span class="menu-title">Sacramento MBA</span></a></li>
+<li class="menu-8899 menu-path-taxonomy-term-445 even "><a href="/master-professional-accountancy-mpac" title="Master of Professional Accountancy (MPAc)" class=" menu-link depth-3 tid-445"><span class="menu-title">Master of Professional Accountancy (MPAc)</span></a></li>
+<li class="menu-20354 menu-path-taxonomy-term-974 odd "><a href="/program-comparison" title="Program Comparison" class=" menu-link depth-3 tid-974"><span class="menu-title">Program Comparison</span></a></li>
+<li class="menu-8566 menu-path-taxonomy-term-364 even  last "><a href="/mba-program-rankings" title="MBA Program Rankings" class=" menu-link depth-3 tid-364"><span class="menu-title">MBA Program Rankings</span></a></li>
+</ul>
+</li>
+<li class="menu-8094 menuparent menu-path-taxonomy-term-124 even "><ul>
+<li class="menu-8537 menu-path-taxonomy-term-335 first  odd ">
+<li class="menu-8538 menu-path-taxonomy-term-336 even  last ">
+</ul></li>
+<li class="menu-8135 menuparent menu-path-taxonomy-term-165 odd ">
+<a href="/mba-application-center" title="MBA Application Center" class=" menu-link depth-2 tid-165"><span class="menu-title">Application Center</span><span class="menu-description"><br class="accessible-break"></span></a><ul>
+<li class="menu-8484 menu-path-taxonomy-term-278 first  odd "><a href="/admissions-faqs-0" title="Admissions FAQs" class=" menu-link depth-3 tid-278"><span class="menu-title">Admissions FAQs</span></a></li>
+<li class="menu-8535 menu-path-taxonomy-term-333 even ">
+<li class="menu-8536 menu-path-taxonomy-term-334 odd "><a href="/mba-admissions-events" title="MBA Admissions Events" class=" menu-link depth-3 tid-334"><span class="menu-title">Admissions Events</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-15091 menu-path-taxonomy-term-687 even  last "><a href="/mba-class-visits" title="MBA Class Visits" class=" menu-link depth-3 tid-687"><span class="menu-title">MBA Class Visits</span></a></li>
+</ul>
+</li>
+<li class="menu-8567 menu-path-taxonomy-term-365 even "><a href="/technology-management-minor-undergraduate" title="Technology Management Minor (Undergraduate)" class=" menu-link depth-2 tid-365"><span class="menu-title">Technology Management Minor (Undergraduate)</span></a></li>
+<li class="menu-8939 menu-path-taxonomy-term-481 odd ">
+<li class="menu-8563 menu-path-taxonomy-term-361 even  last ">
+</ul>
+</li>
+<li class="menu-8117 menuparent menu-path-taxonomy-term-147 odd ">
+<a href="/faculty-research" title="Faculty &amp; Research" class=" menu-link depth-1 tid-147"><span class="menu-title">Faculty &amp; Research</span></a><ul>
+<li class="menu-20334 menuparent menu-path-taxonomy-term-954 first  odd "><ul>
+<li class="menu-15203 menu-path-taxonomy-term-694 first  odd  last ">
+</ul></li>
+<li class="menu-8747 menuparent menu-path-taxonomy-term-375 even ">
+<a href="/faculty-research" title="Meet the Faculty" class=" menu-link depth-2 tid-375"><span class="menu-title">Meet the Faculty</span></a><ul>
+<li class="menu-8122 menu-path-taxonomy-term-152 first  odd "><a href="/faculty-directory" title="Faculty Directory" class=" menu-link depth-3 tid-152"><span class="menu-title">Faculty Directory</span></a></li>
+<li class="menu-8127 menu-path-taxonomy-term-157 even "><a href="/faculty-spotlights" title="Faculty Spotlights" class=" menu-link depth-3 tid-157"><span class="menu-title">Faculty Spotlights</span></a></li>
+<li class="menu-13420 menu-path-taxonomy-term-572 odd ">
+<li class="menu-8861 menu-path-taxonomy-term-405 even "><a href="/faculty-awards" title="Faculty Awards" class=" menu-link depth-3 tid-405"><span class="menu-title">Faculty Awards</span></a></li>
+<li class="menu-8748 menu-path-taxonomy-term-376 odd ">
+<li class="menu-8485 menu-path-taxonomy-term-279 even  last "><a href="/resources-faculty" title="Resources for Faculty" class=" menu-link depth-3 tid-279"><span class="menu-title">Resources for Faculty</span></a></li>
+</ul>
+</li>
+<li class="menu-8124 menuparent menu-path-taxonomy-term-154 odd ">
+<a href="/centers-excellence" title="Centers of Excellence" class=" menu-link depth-2 tid-154"><span class="menu-title">Centers of Excellence</span></a><ul>
+<li class="menu-8132 menu-path-taxonomy-term-162 first  odd "><a href="/center-investor-welfare-and-corporate-responsibility" title="Center for Investor Welfare and Corporate Responsibility" class=" menu-link depth-3 tid-162"><span class="menu-title">Center for Investor Welfare and Corporate Responsibility</span></a></li>
+<li class="menu-8129 menu-path-taxonomy-term-159 even  last "><a href="/entrepreneurship" title="Child Family Institute for Innovation and Entrepreneurship" class=" menu-link depth-3 tid-159"><span class="menu-title">Child Family Institute for Innovation and Entrepreneurship</span></a></li>
+</ul>
+</li>
+<li class="menu-8126 menuparent menu-path-taxonomy-term-156 even ">
+<a href="/faculty-seminars" title="Faculty Seminars" class=" menu-link depth-2 tid-156"><span class="menu-title">Faculty Seminars</span></a><ul>
+<li class="menu-8907 menu-path-taxonomy-term-453 first  odd "><a href="/accounting-economics-and-finance-seminars" title="Accounting, Economics and Finance Seminars " class=" menu-link depth-3 tid-453"><span class="menu-title">Accounting, Economics and Finance Seminars</span></a></li>
+<li class="menu-19937 menu-path-taxonomy-term-877 even "><a href="/organizational-behavior" title="Organizational Behavior" class=" menu-link depth-3 tid-877"><span class="menu-title">Organizational Behavior</span></a></li>
+<li class="menu-8908 menu-path-taxonomy-term-454 odd  last "><a href="/information-technology-marketing-and-operations-research-seminars" title="Information Technology, Marketing and Operations Research Seminars" class=" menu-link depth-3 tid-454"><span class="menu-title">Information Technology, Marketing and Operations Research Seminars</span></a></li>
+</ul>
+</li>
+<li class="menu-8125 menuparent menu-path-taxonomy-term-155 odd  last ">
+<a href="/featured-research" title="Featured Research" class=" menu-link depth-2 tid-155"><span class="menu-title">Featured Research</span></a><ul>
+<li class="menu-17128 menu-path-taxonomy-term-730 first  odd "><a href="/forthcoming-publications" title="Forthcoming Publications" class=" menu-link depth-3 tid-730"><span class="menu-title">Forthcoming Publications</span></a></li>
+<li class="menu-8656 menu-path-taxonomy-term-373 even ">
+<li class="menu-8749 menu-path-taxonomy-term-377 odd  last ">
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-8164 menuparent menu-path-taxonomy-term-194 even ">
+<a href="/corporate-connections" title="Corporate Connections" class=" menu-link depth-1 tid-194"><span class="menu-title">Corporate Connections</span></a><ul>
+<li class="menu-8935 menu-path-taxonomy-term-477 first  odd ">
+<li class="menu-8166 menuparent menu-path-taxonomy-term-196 even ">
+<a href="/recruit-hire-mba" title="Recruit &amp; Hire an MBA" class=" menu-link depth-2 tid-196"><span class="menu-title">Recruit &amp; Hire an MBA</span></a><ul>
+<li class="menu-13567 menu-path-taxonomy-term-621 first  odd ">
+<li class="menu-9044 menu-path-taxonomy-term-512 even ">
+<li class="menu-8174 menu-path-taxonomy-term-204 odd "><a href="/employment-report" title="Employment Report" class=" menu-link depth-3 tid-204"><span class="menu-title">Employment Report</span></a></li>
+<li class="menu-8176 menu-path-taxonomy-term-206 even "><a href="/campus-recruiting-0" title="Off-Campus Recruiting" class=" menu-link depth-3 tid-206"><span class="menu-title">Off-Campus Recruiting</span></a></li>
+<li class="menu-8175 menu-path-taxonomy-term-205 odd "><a href="/campus-recruiting" title="On-Campus Recruiting" class=" menu-link depth-3 tid-205"><span class="menu-title">On-Campus Recruiting</span></a></li>
+<li class="menu-8173 menu-path-taxonomy-term-203 even "><a href="/form/recruiting-uc-davis-mba-mpac-students" title="Post a Job or Internship" class=" menu-link depth-3 tid-203"><span class="menu-title">Post a Job or Internship</span></a></li>
+<li class="menu-8540 menu-path-taxonomy-term-338 odd  last "><a href="/why-hire-uc-davis-mba" title="Why Hire a UC Davis MBA?" class=" menu-link depth-3 tid-338"><span class="menu-title">Why Hire a UC Davis MBA?</span></a></li>
+</ul>
+</li>
+<li class="menu-8167 menuparent menu-path-taxonomy-term-197 odd ">
+<a href="/business-partnership-program" title="Business Partnership Program" class=" menu-link depth-2 tid-197"><span class="menu-title">Business Partnership Program</span></a><ul>
+<li class="menu-8949 menu-path-taxonomy-term-490 first  odd "><a href="/become-partner" title="Become a Partner" class=" menu-link depth-3 tid-490"><span class="menu-title">Become a Partner</span></a></li>
+<li class="menu-8948 menu-path-taxonomy-term-489 even "><a href="/benefits" title="Benefits" class=" menu-link depth-3 tid-489"><span class="menu-title">Benefits</span></a></li>
+<li class="menu-8906 menu-path-taxonomy-term-452 odd "><a href="/business-partner-events" title="Business Partner Events" class=" menu-link depth-3 tid-452"><span class="menu-title">Business Partner Events</span></a></li>
+<li class="menu-8393 menu-path-taxonomy-term-266 even ">
+<li class="menu-8394 menu-path-taxonomy-term-267 odd ">
+<li class="menu-8950 menu-path-taxonomy-term-491 even "><a href="/our-partners" title="Our Partners" class=" menu-link depth-3 tid-491"><span class="menu-title">Our Partners</span></a></li>
+<li class="menu-8395 menu-path-taxonomy-term-268 odd  last ">
+</ul>
+</li>
+<li class="menu-8168 menuparent menu-path-taxonomy-term-198 even ">
+<a href="/mba-consulting-center" title="MBA Consulting Center" class=" menu-link depth-2 tid-198"><span class="menu-title">MBA Consulting Center</span></a><ul>
+<li class="menu-8902 menu-path-taxonomy-term-448 first  odd "><a href="/clients-past-projects" title="Clients &amp; Past Projects" class=" menu-link depth-3 tid-448"><span class="menu-title">Clients &amp; Past Projects</span></a></li>
+<li class="menu-11635 menu-path-taxonomy-term-525 even "><a href="/center-executive-team" title="Center Executive Team" class=" menu-link depth-3 tid-525"><span class="menu-title">Center Executive Team</span></a></li>
+<li class="menu-13427 menu-path-taxonomy-term-579 odd ">
+<li class="menu-8900 menu-path-taxonomy-term-446 even ">
+<li class="menu-13426 menu-path-taxonomy-term-578 odd "><a href="/impact-program" title="IMPACT Program" class=" menu-link depth-3 tid-578"><span class="menu-title">IMPACT Program</span></a></li>
+<li class="menu-13425 menu-path-taxonomy-term-577 even "><a href="/profile-student-teams" title="Profile of Student Teams" class=" menu-link depth-3 tid-577"><span class="menu-title">Profile of Student Teams</span></a></li>
+<li class="menu-13419 menu-path-taxonomy-term-571 odd "><a href="/sponsor-projects-how-it-works" title="Sponsor Projects: How it Works" class=" menu-link depth-3 tid-571"><span class="menu-title">Sponsor Projects: How it Works</span></a></li>
+<li class="menu-8901 menu-path-taxonomy-term-447 even ">
+<li class="menu-14880 menu-path-taxonomy-term-685 odd  last "><a href="/student-team-testimonials" title="Student Team Testimonials" class=" menu-link depth-3 tid-685"><span class="menu-title">Student Testimonials</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-8487 menuparent menu-path-taxonomy-term-285 odd ">
+<a href="/executive-education" title="Executive Education" class=" menu-link depth-2 tid-285"><span class="menu-title">Executive Education</span></a><ul>
+<li class="menu-8488 menu-path-taxonomy-term-286 first  odd "><a href="/wine-executive-program" title="Wine Executive Program" class=" menu-link depth-3 tid-286"><span class="menu-title">Wine Executive Program</span></a></li>
+<li class="menu-8878 menu-path-taxonomy-term-424 even ">
+<li class="menu-18713 menu-path-taxonomy-term-822 odd ">
+<li class="menu-8489 menu-path-taxonomy-term-287 even "><a href="/customized-programs" title="Customized Executive Education Programs" class=" menu-link depth-3 tid-287"><span class="menu-title">Customized Programs</span><span class="menu-description"><br class="accessible-break">Customized Executive Education Programs</span></a></li>
+<li class="menu-10702 menu-path-taxonomy-term-516 odd "><a href="/executive-education-blog" title="Executive Education Blog" class=" menu-link depth-3 tid-516"><span class="menu-title">Our Blog</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8936 menu-path-taxonomy-term-478 even "><a href="/our-campus" title="Our Campus" class=" menu-link depth-3 tid-478"><span class="menu-title">Our Campus</span></a></li>
+<li class="menu-8879 menu-path-taxonomy-term-425 odd "><a href="/our-experts" title="Our Experts" class=" menu-link depth-3 tid-425"><span class="menu-title">Our Experts</span></a></li>
+<li class="menu-8880 menu-path-taxonomy-term-426 even  last ">
+</ul>
+</li>
+<li class="menu-8545 menu-path-taxonomy-term-343 even "><a href="/executives-residence" title="Executives in Residence" class=" menu-link depth-2 tid-343"><span class="menu-title">Executives in Residence</span></a></li>
+<li class="menu-20608 menu-path-taxonomy-term-1007 odd "><a href="/women" title="Women in Business Leadership" class=" menu-link depth-2 tid-1007"><span class="menu-title">Women in Business Leadership</span></a></li>
+<li class="menu-8544 menuparent menu-path-taxonomy-term-342 even ">
+<a href="/deans-distinguished-speakers" title="Dean's Distinguished Speakers" class=" menu-link depth-2 tid-342"><span class="menu-title">Dean's Distinguished Speakers</span></a><ul>
+<li class="menu-8947 menu-path-taxonomy-term-488 first  odd  last ">
+</ul>
+</li>
+<li class="menu-8547 menu-path-taxonomy-term-345 odd  last "><a href="/deans-advisory-council-0" title="Dean's Advisory Council" class=" menu-link depth-2 tid-345"><span class="menu-title">Dean's Advisory Council</span></a></li>
+</ul>
+</li>
+<li class="menu-8146 menuparent menu-path-taxonomy-term-176 odd ">
+<a href="/alumni" title="Alumni" class=" menu-link depth-1 tid-176"><span class="menu-title">Alumni</span></a><ul>
+<li class="menu-8147 menuparent menu-path-taxonomy-term-177 first  odd ">
+<a href="/alumni-association" title="Alumni Association" class=" menu-link depth-2 tid-177"><span class="menu-title">Alumni Association</span></a><ul>
+<li class="menu-8504 menu-path-taxonomy-term-302 first  odd "><a href="/alumni-awards" title="Alumni Awards" class=" menu-link depth-3 tid-302"><span class="menu-title">Alumni Awards</span></a></li>
+<li class="menu-8154 menu-path-taxonomy-term-184 even "><a href="/leadership" title="Leadership" class=" menu-link depth-3 tid-184"><span class="menu-title">Alumni Leadership</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8506 menu-path-taxonomy-term-304 odd "><a href="/networking-tools" title="Networking Tools" class=" menu-link depth-3 tid-304"><span class="menu-title">Networking Tools</span></a></li>
+<li class="menu-8510 menu-path-taxonomy-term-308 even ">
+<li class="menu-8942 menu-path-taxonomy-term-484 odd "><a href="/student-fellowships" title="Student Fellowships" class=" menu-link depth-3 tid-484"><span class="menu-title">Student Fellowships</span></a></li>
+<li class="menu-8158 menu-path-taxonomy-term-188 even  last "><a href="/alumni-networking-groups" title="Alumni Networking Groups" class=" menu-link depth-3 tid-188"><span class="menu-title">Alumni Networking Groups</span></a></li>
+</ul>
+</li>
+<li class="menu-8499 menuparent menu-path-taxonomy-term-297 even ">
+<a href="/career-management" title="Career Management" class=" menu-link depth-2 tid-297"><span class="menu-title">Career Management</span></a><ul>
+<li class="menu-8501 menu-path-taxonomy-term-299 first  odd "><a href="/announcements-and-job-listings" title="Announcements and Job Listings" class=" menu-link depth-3 tid-299"><span class="menu-title">Announcements and Job Listings</span></a></li>
+<li class="menu-8502 menu-path-taxonomy-term-300 even "><a href="/career-development" title="Career Development" class=" menu-link depth-3 tid-300"><span class="menu-title">Career Development</span></a></li>
+<li class="menu-8503 menu-path-taxonomy-term-301 odd  last "><a href="/career-resources" title="Career Resources" class=" menu-link depth-3 tid-301"><span class="menu-title">Career Resources</span></a></li>
+</ul>
+</li>
+<li class="menu-8150 menu-path-taxonomy-term-180 odd "><a href="/alumni-spotlights" title="Alumni Spotlights" class=" menu-link depth-2 tid-180"><span class="menu-title">Alumni Spotlights</span></a></li>
+<li class="menu-8505 menu-path-taxonomy-term-303 even "><a href="/alumni-directory" title="Alumni Directory" class=" menu-link depth-2 tid-303"><span class="menu-title">Alumni Directory</span></a></li>
+<li class="menu-8952 menu-path-taxonomy-term-493 odd ">
+<li class="menu-8512 menu-path-taxonomy-term-310 even ">
+<li class="menu-8498 menu-path-taxonomy-term-296 odd ">
+<li class="menu-11429 menu-path-taxonomy-term-522 even "><a href="/alumni-move" title="Alumni on the Move" class=" menu-link depth-2 tid-522"><span class="menu-title">Alumni on the Move</span></a></li>
+<li class="menu-12459 menu-path-taxonomy-term-534 odd ">
+<li class="menu-8500 menuparent menu-path-taxonomy-term-298 even  last ">
+<a href="/ways-give-0" title="Alumni Giving" class=" menu-link depth-2 tid-298"><span class="menu-title">Alumni Giving</span></a><ul>
+<li class="menu-17129 menu-path-taxonomy-term-731 first  odd "><a href="/general-information/volunteer-opportunities" title="Volunteer Opportunities" class=" menu-link depth-3 tid-731"><span class="menu-title">Volunteer Opportunities</span></a></li>
+<li class="menu-8508 menu-path-taxonomy-term-306 even  last "><a href="/ways-give-0" title="Ways to Give" class=" menu-link depth-3 tid-306"><span class="menu-title">Ways to Give</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-8177 menuparent menu-path-taxonomy-term-207 even ">
+<a href="/featured-stories" title="News Center" class=" menu-link depth-1 tid-207"><span class="menu-title">News Center</span></a><ul>
+<li class="menu-8183 menuparent menu-path-taxonomy-term-213 first  odd ">
+<a href="/featured-stories" title="Featured Stories" class=" menu-link depth-2 tid-213"><span class="menu-title">Featured Stories</span></a><ul>
+<li class="menu-8182 menu-path-taxonomy-term-212 first  odd "><a href="/news" title="In the News" class=" menu-link depth-3 tid-212"><span class="menu-title">In the News</span></a></li>
+<li class="menu-20626 menu-path-taxonomy-term-1024 even ">
+<li class="menu-8186 menu-path-taxonomy-term-216 odd "><a href="/news-releases" title="News Releases" class=" menu-link depth-3 tid-216"><span class="menu-title">News Releases</span></a></li>
+<li class="menu-8181 menu-path-taxonomy-term-211 even  last "><a href="/innovator-magazine" title="Innovator Magazine" class=" menu-link depth-3 tid-211"><span class="menu-title">Innovator Magazine</span></a></li>
+</ul>
+</li>
+<li class="menu-8184 menuparent menu-path-taxonomy-term-214 even ">
+<a href="/video" title="Video" class=" menu-link depth-2 tid-214"><span class="menu-title">Video</span></a><ul>
+<li class="menu-8478 menu-path-taxonomy-term-272 first  odd ">
+<li class="menu-8482 menu-path-taxonomy-term-276 even "><a href="/executive-speakers" title="Executive Speakers" class=" menu-link depth-3 tid-276"><span class="menu-title">Executive Speakers</span></a></li>
+<li class="menu-11945 menu-path-taxonomy-term-529 odd "><a href="/faculty-spotlights-0" title="Faculty Spotlights" class=" menu-link depth-3 tid-529"><span class="menu-title">Faculty Spotlights</span></a></li>
+<li class="menu-8480 menu-path-taxonomy-term-274 even ">
+<li class="menu-8479 menu-path-taxonomy-term-273 odd ">
+<li class="menu-8481 menu-path-taxonomy-term-275 even ">
+<li class="menu-8483 menu-path-taxonomy-term-277 odd  last "><a href="/uc-davis-mba-alumni" title="UC Davis MBA Alumni" class=" menu-link depth-3 tid-277"><span class="menu-title">UC Davis MBA Alumni</span></a></li>
+</ul>
+</li>
+<li class="menu-8956 menu-path-taxonomy-term-498 odd ">
+<li class="menu-8185 menu-path-taxonomy-term-215 even ">
+<li class="menu-8923 menuparent menu-path-taxonomy-term-470 odd  last ">
+<a href="/socialgsm" title="Social@GSM" class=" menu-link depth-2 tid-470"><span class="menu-title">Social@GSM</span></a><ul>
+<li class="menu-20623 menu-path-taxonomy-term-1021 first  odd "><a href="/taxonomy/term/1021" title="Facebook" class=" menu-link depth-3 tid-1021"><span class="menu-title">Facebook</span></a></li>
+<li class="menu-20625 menu-path-taxonomy-term-1023 even "><a href="/taxonomy/term/1023" title="LinkedIn" class=" menu-link depth-3 tid-1023"><span class="menu-title">LinkedIn</span></a></li>
+<li class="menu-15416 menu-path-taxonomy-term-695 odd ">
+<li class="menu-20624 menu-path-taxonomy-term-1022 even  last "><a href="/taxonomy/term/1022" title="Twitter" class=" menu-link depth-3 tid-1022"><span class="menu-title">Twitter</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-8089 menuparent menu-path-taxonomy-term-119 odd ">
+<a href="/about-us" title="About Us" class=" menu-link depth-1 tid-119"><span class="menu-title">About Us</span></a><ul>
+<li class="menu-8541 menu-path-taxonomy-term-339 first  odd ">
+<li class="menu-8565 menuparent menu-path-taxonomy-term-363 even ">
+<a href="/uc-davis-mba-experience" title="The UC Davis MBA Experience" class=" menu-link depth-2 tid-363"><span class="menu-title">The UC Davis MBA Experience</span></a><ul>
+<li class="menu-8872 menu-path-taxonomy-term-418 first  odd "><a href="/accelerate-your-career-2" title="Accelerate your Career" class=" menu-link depth-3 tid-418"><span class="menu-title">Accelerate your Career</span></a></li>
+<li class="menu-12253 menu-path-taxonomy-term-531 even "><a href="/student-blogs" title="Student Blogs" class=" menu-link depth-3 tid-531"><span class="menu-title">Student Blogs</span></a></li>
+<li class="menu-18826 menu-path-taxonomy-term-823 odd "><a href="/international-study-trip" title="International Study Trip" class=" menu-link depth-3 tid-823"><span class="menu-title">International Study Trip</span></a></li>
+<li class="menu-8109 menu-path-taxonomy-term-139 even "><a href="/student-clubs" title="Student Clubs" class=" menu-link depth-3 tid-139"><span class="menu-title">Student Clubs</span></a></li>
+<li class="menu-8871 menu-path-taxonomy-term-417 odd "><a href="/student-life-housing" title="Student Life &amp; Housing" class=" menu-link depth-3 tid-417"><span class="menu-title">Student Life &amp; Housing</span></a></li>
+<li class="menu-8870 menu-path-taxonomy-term-416 even  last "><a href="/uc-davis-mba-edge-2" title="UC Davis MBA Edge" class=" menu-link depth-3 tid-416"><span class="menu-title">UC Davis MBA Edge</span></a></li>
+</ul>
+</li>
+<li class="menu-8542 menuparent menu-path-taxonomy-term-340 odd ">
+<a href="/our-locations" title="Our Locations" class=" menu-link depth-2 tid-340"><span class="menu-title">Our Locations</span></a><ul>
+<li class="menu-8868 menu-path-taxonomy-term-414 first  odd "><a href="/highlight/san-francisco-bay-area-mba-program-campus" title="Bay Area MBA Campus" class=" menu-link depth-3 tid-414"><span class="menu-title">Bay Area MBA Campus</span></a></li>
+<li class="menu-8867 menu-path-taxonomy-term-413 even "><a href="/highlight/gallagher-hall-state-art-leed-platinum-building" title="Full-Time MBA Campus" class=" menu-link depth-3 tid-413"><span class="menu-title">Full-Time MBA Campus</span></a></li>
+<li class="menu-8869 menu-path-taxonomy-term-415 odd  last "><a href="/highlight/sacramento-mba-program" title="Sacramento MBA Campus" class=" menu-link depth-3 tid-415"><span class="menu-title">Sacramento MBA Campus</span></a></li>
+</ul>
+</li>
+<li class="menu-8564 menuparent menu-path-taxonomy-term-362 even ">
+<a href="/staff-leadership" title="Staff &amp; Leadership" class=" menu-link depth-2 tid-362"><span class="menu-title">Staff &amp; Leadership</span></a><ul>
+<li class="menu-20752 menu-path-taxonomy-term-1039 first  odd ">
+<li class="menu-9032 menu-path-taxonomy-term-504 even "><a href="/deans-advisory-council" title="Dean’s Advisory Council" class=" menu-link depth-3 tid-504"><span class="menu-title">Dean’s Advisory Council</span></a></li>
+<li class="menu-8873 menu-path-taxonomy-term-419 odd ">
+<li class="menu-16693 menu-path-taxonomy-term-715 even "><a href="/career-opportunities" title="Career Opportunities" class=" menu-link depth-3 tid-715"><span class="menu-title">Career Opportunities</span></a></li>
+<li class="menu-8223 menu-path-taxonomy-term-255 odd  last "><a href="/staff-directory" title="Staff Directory" class=" menu-link depth-3 tid-255"><span class="menu-title">Staff Directory</span></a></li>
+</ul>
+</li>
+<li class="menu-8202 menuparent menu-path-taxonomy-term-232 odd ">
+<a href="/invest-school" title="Invest in the School" class=" menu-link depth-2 tid-232"><span class="menu-title">Invest in the School</span></a><ul>
+<li class="menu-17130 menu-path-taxonomy-term-732 first  odd "><a href="/general-information/volunteer-opportunities" title="Volunteer Opportunities" class=" menu-link depth-3 tid-732"><span class="menu-title">Volunteer Opportunities</span></a></li>
+<li class="menu-8204 menu-path-taxonomy-term-234 even  last "><a href="/ways-give" title="Ways to Give" class=" menu-link depth-3 tid-234"><span class="menu-title">Ways to Give</span></a></li>
+</ul>
+</li>
+<li class="menu-8848 menu-path-taxonomy-term-390 even ">
+<li class="menu-20469 menu-path-taxonomy-term-982 odd "><a href="/strategic-plan" title="Strategic Plan" class=" menu-link depth-2 tid-982"><span class="menu-title">Strategic Plan</span></a></li>
+<li class="menu-8096 menu-path-taxonomy-term-126 even  last "><a href="/brochures" title="Brochures" class=" menu-link depth-2 tid-126"><span class="menu-title">Brochures</span></a></li>
+</ul>
+</li>
+<li class="menu-12667 menuparent menu-path-taxonomy-term-537 even  last ">
+<a href="/students" title="Students" class=" menu-link depth-1 tid-537"><span class="menu-title">Current Students</span><span class="menu-description"><br class="accessible-break"></span></a><ul>
+<li class="menu-12776 menuparent menu-path-taxonomy-term-544 first  odd ">
+<a href="/my-program" title="My Program" class=" menu-link depth-2 tid-544"><span class="menu-title">My Program</span></a><ul>
+<li class="menu-12777 menu-path-taxonomy-term-545 first  odd "><a href="/full-time-mba-program" title="Full-Time MBA Program" class=" menu-link depth-3 tid-545"><span class="menu-title">Full-Time MBA Program</span></a></li>
+<li class="menu-12779 menu-path-taxonomy-term-547 even "><a href="/bay-area-mba-program" title="Bay Area MBA Program" class=" menu-link depth-3 tid-547"><span class="menu-title">Bay Area MBA Program</span></a></li>
+<li class="menu-12778 menu-path-taxonomy-term-546 odd "><a href="/sacramento-mba-program" title="Sacramento MBA Program" class=" menu-link depth-3 tid-546"><span class="menu-title">Sacramento MBA Program</span></a></li>
+<li class="menu-12771 menu-path-taxonomy-term-539 even "><a href="/mpac-program" title="MPAc Program" class=" menu-link depth-3 tid-539"><span class="menu-title">MPAc Program</span></a></li>
+<li class="menu-12772 menu-path-taxonomy-term-540 odd  last "><a href="/tech-minor" title="Tech Minor" class=" menu-link depth-3 tid-540"><span class="menu-title">Tech Minor</span></a></li>
+</ul>
+</li>
+<li class="menu-13189 menuparent menu-path-taxonomy-term-550 even ">
+<a href="/career-development-my-programs" title="Career Development" class=" menu-link depth-2 tid-550"><span class="menu-title">Career Development</span></a><ul>
+<li class="menu-20086 menu-path-taxonomy-term-916 first  odd  last "><a href="/career-development-my-programs" title="Career Development - My Programs" class=" menu-link depth-3 tid-916"><span class="menu-title">Career Development by Program</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-12774 menuparent menu-path-taxonomy-term-542 odd ">
+<a href="/current-student-resources" title="Current Student Resources" class=" menu-link depth-2 tid-542"><span class="menu-title">Student Resources</span><span class="menu-description"><br class="accessible-break"></span></a><ul>
+<li class="menu-20750 menu-path-taxonomy-term-1036 first  odd "><a href="/student-club-websites" title="Student Club Websites" class=" menu-link depth-3 tid-1036"><span class="menu-title">Club Website Instructions &amp; Guidelines</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-20605 menu-path-taxonomy-term-1004 even  last "><a href="/teaching-assistantships" title="Teaching Assistantships" class=" menu-link depth-3 tid-1004"><span class="menu-title">Teaching Assistantships</span></a></li>
+</ul>
+</li>
+<li class="menu-13190 menuparent menu-path-taxonomy-term-551 even ">
+<a href="/academic-calendar" title="Academic Calendar" class=" menu-link depth-2 tid-551"><span class="menu-title">Academic Calendar</span></a><ul>
+<li class="menu-13566 menu-path-taxonomy-term-620 first  odd  last "><a href="/course-schedule-calendar" title="Course Schedule - Calendar" class=" menu-link depth-3 tid-620"><span class="menu-title">Course Schedule &amp; Registration System</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-13191 menu-path-taxonomy-term-552 odd  last "><a href="/contact-3" title="Contact" class=" menu-link depth-2 tid-552"><span class="menu-title">Contact</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div></div> <!-- /#navbar-inner, /#navbar -->
+                      </div></div> <!-- /#main-inner, /#main -->
+      </div></div> <!-- /#page-inner, /#page -->
+      <div id="closure-blocks"><div class="region region-closure">
+<div id="block-dd_login-login" class="block block-dd_login region-odd even region-count-1 count-12"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Log in</span></h2>
+  
+  <div class="block-content content">
+    <form action="/home?destination=taxonomy%2Fterm%2F51" accept-charset="UTF-8" method="post" id="user-login-form">
+<div>
+<div class=" form-item type-textfield" id="edit-name-wrapper">
+ <label for="edit-name">E-mail or username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" tabindex="1" class="form-text required">
+</div>
+<div class=" form-item type-password" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" tabindex="2" class="form-text required">
+</div>
+<div class=" form-item type-checkbox" id="edit-remember-me-wrapper">
+ <label class="option" for="edit-remember-me"><input type="checkbox" name="remember_me" id="edit-remember-me" value="1" checked tabindex="3" class="form-checkbox"> Remember me</label>
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="Log in" tabindex="4" class="form-submit"><div class="item-list"><ul>
+<li class="first last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div>
+<input type="hidden" name="form_build_id" id="form-xvMp-eH6mFSzs5FimrPrpnPRu33zMolHU2St7tU3PVQ" value="form-xvMp-eH6mFSzs5FimrPrpnPRu33zMolHU2St7tU3PVQ"><input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block">
+</div>
+</form>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-command_menu" class="block block-digitaldcore region-even odd region-count-2 count-13"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Commands</span></h2>
+  
+  <div class="block-content content">
+    <div class="menu-block-dcore menu-name-dd-cmd parent-mlid-0 menu-level-1">
+  <ul class="menu">
+<li class="leaf first menu-mlid-7895"><a href="/help" title="" class=" menu-help-center help depth-1">Help</a></li>
+<li class="leaf last menu-mlid-7896"><a href="/user/login" title="" class=" menu-login user-login depth-1">Log in</a></li>
+</ul>
+</div>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-9" class=" bg-c14 nhlc-c8 mt-40 imt-20 ip-none pod-mode te-title-100 te-hide-subtitle  dd block block-views_blocks region-odd even region-count-3 count-14 footer-links views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+        <div class="view-header">
+      <div class="footer-tabs">
+<div class="footer-tabs-inner">
+<span class="show-t366 active">UC Davis GSM</span> 
+<span class="show-t367">Apply</span> 
+<span class="show-t368">Event Calendar</span> 
+<span class="show-t369">Current Students</span> 
+</div>
+</div>
+
+<div id="gsm-footer-container">
+<div id="gsm-footer-logo"><a href="http://gsm.ucdavis.edu/" title="UC Davis Graduate School of Management"></a></div>
+</div>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-5936-teaser" class="node node-teaser node-type-post node-5936 pt-show-social-block no-event-date t56 wt56 wt0 t369 wt369 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/student-clubs" title="Student Clubs"><span class="title">Student Clubs</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Mar 27, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/student-clubs"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-2153-teaser" class="node node-teaser node-type-post node-2153 pt-show-social-block no-event-date t56 wt56 wt0 t368 wt368 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-admissions-events" title="Admissions Events"><span class="title">Admissions Events</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 28, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-admissions-events"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-3373-teaser" class="node node-teaser node-type-post node-3373 pt-show-social-block no-event-date t56 wt56 wt0 t368 wt368 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/alumni" title="Alumni Events"><span class="title">Alumni Events</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Mar 27, 2012</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/alumni"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-3371-teaser" class="node node-teaser node-type-post node-3371 pt-show-social-block no-event-date t56 wt56 wt0 t368 wt368 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/business-partner-events" title="Business Partner Events"><span class="title">Business Partner Events</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Mar 27, 2012</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/business-partner-events"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-2395-teaser" class="node node-teaser node-type-post node-2395 pt-show-social-block no-event-date t56 wt56 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://give.ucdavis.edu/GSM1" title="Make a Gift"><span class="title">Make a Gift</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Nov 10, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://give.ucdavis.edu/GSM1"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-2194-teaser" class="node node-teaser node-type-post node-2194 pt-show-social-block no-event-date t56 wt56 wt0 t368 wt368 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/calendar" title="Full Calendar"><span class="title">Full Calendar</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 29, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/calendar"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-2091-teaser" class="node node-teaser node-type-post node-2091 pt-show-social-block no-event-date t56 wt56 wt0 t367 wt367 wt366 wt51 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://app.applyyourself.com/AYApplicantLogin/ApplicantConnectLogin.asp?id=davis-gsb" title="Apply Online"><span class="title">Apply Online</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 27, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://app.applyyourself.com/AYApplicantLogin/ApplicantConnectLogin.asp?id=davis-gsb"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-1812-teaser" class="node node-teaser node-type-post node-1812 pt-show-social-block no-event-date t56 wt56 wt0 t367 wt367 wt366 wt51 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/daytime-mba-costs-financial-aid" title="Financial Aid"><span class="title">Financial Aid</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 13, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/daytime-mba-costs-financial-aid"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-2094-teaser" class="node node-teaser node-type-post node-2094 pt-show-social-block no-event-date t56 wt56 wt0 t367 wt367 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-admissions-events" title="Information Sessions"><span class="title">Information Sessions</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 27, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-admissions-events"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-2093-teaser" class="node node-teaser node-type-post node-2093 pt-show-social-block no-event-date t56 wt56 wt0 t367 wt367 wt366 wt51 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/overview/uc-davis-graduate-business-program-brochures" title="Download a Brochure"><span class="title">Download a Brochure</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 27, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/overview/uc-davis-graduate-business-program-brochures"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-1727-teaser" class="node node-teaser node-type-post node-1727 pt-show-social-block no-event-date t56 wt56 wt0 t369 wt369 wt366 wt51 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/form/contact-us" title="Contact"><span class="title">Contact</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Aug 25, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/form/contact-us"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-1811-teaser" class="node node-teaser node-type-post node-1811 pt-show-social-block no-event-date t56 wt56 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/our-locations" title="Directions"><span class="title">Directions</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 13, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/our-locations"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div id="node-1813-teaser" class="node node-teaser node-type-post node-1813 pt-show-social-block no-event-date t56 wt56 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/about-us" title="About Us"><span class="title">About Us</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 13, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/about-us"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-1814-teaser" class="node node-teaser node-type-post node-1814 pt-show-social-block no-event-date t56 wt56 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-application-center" title="Application Deadlines"><span class="title">Application Deadlines</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 13, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-application-center"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-2318-teaser" class="node node-teaser node-type-post node-2318 pt-show-social-block no-event-date t56 wt56 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/general-information/terms-and-conditions" title="Terms and Conditions"><span class="title">Terms and Conditions</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Oct 20, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/general-information/terms-and-conditions"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-16 views-row-even">
+    <div id="node-4665-teaser" class="node node-teaser node-type-post node-4665 pt-show-social-block no-event-date t56 wt56 wt0 t366 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://smartsite.ucdavis.edu/xsl-portal" title="SmartSite"><span class="title">SmartSite</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Aug 16, 2012</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://smartsite.ucdavis.edu/xsl-portal"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-17 views-row-odd">
+    <div id="node-4863-teaser" class="node node-teaser node-type-post node-4863 pt-show-social-block no-event-date t56 wt56 wt0 t369 wt369 wt366 wt51 wt0 access-normal no-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/my-program" title="My Programs"><span class="title">My Programs</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 4, 2012</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/my-program"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-18 views-row-even views-row-last">
+    <div id="node-682-teaser" class="node node-teaser node-type-post node-682 pt-show-social-block no-event-date t56 wt56 wt0 t369 wt369 wt366 wt51 wt0 t366 wt366 wt51 wt0 access-normal has-more pt56 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/footer-link/website-feedback" title="Website Feedback"><span class="title">Website Feedback</span>
+      <br class="accessible-break"><span class="subtitle">Let us know how we're doing</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Apr 29, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/footer-link/website-feedback"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-dd_twitter_feed-twitter_feed" class="block block-dd_twitter_feed region-even odd region-count-4 count-15"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Twitter Feed</span></h2>
+  
+  <div class="block-content content">
+    <div class="dd-twitter-feed">
+  <div class="dd-twitter-feed-header">
+    <a id="gsm-twitter-logo" href="http://twitter.com/ucdavismba" title="UCDavisMBA on Twitter"></a>
+  </div>
+  <div class="dd-twitter-feed-loader">
+    <span class="dd-twitter-feed-msg">Loading tweets...</span>
+  </div>
+  <div class="dd-twitter-feed-tweets"></div>
+  <div class="dd-twitter-feed-footer">
+    <a id="gsm-twitter-follow" href="http://twitter.com/ucdavismba">Follow Us on Twitter</a>
+  </div>
+</div>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-16" class=" s-img-old  dd block block-views_blocks region-odd even region-count-5 count-16  views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-9932-teaser" class="node node-teaser node-type-post node-9932 pt-show-date pt-show-post-type pt-show-social-block no-event-date t58 wt58 wt2 wt0 t213 wt213 wt207 wt0 t216 wt216 wt213 wt207 wt0 t82 wt82 wt51 wt0 t364 wt364 wt370 wt122 wt0 t389 wt389 wt51 wt0 access-normal has-image has-more pt58 has-5-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="News Releases">News Release</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-part-time-mba-ranked-nations-top-9" title="UC Davis Part-Time MBA Ranked in Nation’s Top 9%"><span class="title">UC Davis Part-Time MBA Ranked in Nation’s Top 9%</span>
+      <br class="accessible-break"><span class="subtitle">Fourth Consecutive Year among U.S News &amp; World Report's Premier Programs</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/news-release/uc-davis-part-time-mba-ranked-nations-top-9" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/part-time-us-news-graphic-800.jpg" alt="Image of UC Davis Part-Time MBA Ranked in Nation’s Top 9%" title="" width="172" height="97"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Mar 23, 2015</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/mba-program-rankings">MBA Program Rankings</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>(Davis, CA) — The UC Davis Part-Time MBA program offered in Sacramento and the San Francisco Bay Area is ranked among the top 9% in the U.S., according to U.S. News &amp; World Report’s latest graduate business school rankings.</p>
+
+<p>At No. 29, this is the fourth consecutive year the UC Davis Part-Time MBA program is among the top AACSB International-accredited part-time MBA programs surveyed. This year, there were 323 part-time MBA programs surveyed.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-part-time-mba-ranked-nations-top-9"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-9895-teaser" class="node node-teaser node-type-post node-9895 pt-show-date pt-show-post-type pt-show-social-block no-event-date t58 wt58 wt2 wt0 t213 wt213 wt207 wt0 t212 wt212 wt213 wt207 wt0 t216 wt216 wt213 wt207 wt0 t364 wt364 wt370 wt122 wt0 t389 wt389 wt51 wt0 access-normal has-image has-more pt58 has-5-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="News Releases">News Release</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-full-time-mba-ranked-among-nations-premier-programs-20th-consecutive-year-0" title="UC Davis Full-Time MBA Ranked among Nation’s Premier Programs for 20th Consecutive Year"><span class="title">UC Davis Full-Time MBA Ranked among Nation’s Premier Programs for 20th Consecutive Year</span>
+      <br class="accessible-break"><span class="subtitle">MBA Programs among Top 10% in U.S. <br> Record Salary and Bonus</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/news-release/uc-davis-full-time-mba-ranked-among-nations-premier-programs-20th-consecutive-year-0" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/top10-20yrs-flat-unbranded.jpg" alt="Image of UC Davis Full-Time MBA Ranked among Nation’s Premier Programs for 20th Consecutive Year " title="" width="172" height="115"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Mar 10, 2015</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/mba-program-rankings">MBA Program Rankings</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>(Davis, CA) — The UC Davis Graduate School of Management’s Full-Time MBA program is ranked among the premier business schools in the nation for the 20th consecutive year, according to U.S. News &amp; World Report’s latest graduate business school rankings released today.</p>
+
+<p>U.S. News’ latest ranking places the Full-Time MBA program at No. 48, placing it among the top 10% of the 464 Association to Advance Collegiate Schools of Business International’s accredited full-time MBA programs surveyed.</p>
+
+<p>Key statistics from the School’s Full-Time MBA ranking include:</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-full-time-mba-ranked-among-nations-premier-programs-20th-consecutive-year-0"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-9692-teaser" class="node node-teaser node-type-post node-9692 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t954 wt954 wt147 wt0 t211 wt211 wt213 wt207 wt0 t389 wt389 wt51 wt0 access-normal has-image no-more pt257 has-3-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://innovator.gsm.ucdavis.edu/big-data" title="Big Data Means Big Opportunity"><span class="title">Big Data Means Big Opportunity</span>
+      <br class="accessible-break"><span class="subtitle">Big data has forever altered the way businesses operate, from marketing and supply chains, to competitive strategy and human resources. Today's big challenge: Harnessing the flood.</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://innovator.gsm.ucdavis.edu/big-data" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/big-data-menu.jpg" alt="Image of Big Data Means Big Opportunity" title="" width="172" height="103"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Jan 26, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link comment-add link-comment first"><a href="/comment/reply/9692#comment-form" title="Add a new comment to this page.">Add new comment</a></li>
+<li class="link link-read-more last"><span><a href="http://innovator.gsm.ucdavis.edu/big-data"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-9687-teaser" class="node node-teaser node-type-post node-9687 pt-show-date pt-show-post-type pt-show-social-block no-event-date t58 wt58 wt2 wt0 t213 wt213 wt207 wt0 t828 wt828 wt827 wt479 wt139 wt363 wt119 wt0 t1042 wt1042 wt1041 wt829 wt827 wt479 wt139 wt363 wt119 wt0 t863 wt863 wt830 wt827 wt479 wt139 wt363 wt119 wt0 t216 wt216 wt213 wt207 wt0 t830 wt830 wt827 wt479 wt139 wt363 wt119 wt0 t1041 wt1041 wt829 wt827 wt479 wt139 wt363 wt119 wt0 t389 wt389 wt51 wt0 access-normal has-image has-more pt58 has-8-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="News Releases">News Release</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/uc-davis-graduate-school-management-partners-lawrence-livermore-and-sandia-national" title="UC Davis Graduate School of Management partners with Lawrence Livermore and Sandia National Labs to drive technologies from lab to market"><span class="title">UC Davis Graduate School of Management partners with Lawrence Livermore and Sandia National Labs to drive technologies from lab to market</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/news-release/uc-davis-graduate-school-management-partners-lawrence-livermore-and-sandia-national" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/llnl.jpg" alt="Image of UC Davis Graduate School of Management partners with Lawrence Livermore and Sandia National Labs to drive technologies from lab to market  " title="" width="172" height="94"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Jan 22, 2015</span> <span class="meta-item meta-profile meta-profile-link"><a href="/entrepreneurship">Child Family Institute for Innovation and Entrepreneurship</a></span> <span class="last meta-item meta-profile meta-profile-link"><a href="/faculty/andrew-b-hargadon">Andrew B. Hargadon</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>(Davis, Calif.) – With a joint goal of speeding the transfer of new technologies from the laboratory to the commercial marketplace, the UC Davis Graduate School of Management, <a href="http://www.llnl.gov/">Lawrence Livermore National Laboratory</a> and <a href="http://www.sandia.gov/">Sandia National Laboratories</a> have announced a new partnership for researchers to develop their entrepreneurial skills.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/uc-davis-graduate-school-management-partners-lawrence-livermore-and-sandia-national"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-9561-teaser" class="node node-teaser node-type-post node-9561 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t180 wt180 wt176 wt0 t389 wt389 wt51 wt0 access-normal has-image has-more pt257 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/spotlight-story/vickie-sherman" title="Vickie Sherman MBA 13 Finds Her Passion, Her Career—and Herself"><span class="title">Vickie Sherman MBA 13 Finds Her Passion, Her Career—and Herself</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/spotlight-story/vickie-sherman" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/sherman-vickie_029_web.jpg" alt="Image of Vickie Sherman MBA 13 Finds Her Passion, Her Career—and Herself" title="" width="172" height="126"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Dec 16, 2014</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <h4>What opportunities, decisions, events have shaped your professional life?</h4>
+
+<p>My career path has been a climb across a jungle gym rather than a tangent up a corporate ladder. As a child, I used to thumb through the three-inch JCPenney catalogue, picking out the professional women who I would grow to be. I wanted to rule the world from a corner office in a suit and heels. I wanted to shed my humble origins and become Corporate Barbie.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/spotlight-story/vickie-sherman"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-5848-teaser" class="node node-teaser node-type-post node-5848 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t389 wt389 wt51 wt0 t447 wt447 wt198 wt194 wt0 access-normal has-image has-more pt257 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/spotlight-story/mba-student-consultants-make-impact" title="MBA Student Consultants Make an IMPACT"><span class="title">MBA Student Consultants Make an IMPACT</span>
+      <br class="accessible-break"><span class="subtitle">Projects Put Business Needs Front and Center</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/spotlight-story/mba-student-consultants-make-impact" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/screen_shot_2013-03-14_at_4.27.28_pm_0.png" alt="Image of MBA Student Consultants Make an IMPACT" title="Dialing Up Digital: MBA students (left to right) Tiffany Tan, Evan Benway, Sherry Si, Dylan Fiesel and Dani Morgan are working with AT&amp;T on a plan to transition from direct mail to digital marketing for AT&amp;T Wireless products." width="172" height="115"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">Mar 15, 2013</span> <span class="meta-item meta-profile meta-profile-link"><a href="/mba-consulting-center">MBA Consulting Center</a></span> <span class="last meta-item meta-profile meta-profile-link"><a href="/clients-past-projects">Corporate Sponsors and Projects</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>Agilent Technologies’ Electronic Measurement Group is a $3.6 billion business that over the past decade has seen a dramatic shift in its customer base from U.S., and Western European customers to predominantly Asia-based customers. Today, the majority of the division’s revenues are generated outside of the U.S., with an increasing concentration in China.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/spotlight-story/mba-student-consultants-make-impact"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd views-row-last">
+    <div id="node-2052-teaser" class="node node-teaser node-type-post node-2052 pt-show-date pt-show-post-type pt-show-social-block no-event-date t257 wt257 wt2 wt0 t479 wt479 wt139 wt363 wt119 wt0 t339 wt339 wt119 wt0 t389 wt389 wt51 wt0 access-normal has-image no-more pt257 has-3-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Spotlight Stories">Spotlight Story</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/mba-ambassadors" title="Meet Our UC Davis MBA Ambassadors"><span class="title">Meet Our UC Davis MBA Ambassadors</span>
+      <br class="accessible-break"><span class="subtitle">Student leaders share the inside scoop about the UC Davis MBA experience</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/mba-ambassadors" rel=""><img src="http://gsm.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/2476_0.png" alt="Image of Meet Our UC Davis MBA Ambassadors " title="" width="172" height="113"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">Sep 26, 2011</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/mba-ambassadors"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+</div></div>
+    <script type="text/javascript" src="/sites/main/files/advagg_js/js_19ecf24c5368f0cb90e1e64dcac885b4_5.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"51e9ee0927","applicationID":"3044101","transactionName":"bwBRZUoEC0NXUEEKXlZKcERLEQpdGX1UFWVdF14eSAQCVQ==","queueTime":0,"applicationTime":577,"atts":"Q0dGEwIeR15XRWEGQ1UxVlxICQREUxEPQXdKCl1FGBUEV1MRGUFESwBBYkwEEUVFEQ9BUFYKXUhVChBDFB8XEFBWAVFeQCwBEgwRUhBcZxVBXlwQBkRfXFtBTBRHUhMCHhhN","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com/nr-515.min.js"}</script>
+</body>
+</html>

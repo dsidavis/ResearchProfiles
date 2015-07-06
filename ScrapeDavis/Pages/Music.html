@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Music - UC Davis Arts</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMFV1NVGwAAUFVTBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:19,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:19,2:20,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:20,2:19,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:20,2:19,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:20,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&u&&u.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=l.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document,f="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};u[f]?(u[f]("DOMContentLoaded",o,!1),c[f]("load",n,!1)):(u[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:18,handle:"D5DuLP"}],18:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],19:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],20:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:19,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="/sites/main/files/dtheme_favicon.ico" type="image/x-icon">
+<meta name="og:site_name" content="Music">
+<meta name="og:title" content="UC Davis Concert Band Program - Music">
+<meta name="og:description" content="Pete Nowlen, director">
+<meta name="og:type" content="article">
+<meta name="og:image" content="http://arts.ucdavis.edu/sites/main/files/imagecache/medium/main-images/causeway-177.jpg">
+<meta name="og:url" content="http://arts.ucdavis.edu/concertband">
+<meta name="og:video" content="http://www.youtube.com/v/-V_JfRfY-og">
+<meta name="og:video:secure_url" content="https://www.youtube.com/v/-V_JfRfY-og">
+<meta name="og:video:type" content="application/x-shockwave-flash">
+<meta name="og:video:width" content="398">
+<meta name="og:video:height" content="259">
+<link rel="canonical" href="http://arts.ucdavis.edu/music">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_2a228025768e313d9fd167b38865d41b_30.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_cbab193ae603649952e779e7ae6cb9a4_29.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_4ee8256110334ad46b3edf8efd355380_1.css">
+<link type="text/css" rel="stylesheet" media="print" href="/sites/main/files/advagg_css/css_138bd610de57bd633c34ded8b230ac79_30.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/dtheme-direct.css?Z">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/ie.css?Z" />
+<![endif]--><!--[if IE 8]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie8.css?Z" />
+<![endif]--><!--[if IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie7.css?Z" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/ie7.css?Z" />
+<![endif]--><!--[if lt IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/ie6.css?Z" />
+<![endif]--><script type="text/javascript" src="/sites/main/files/advagg_js/js_ecf2f203ee09399ff1a4a43706bc1415_22.js"></script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"/","googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"lightbox2":{"rtl":0,"file_path":"/(\w\w/)sites/main/files","default_image":"/sites/all/modules/lightbox2/images/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":1,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":1,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press <a href="#" onclick="hideLightbox(); return FALSE;"><kbd>x to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":640,"iframe_height":385,"iframe_border":0,"enable_video":0},"nice_menus_options":{"delay":800,"speed":"fast"},"ddCaptcha":1971,"ddPoll":{"resultsURI":"/sites/all/modules/_dd/dd_poll/dd_poll_results.php"},"ddTwitterFeed":{"getTweetsURI":"/dd_twitter_feed/get_tweets"},"extlink":{"extTarget":"_blank","extClass":"ext","extSubdomains":1,"extExclude":"","extInclude":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto"},"cssInit":{"node.css":true,"defaults.css":true,"system.css":true,"system-menus.css":true,"user.css":true,"content-module.css":true,"ctools.css":true,"date.css":true,"datepicker.css":true,"jquery.timeentry.css":true,"filefield.css":true,"lightbox_alt.css":true,"logintoboggan.css":true,"nice_menus.css":true,"nice_menus_default.css":true,"dd_captcha.css":true,"dd_classes.experimental.css":true,"dd_classes.do_timeout.css":true,"dd_classes.infinity_carousel.css":true,"dd_classes.gallery.css":true,"dd_classes.calfilters.css":true,"dd_create.css":true,"compiled-classes.css":true,"dd_login.css":true,"dd_poll.css":true,"dd_sharethis.css":true,"dd_twitter_feed.css":true,"dd_user_roles.css":true,"farbtastic.css":true,"calendar.css":true,"extlink.css":true,"fieldgroup.css":true,"views.css":true,"dtheme-direct.css":true,"html-elements.css":true,"tabs.css":true,"messages.css":true,"block-editing.css":true,"wireframes.css":true,"zen.css":true,"dmodel-layout.css":true,"dmodel.css":true,"dtheme.css":true},"jsInit":{"misc/jquery.js":true,"misc/drupal.js":true,"sites/all/modules/google_analytics/googleanalytics.js":true,"sites/all/modules/nice_menus/superfish/js/superfish.js":true,"sites/all/modules/nice_menus/superfish/js/jquery.bgiframe.min.js":true,"sites/all/modules/nice_menus/superfish/js/jquery.hoverIntent.minified.js":true,"sites/all/modules/nice_menus/nice_menus.js":true,"sites/all/modules/_dd/dd_captcha/dd_captcha.js":true,"sites/all/modules/_dd/dd_classes/dd_classes.js":true,"sites/all/modules/_dd/dd_classes/plugins/do_timeout/dd_classes.do_timeout.js":true,"sites/all/modules/_dd/dd_classes/plugins/infinity_carousel/dd_classes.infinity_carousel.js":true,"sites/all/modules/_dd/dd_classes/plugins/gallery/dd_classes.gallery.js":true,"sites/all/modules/_dd/dd_classes/plugins/calfilters/dd_classes.calfilters.js":true,"sites/all/modules/_dd/dd_create/dd_create.js":true,"sites/all/modules/_dd/dd_login/dd_login.js":true,"sites/all/modules/_dd/dd_poll/dd_poll.js":true,"sites/all/modules/_dd/dd_sharethis/dd_sharethis.js":true,"sites/all/modules/_dd/dd_twitter_feed/dd_twitter_feed.js":true,"sites/all/modules/extlink/extlink.js":true,"sites/all/modules/_dd/digitaldcore/digitaldcore.js":true,"sites/all/modules/_dd/digitaldcore/modernizr.js":true,"sites/all/modules/_dd/digitaldcore/browser-detect.js":true,"sites/all/modules/_dd/digitaldcore/dd-search.js":true,"sites/all/modules/jquery_ui/jquery.ui/ui/minified/ui.core.min.js":true,"sites/all/modules/jquery_ui/jquery.ui/ui/minified/ui.dialog.min.js":true,"sites/all/modules/_dd/digitaldcore/digitaldcore.monkey-patch.js":true,"sites/all/themes/dmodel/dmodel.js":true,"sites/default/themes/dtheme/dtheme.js":true}});
+//--><!]]>
+</script><link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/5aaa7ff0-3140-4d55-9faa-b4733c0a6b42.css">
+</head>
+<body class="not-front not-logged-in no-sidebars page-music section-music dd-cache user-not-admin live launched tt77 t77 wt77 wt0 ttv3 ttv-alt-1 t role-anonymous-user role-not-admin microsite microsite-77">
+        <div class="accessibility-utility-links">
+<a id="navigation-top"></a>
+          </div>
+        <div id="page" class="region-page no-sidebars  col4 dd"><div id="page-inner">
+    <div id="header"><div id="header-inner" class="clear-block">
+              <div id="theme-logo">
+                      <div class="logo"><a href="/" title="Home" rel="home"><img src="/sites/default/themes/dtheme/logo.png" alt="Home"></a></div>
+                                              <div class="site-name">
+                <a href="/" title="Home" rel="home">UC Davis Arts</a>
+              </div>
+                                                  </div> <!-- /#page-logo -->
+                    <div id="header-blocks" class="region region-header">
+          <div id="block-digitaldcore-logo" class="block block-digitaldcore region-odd odd region-count-1 count-1"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <a href="/music" title="UC Davis Arts home page" id="block-logo" class="active"><span class="logo-text">UC Davis Arts</span></a>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-8" class=" nhlc-c9 nhlh-c9 te-bpad-0 te-bm-0 pod-mode te-title-89 te-t-f1 te-hide-subtitle  dd block block-views_blocks region-even even region-count-2 count-2 header-links views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-3025-teaser" class="node node-teaser node-type-post node-3025 pt-show-social-block no-event-date t102 wt102 wt0 t90 wt90 wt0 t91 wt91 wt0 t75 wt75 wt0 t76 wt76 wt0 t77 wt77 wt0 t87 wt87 wt0 t213 wt213 wt0 access-normal no-more pt102 has-7-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Header links">Header link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/calendar" title="Calendar of Events"><span class="title">Calendar of Events</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">June 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/calendar"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-2282-teaser" class="node node-teaser node-type-post node-2282 pt-show-social-block no-event-date t102 wt102 wt0 access-normal no-more pt102 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Header links">Header link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/administrative-services-and-resources" title="Administrative Services"><span class="title">Administrative Services</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/administrative-services-and-resources"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-2283-teaser" class="node node-teaser node-type-post node-2283 pt-show-social-block no-event-date t102 wt102 wt0 t113 wt113 wt0 access-normal no-more pt102 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Header links">Header link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/room-reservations" title="Room Reservations"><span class="title">Room Reservations</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/room-reservations"><span class="read-more-text">Read more</span></a></span></li>
+<li class="link link-related link-related-cows-reservation-calendar last"><span><a href="http://cows.ucdavis.edu/taag"><span class="link-text">COWS reservation calendar</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    <div id="node-3351-teaser" class="node node-teaser node-type-post node-3351 pt-show-social-block no-event-date t102 wt102 wt0 access-normal no-more pt102 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Header links">Header link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/" title="Home: UC Davis Arts"><span class="title">Home: UC Davis Arts</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">September 9, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-search" class="block block-digitaldcore region-odd odd region-count-3 count-3  search-keywords  "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div id="dd-search" class="dd-search">
+<form action="/music" accept-charset="UTF-8" method="post" id="faceted-search-ui-form-1" class=" dd-search-clear">
+<div>
+<div class="dd-search-keywords">
+<div title="Search keywords" class=" form-item type-textfield" id="edit-keywords-wrapper">
+ <input type="text" maxlength="255" name="keywords" id="edit-keywords" size="20" value="" title="Search keywords" class="form-text">
+</div>
+</div>
+<input type="hidden" name="stage" id="edit-stage" value="results"><input type="hidden" name="facet-key" id="edit-facet-key" value=""><input type="hidden" name="facet-id" id="edit-facet-id" value=""><input type="hidden" name="facet-sort" id="edit-facet-sort" value=""><div class="dd-search-submit">
+<button class="dd-search-submit-button" type="submit">Search</button><div class="legacy-button"><input type="submit" name="op" id="edit-submit" value="Search" class="form-submit"></div>
+</div>
+<div class="dd-search-more"><a href="/find/" class="faceted-search-more">More options</a></div>
+<input type="hidden" name="form_build_id" id="form-codrz4tEcRwfhaBYI3ACG-TpeKP-9qGjeJlgg3VVLoY" value="form-codrz4tEcRwfhaBYI3ACG-TpeKP-9qGjeJlgg3VVLoY"><input type="hidden" name="form_id" id="edit-faceted-search-ui-form-1" value="faceted_search_ui_form_1"><input type="hidden" name="box_text" id="edit-box-text" value="">
+</div>
+</form>
+</div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-nice_menus-1" class=" mlcd1-c1 mlhd1-c2 mlc-c1 mlh-c2  dd block block-nice_menus region-even even region-count-4 count-4 navbar "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <ul class="nice-menu nice-menu-down" id="nice-menu-1">
+<li class="menu-8703 menuparent mt-169  first  odd  depth-1">
+<a href="/music-about-contact" title="Music About / Contact" class=" menu-link depth-1 tid-169"><span class="menu-title">About</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-2">
+<li class="menu-9450 mt-396  first  odd  depth-2"><a href="/music-library" title="Music Library" class=" menu-link depth-2 tid-396"><span class="menu-title">Library</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11868 mt-621  even  depth-2"><a href="/music-buildings" title="Music Buildings" class=" menu-link depth-2 tid-621"><span class="menu-title">Buildings</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-12552 mt-666  odd  depth-2">
+<li class="menu-9245 mt-363  even  depth-2">
+<li class="menu-8706 mt-172  odd  depth-2"><a href="/music-resources" title="Music Resources" class=" menu-link depth-2 tid-172"><span class="menu-title">Resources</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-12829 mt-674  even  depth-2"><a href="/musicarchives" title="MusicArchives" class=" menu-link depth-2 tid-674"><span class="menu-title">Archives</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9623 menuparent mt-461  odd  last  depth-2"><ul class="depth-3">
+<li class="menu-11407 mt-611  first  odd  depth-3"><a href="/anderson" title="Anderson" class=" menu-link depth-3 tid-611"><span class="menu-title">Leroy Anderson (1908–75)</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9755 mt-496  even  depth-3"><a href="/js-bach" title="JS Bach" class=" menu-link depth-3 tid-496"><span class="menu-title">JS Bach (1685–1750)</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9779 mt-520  odd  depth-3"><a href="/bartok" title="Bartók" class=" menu-link depth-3 tid-520"><span class="menu-title">Béla Bartók (1881–1945)</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9741 mt-482  even  depth-3"><a href="/beethoven" title="Beethoven" class=" menu-link depth-3 tid-482"><span class="menu-title">Ludwig van Beethoven (1770–1827)</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9747 mt-488  odd  depth-3"><a href="/alban-berg-1885-1935" title="Alban Berg (1885–1935)" class=" menu-link depth-3 tid-488"><span class="menu-title">Berg</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9777 mt-518  even  depth-3"><a href="/hector-berlioz-1803-69" title="Hector Berlioz (1803–69)" class=" menu-link depth-3 tid-518"><span class="menu-title">Berlioz</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9772 mt-513  odd  depth-3"><a href="/leonard-bernstein-1918-90" title="Leonard Bernstein (1918–90)" class=" menu-link depth-3 tid-513"><span class="menu-title">Bernstein</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9778 mt-519  even  depth-3"><a href="/georges-bizet-1838-75" title="Georges Bizet (1838–75)" class=" menu-link depth-3 tid-519"><span class="menu-title">Bizet</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9768 mt-509  odd  depth-3"><a href="/johannes-brahms-1833-97" title="Johannes Brahms (1833–97)" class=" menu-link depth-3 tid-509"><span class="menu-title">Brahms</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9757 mt-498  even  depth-3"><a href="/benjamin-britten-1913-76" title="Benjamin Britten (1913–76)" class=" menu-link depth-3 tid-498"><span class="menu-title">Britten</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9774 mt-515  odd  depth-3"><a href="/aaron-copland-1900-90" title="Aaron Copland (1900–90)" class=" menu-link depth-3 tid-515"><span class="menu-title">Copland</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9742 mt-483  even  depth-3"><a href="/antonin-dvorak-1841-1904" title="Antonín Dvorák (1841–1904)" class=" menu-link depth-3 tid-483"><span class="menu-title">Dvorák</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9756 mt-497  odd  depth-3"><a href="/edward-elgar-1857-1934" title="Edward Elgar (1857–1934)" class=" menu-link depth-3 tid-497"><span class="menu-title">Elgar</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9743 mt-484  even  depth-3"><a href="/manuel-de-falla-1876-1946" title="Manuel de Falla (1876–1946)" class=" menu-link depth-3 tid-484"><span class="menu-title">Falla</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9748 mt-489  odd  depth-3"><a href="/gabriel-faure-1845-1924" title="Gabriel Fauré (1845–1924)" class=" menu-link depth-3 tid-489"><span class="menu-title">Fauré</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9749 mt-490  even  depth-3"><a href="/george-gershwin-1898-1937" title="George Gershwin (1898–1937)" class=" menu-link depth-3 tid-490"><span class="menu-title">Gershwin</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9746 mt-487  odd  depth-3"><a href="/mikhail-glinka-1804-57" title="Mikhail Glinka (1804–57)" class=" menu-link depth-3 tid-487"><span class="menu-title">Glinka</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9744 mt-485  even  depth-3"><a href="/edvard-grieg-1843-1907" title="Edvard Grieg (1843–1907)" class=" menu-link depth-3 tid-485"><span class="menu-title">Grieg</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9745 mt-486  odd  depth-3"><a href="/george-frideric-handel-1685-1759" title="George Frideric Handel (1685–1759)" class=" menu-link depth-3 tid-486"><span class="menu-title">Handel</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9776 mt-517  even  depth-3"><a href="/franz-joseph-haydn-1732-1809" title="Franz Joseph Haydn (1732–1809)" class=" menu-link depth-3 tid-517"><span class="menu-title">Haydn</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9874 mt-525  odd  depth-3"><a href="/charles-ives-1874-1954" title="Charles Ives (1874–1954)" class=" menu-link depth-3 tid-525"><span class="menu-title">Ives</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9875 mt-526  even  depth-3"><a href="/franz-liszt1811-86" title="Franz Liszt(1811–86)" class=" menu-link depth-3 tid-526"><span class="menu-title">Liszt</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9775 mt-516  odd  depth-3"><a href="/jean-sibelius-1865-1957" title="Jean Sibelius (1865–1957)" class=" menu-link depth-3 tid-516"><span class="menu-title">Sibelius</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9770 mt-511  even  depth-3"><a href="/antonio-vivaldi-1678-1741" title="Antonio Vivaldi (1678–1741)" class=" menu-link depth-3 tid-511"><span class="menu-title">Vivaldi</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9769 mt-510  odd  depth-3"><a href="/richard-wagner-1813-83" title="Richard Wagner (1813–83)" class=" menu-link depth-3 tid-510"><span class="menu-title">Wagner</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9733 mt-474  even  depth-3"><a href="/composers" title="A Composers" class=" menu-link depth-3 tid-474"><span class="menu-title">A</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9735 mt-476  odd  depth-3"><a href="/b-composers" title="B Composers" class=" menu-link depth-3 tid-476"><span class="menu-title">B</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9773 mt-514  even  depth-3"><a href="/c-composers" title="C Composers" class=" menu-link depth-3 tid-514"><span class="menu-title">C</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9740 mt-481  odd  depth-3"><a href="/d-composers" title="D Composers" class=" menu-link depth-3 tid-481"><span class="menu-title">D</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9739 mt-480  even  depth-3"><a href="/e-composers" title="E Composers" class=" menu-link depth-3 tid-480"><span class="menu-title">E</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9737 mt-478  odd  depth-3"><a href="/f-composers" title="F Composers" class=" menu-link depth-3 tid-478"><span class="menu-title">F</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9738 mt-479  even  depth-3"><a href="/g-composers" title="G Composers" class=" menu-link depth-3 tid-479"><span class="menu-title">G</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9736 mt-477  odd  depth-3"><a href="/h-composers" title="H Composers" class=" menu-link depth-3 tid-477"><span class="menu-title">H</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9758 mt-499  even  depth-3"><a href="/i-composers" title="I Composers" class=" menu-link depth-3 tid-499"><span class="menu-title">I</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-10340 mt-543  odd  depth-3"><a href="/k-composers" title="K Composers" class=" menu-link depth-3 tid-543"><span class="menu-title">K</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9759 mt-500  even  depth-3"><a href="/l-composers" title="L Composers" class=" menu-link depth-3 tid-500"><span class="menu-title">L</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9760 mt-501  odd  depth-3"><a href="/m-composers" title="M Composers" class=" menu-link depth-3 tid-501"><span class="menu-title">M</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9761 mt-502  even  depth-3"><a href="/n-composers" title="N Composers" class=" menu-link depth-3 tid-502"><span class="menu-title">N</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9762 mt-503  odd  depth-3"><a href="/p-composers" title="P Composers" class=" menu-link depth-3 tid-503"><span class="menu-title">P</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9763 mt-504  even  depth-3"><a href="/r-composers" title="R Composers" class=" menu-link depth-3 tid-504"><span class="menu-title">R</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9764 mt-505  odd  depth-3"><a href="/s-composers" title="S Composers" class=" menu-link depth-3 tid-505"><span class="menu-title">S</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9765 mt-506  even  depth-3"><a href="/t-composers" title="T Composers" class=" menu-link depth-3 tid-506"><span class="menu-title">T</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9766 mt-507  odd  depth-3"><a href="/v-composers" title="V Composers" class=" menu-link depth-3 tid-507"><span class="menu-title">V</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9767 mt-508  even  last  depth-3"><a href="/w-composers" title="W Composers" class=" menu-link depth-3 tid-508"><span class="menu-title">W</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul></li>
+</ul>
+</li>
+<li class="menu-8707 menuparent mt-173  even  depth-1">
+<a href="/music-news-events" title="Music News &amp; Events" class=" menu-link depth-1 tid-173"><span class="menu-title">News &amp; Events</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-2">
+<li class="menu-8708 mt-174  first  odd  depth-2"><a href="/music-news" title="Music News" class=" menu-link depth-2 tid-174"><span class="menu-title">News</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8709 menuparent mt-175  even  last  depth-2">
+<a href="/music-events" title="Music Events" class=" menu-link depth-2 tid-175"><span class="menu-title">Events</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-9753 mt-494  first  odd  depth-3"><a href="/artists-residence-music" title="Artists-in-Residence (Music)" class=" menu-link depth-3 tid-494"><span class="menu-title">Artists-in-Residence</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9771 mt-512  even  depth-3"><a href="/chorus-concerts" title="Chorus Concerts" class=" menu-link depth-3 tid-512"><span class="menu-title">Chorus</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13318 menuparent mt-699  odd  depth-3">
+<a href="/music-department-cipriano-conference" title="Music Department Cipriano Conference" class=" menu-link depth-3 tid-699"><span class="menu-title">Cipriano Conference</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-4">
+<li class="menu-13324 mt-703  first  odd  depth-4"><a href="/cipriano-overview" title="Cipriano Overview" class=" menu-link depth-4 tid-703"><span class="menu-title">Overview</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13323 mt-702  even  depth-4"><a href="/cipriano-participants" title="Cipriano-Participants" class=" menu-link depth-4 tid-702"><span class="menu-title">Participants</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13325 mt-704  odd  depth-4"><a href="/register" title="Register" class=" menu-link depth-4 tid-704"><span class="menu-title">Register</span></a></li>
+<li class="menu-13322 mt-701  even  depth-4">
+<li class="menu-13326 mt-705  odd  last  depth-4"><a href="/traveling-davis" title="Traveling to Davis" class=" menu-link depth-4 tid-705"><span class="menu-title">Traveling to Davis</span></a></li>
+</ul>
+</li>
+<li class="menu-9609 mt-447  even  depth-3"><a href="/composer-talks" title="Composer Talks" class=" menu-link depth-3 tid-447"><span class="menu-title">Composer Talks</span></a></li>
+<li class="menu-9754 mt-495  odd  depth-3"><a href="/empyrean-concerts" title="Empyrean Concerts" class=" menu-link depth-3 tid-495"><span class="menu-title">Empyrean Concerts</span></a></li>
+<li class="menu-9610 mt-448  even  depth-3"><a href="/ethnomusicology-talks" title="Ethnomusicology Talks" class=" menu-link depth-3 tid-448"><span class="menu-title">Ethnomusicology Talks</span></a></li>
+<li class="menu-12647 mt-673  odd  depth-3">
+<li class="menu-9608 mt-446  even  depth-3"><a href="/musicology-talks" title="Musicology Talks" class=" menu-link depth-3 tid-446"><span class="menu-title">Musicology Talks</span></a></li>
+<li class="menu-9606 mt-444  odd  depth-3"><a href="/shinkoskey-noon-concerts" title="Shinkoskey Noon Concerts" class=" menu-link depth-3 tid-444"><span class="menu-title">Noon Concerts</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9611 mt-449  even  depth-3"><a href="/student-recitals" title="Student Recitals" class=" menu-link depth-3 tid-449"><span class="menu-title">Student Recitals</span></a></li>
+<li class="menu-9607 mt-445  odd  depth-3"><a href="/symphony-concerts" title="Symphony Concerts" class=" menu-link depth-3 tid-445"><span class="menu-title">Symphony</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11872 mt-625  even  last  depth-3">
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-8704 menuparent mt-170  odd  depth-1">
+<a href="/music-people" title="Music People" class=" menu-link depth-1 tid-170"><span class="menu-title">People</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-2">
+<li class="menu-8711 menuparent mt-177  first  odd  depth-2">
+<a href="/music-faculty" title="Music Faculty" class=" menu-link depth-2 tid-177"><span class="menu-title">Faculty</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-9451 mt-397  first  odd  depth-3"><a href="/music-faculty-0" title="Music Faculty" class=" menu-link depth-3 tid-397"><span class="menu-title">Music Faculty</span></a></li>
+<li class="menu-9454 mt-400  even  last  depth-3"><a href="/music-emeriti-faculty" title="Music Emeriti Faculty" class=" menu-link depth-3 tid-400"><span class="menu-title">Emeriti Faculty</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-9453 menuparent mt-399  even  depth-2">
+<a href="/applied-faculty" title="Applied Faculty" class=" menu-link depth-2 tid-399"><span class="menu-title">Applied Faculty</span></a><ul class="depth-3">
+<li class="menu-11392 mt-596  first  odd  depth-3"><a href="/bassoon" title="Bassoon" class=" menu-link depth-3 tid-596"><span class="menu-title">Bassoon</span></a></li>
+<li class="menu-11389 mt-593  even  depth-3"><a href="/applied-cello" title="Applied Cello" class=" menu-link depth-3 tid-593"><span class="menu-title">Cello</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11394 mt-598  odd  depth-3"><a href="/applied-clarinet" title="Applied Clarinet" class=" menu-link depth-3 tid-598"><span class="menu-title">Clarinet</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-12553 mt-667  even  depth-3"><a href="/applied-ensemble-directors" title="Applied Ensemble Directors" class=" menu-link depth-3 tid-667"><span class="menu-title">Ensemble Directors</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11395 mt-599  odd  depth-3"><a href="/applied-flute" title="Applied Flute" class=" menu-link depth-3 tid-599"><span class="menu-title">Flute</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11396 mt-600  even  depth-3"><a href="/applied-guitar" title="Applied Guitar" class=" menu-link depth-3 tid-600"><span class="menu-title">Guitar</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11388 mt-592  odd  depth-3"><a href="/applied-harpsichord" title="Applied Harpsichord" class=" menu-link depth-3 tid-592"><span class="menu-title">Harpsichord</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11402 mt-606  even  depth-3"><a href="/applied-horn" title="Applied Horn" class=" menu-link depth-3 tid-606"><span class="menu-title">Horn</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11391 mt-595  odd  depth-3"><a href="/applied-oboe" title="Applied Oboe" class=" menu-link depth-3 tid-595"><span class="menu-title">Oboe</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11387 mt-591  even  depth-3"><a href="/applied-percussion" title="Applied Percussion" class=" menu-link depth-3 tid-591"><span class="menu-title">Percussion</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11385 mt-589  odd  depth-3"><a href="/applied-piano" title="Applied Piano" class=" menu-link depth-3 tid-589"><span class="menu-title">Piano</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11393 mt-597  even  depth-3"><a href="/applied-saxophone" title="Applied Saxophone" class=" menu-link depth-3 tid-597"><span class="menu-title">Saxophone</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11397 mt-601  odd  depth-3"><a href="/applied-bass" title="Applied Bass" class=" menu-link depth-3 tid-601"><span class="menu-title">String Bass</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11398 mt-602  even  depth-3"><a href="/applied-trombone" title="Applied Trombone" class=" menu-link depth-3 tid-602"><span class="menu-title">Trombone</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11399 mt-603  odd  depth-3"><a href="/applied-trumpet" title="Applied Trumpet" class=" menu-link depth-3 tid-603"><span class="menu-title">Trumpet</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11400 mt-604  even  depth-3"><a href="/applied-tuba" title="Applied Tuba" class=" menu-link depth-3 tid-604"><span class="menu-title">Tuba</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11390 mt-594  odd  depth-3"><a href="/applied-viola" title="Applied Viola" class=" menu-link depth-3 tid-594"><span class="menu-title">Viola</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11386 mt-590  even  depth-3"><a href="/applied-violin" title="Applied Violin" class=" menu-link depth-3 tid-590"><span class="menu-title">Violin</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11401 mt-605  odd  last  depth-3"><a href="/applied-voice" title="Applied Voice" class=" menu-link depth-3 tid-605"><span class="menu-title">Voice</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-9140 menuparent mt-347  odd  depth-2">
+<a href="/music-advisers" title="Music Advisers" class=" menu-link depth-2 tid-347"><span class="menu-title">Advisers</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-11189 mt-577  first  odd  depth-3"><a href="/music-undergraduate-progam-coordinator" title="Music Undergraduate Progam Coordinator" class=" menu-link depth-3 tid-577"><span class="menu-title">Undergraduate Staff Adviser</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11192 mt-580  even  depth-3"><a href="/music-undergraduate-faculty-advisers" title="Music Undergraduate Faculty Advisers" class=" menu-link depth-3 tid-580"><span class="menu-title">Undergraduate Faculty Advisers</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11191 mt-579  odd  depth-3"><a href="/music-peer-advisers" title="Music Peer Advisers" class=" menu-link depth-3 tid-579"><span class="menu-title">Peer Advisers</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11190 mt-578  even  depth-3"><a href="/music-graduate-program-coordinator" title="Music Graduate Program Coordinator" class=" menu-link depth-3 tid-578"><span class="menu-title">Graduate Staff Adviser</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11193 mt-581  odd  last  depth-3"><a href="/music-graduate-faculty-advisers" title="Music Graduate Faculty Advisers" class=" menu-link depth-3 tid-581"><span class="menu-title">Graduate Faculty Advisers</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-8712 menuparent mt-178  even  depth-2">
+<a href="/music-department-staff-0" title="Music Department Staff" class=" menu-link depth-2 tid-178"><span class="menu-title">Staff</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-11384 mt-588  first  odd  depth-3"><a href="/music-department-staff" title="Music Department Staff" class=" menu-link depth-3 tid-588"><span class="menu-title">Music Department Staff</span></a></li>
+<li class="menu-9781 mt-522  even  last  depth-3"><a href="/arts-administrative-group-staff-music" title="Arts Administrative Group Staff - Music" class=" menu-link depth-3 tid-522"><span class="menu-title">Administrative Staff</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-8771 menuparent mt-245  odd  depth-2">
+<a href="/graduate-students-music" title="Graduate Students in Music" class=" menu-link depth-2 tid-245"><span class="menu-title">Graduate Students</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-9144 mt-351  first  odd  depth-3"><a href="/compositiontheory" title="Composition/Theory" class=" menu-link depth-3 tid-351"><span class="menu-title">Composition</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9976 mt-537  even  depth-3"><a href="/conducting" title="Conducting" class=" menu-link depth-3 tid-537"><span class="menu-title">Conducting</span></a></li>
+<li class="menu-9143 mt-350  odd  depth-3"><a href="/ethnomusicology" title="Ethnomusicology" class=" menu-link depth-3 tid-350"><span class="menu-title">Ethnomusicology</span></a></li>
+<li class="menu-9141 mt-348  even  last  depth-3"><a href="/musicology" title="Musicology" class=" menu-link depth-3 tid-348"><span class="menu-title">Musicology</span></a></li>
+</ul>
+</li>
+<li class="menu-8710 menuparent mt-176  even  last  depth-2">
+<a href="/music-alumni" title="Music Alumni" class=" menu-link depth-2 tid-176"><span class="menu-title">Alumni</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-9750 mt-491  first  odd  depth-3"><a href="/music-graduate-student-alumni" title="Music Graduate Student Alumni" class=" menu-link depth-3 tid-491"><span class="menu-title">Graduate Students</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9752 mt-493  even  last  depth-3"><a href="/music-undergraduate-student-alumni" title="Music Undergraduate Student Alumni" class=" menu-link depth-3 tid-493"><span class="menu-title">Undergraduates</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-8705 menuparent mt-171  even  depth-1">
+<a href="/music-academics" title="Music Academics" class=" menu-link depth-1 tid-171"><span class="menu-title">Academics</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-2">
+<li class="menu-8717 mt-183  first  odd  depth-2"><a href="/prospective-music-students" title="Prospective Music Students" class=" menu-link depth-2 tid-183"><span class="menu-title">Prospective Students</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8714 menuparent mt-180  even  depth-2">
+<a href="/undergraduate-music-programs" title="Undergraduate Music Programs" class=" menu-link depth-2 tid-180"><span class="menu-title">Undergraduate Programs</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-9604 menuparent mt-442  first  odd  depth-3">
+<a href="/major-music" title="Major in Music" class=" menu-link depth-3 tid-442"><span class="menu-title">Major in Music</span></a><ul class="depth-4">
+<li class="menu-11004 mt-572  first  odd  depth-4"><a href="/performance" title="Performance" class=" menu-link depth-4 tid-572"><span class="menu-title">Performance</span></a></li>
+<li class="menu-11005 mt-573  even  depth-4"><a href="/composition" title="Composition" class=" menu-link depth-4 tid-573"><span class="menu-title">Composition</span></a></li>
+<li class="menu-11006 mt-574  odd  depth-4"><a href="/history-theory-and-ethnomusicology" title="History, Theory, and Ethnomusicology" class=" menu-link depth-4 tid-574"><span class="menu-title">History, Theory, and Ethnomusicology</span></a></li>
+<li class="menu-11188 mt-576  even  depth-4"><a href="/music-study-abroad" title="Music Study Abroad" class=" menu-link depth-4 tid-576"><span class="menu-title">Study Abroad</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8733 mt-199  odd  last  depth-4">
+</ul>
+</li>
+<li class="menu-9605 mt-443  even  last  depth-3"><a href="/minor-music" title="Minor in Music" class=" menu-link depth-3 tid-443"><span class="menu-title">Minor in Music</span></a></li>
+</ul>
+</li>
+<li class="menu-8715 menuparent mt-181  odd  depth-2">
+<a href="/graduate-music-programs" title="Graduate Music Programs" class=" menu-link depth-2 tid-181"><span class="menu-title">Graduate Programs</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-11284 mt-582  first  odd  depth-3"><a href="/music-phd-musicology" title="Music PhD in Musicology" class=" menu-link depth-3 tid-582"><span class="menu-title">PhD in Musicology</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11285 mt-583  even  depth-3"><a href="/music-phd-composition" title="Music PhD in Composition" class=" menu-link depth-3 tid-583"><span class="menu-title">PhD in Composition and Theory</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11286 mt-584  odd  depth-3"><a href="/music-phd-ethnomusicology" title="Music PhD in Ethnomusicology" class=" menu-link depth-3 tid-584"><span class="menu-title">PhD in Ethnomusicology</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11287 mt-585  even  depth-3"><a href="/music-ma-conducting" title="Music MA in Conducting" class=" menu-link depth-3 tid-585"><span class="menu-title">MA in Conducting</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11873 mt-626  odd  last  depth-3">
+</ul>
+</li>
+<li class="menu-9977 menuparent mt-538  even  depth-2">
+<a href="/music-courses" title="Music Courses" class=" menu-link depth-2 tid-538"><span class="menu-title">Courses</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-3">
+<li class="menu-13315 mt-696  first  odd  depth-3"><a href="/music-198-courses" title="Music 198 Courses" class=" menu-link depth-3 tid-696"><span class="menu-title">Music 198 Courses</span></a></li>
+<li class="menu-9625 mt-463  even  depth-3">
+<li class="menu-13316 mt-697  odd  last  depth-3"><a href="/new-music-courses-2014-2015" title="New Music courses 2014-2015" class=" menu-link depth-3 tid-697"><span class="menu-title">New courses</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-9603 mt-441  odd  depth-2"><a href="/music-lessons" title="Music Lessons" class=" menu-link depth-2 tid-441"><span class="menu-title">Lessons</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9973 mt-534  even  depth-2"><a href="/music-auditions" title="Music Auditions" class=" menu-link depth-2 tid-534"><span class="menu-title">Auditions</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-12556 mt-670  odd  last  depth-2"><a href="/composition-workshop" title="Composition Workshop" class=" menu-link depth-2 tid-670"><span class="menu-title">Composition Workshop</span></a></li>
+</ul>
+</li>
+<li class="menu-9972 menuparent mt-533  odd  depth-1">
+<a href="/ensembles" title="Ensembles" class=" menu-link depth-1 tid-533"><span class="menu-title">Ensembles</span></a><ul class="depth-2">
+<li class="menu-8757 mt-223  first  odd  depth-2">
+<li class="menu-9729 mt-470  even  depth-2"><a href="/baroque-ensemble" title="Baroque Ensemble" class=" menu-link depth-2 tid-470"><span class="menu-title">Baroque Ensemble</span></a></li>
+<li class="menu-9728 mt-469  odd  depth-2"><a href="/chamber-music-ensembles" title="Chamber Music Ensembles" class=" menu-link depth-2 tid-469"><span class="menu-title">Chamber Music Ensembles</span></a></li>
+<li class="menu-9244 mt-362  even  depth-2"><a href="/concert-band" title="Concert Band" class=" menu-link depth-2 tid-362"><span class="menu-title">Concert Band</span></a></li>
+<li class="menu-9726 mt-467  odd  depth-2"><a href="/early-music-ensemble" title="Early Music Ensemble" class=" menu-link depth-2 tid-467"><span class="menu-title">Early Music Ensemble</span></a></li>
+<li class="menu-9242 menuparent mt-360  even  depth-2">
+<a href="/empyrean-ensemble" title="Empyrean Ensemble" class=" menu-link depth-2 tid-360"><span class="menu-title">Empyrean Ensemble</span></a><ul class="depth-3">
+<li class="menu-9243 mt-361  first  odd  last  depth-3"><a href="/past-empyrean-ensemble-performances" title="Past Empyrean Ensemble Performances" class=" menu-link depth-3 tid-361"><span class="menu-title">Past Performances</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-9727 mt-468  odd  depth-2"><a href="/gamelan" title="Gamelan" class=" menu-link depth-2 tid-468"><span class="menu-title">Gamelan Ensemble</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9725 mt-466  even  depth-2"><a href="/hindustani-vocal-ensemble" title="Hindustani Vocal Ensemble" class=" menu-link depth-2 tid-466"><span class="menu-title">Hindustani Vocal Ensemble</span></a></li>
+<li class="menu-9730 mt-471  odd  depth-2"><a href="/jazz" title="Jazz" class=" menu-link depth-2 tid-471"><span class="menu-title">Jazz</span></a></li>
+<li class="menu-9724 mt-465  even  depth-2"><a href="/korean-percussion-ensemble" title="Korean Percussion Ensemble" class=" menu-link depth-2 tid-465"><span class="menu-title">Korean Percussion Ensemble</span></a></li>
+<li class="menu-9723 mt-464  odd  depth-2"><a href="/samba-school" title="Samba School" class=" menu-link depth-2 tid-464"><span class="menu-title">Samba School</span></a></li>
+<li class="menu-9239 menuparent mt-357  even  depth-2">
+<a href="/symphony-orchestra" title="Symphony Orchestra" class=" menu-link depth-2 tid-357"><span class="menu-title">Symphony Orchestra</span></a><ul class="depth-3">
+<li class="menu-12839 mt-684  first  odd  depth-3"><a href="/symphony-auditions" title="Symphony Auditions" class=" menu-link depth-3 tid-684"><span class="menu-title">Auditions</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11985 mt-648  even  depth-3"><a href="/concerto-competition" title="Concerto Competition" class=" menu-link depth-3 tid-648"><span class="menu-title">Concerto Competition</span></a></li>
+<li class="menu-12258 mt-651  odd  depth-3"><a href="/composition-award" title="Composition Award" class=" menu-link depth-3 tid-651"><span class="menu-title">Composition Award</span></a></li>
+<li class="menu-11867 mt-620  even  depth-3"><a href="/symphony-orchestra-concerts" title="Symphony Orchestra Concerts" class=" menu-link depth-3 tid-620"><span class="menu-title">Concerts</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-11683 mt-616  odd  depth-3"><a href="/symphony-orchestra-endowment" title="Symphony Orchestra Endowment" class=" menu-link depth-3 tid-616"><span class="menu-title">Endowment</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13311 mt-692  even  depth-3"><a href="/symphonygroundrules" title="This is the UC Davis Symphony Orchestra's Basic Rules" class=" menu-link depth-3 tid-692"><span class="menu-title">Ground Rules</span><span class="menu-description"><br class="accessible-break">This is the UC Davis Symphony Orchestra's Basic Rules</span></a></li>
+<li class="menu-9241 mt-359  odd  depth-3"><a href="/symphony-orchestra-archive" title="Symphony Orchestra Archive" class=" menu-link depth-3 tid-359"><span class="menu-title">Archive</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-9240 mt-358  even  last  depth-3">
+</ul>
+</li>
+<li class="menu-9731 mt-472  odd  last  depth-2"><a href="/university-chorus" title="University Chorus" class=" menu-link depth-2 tid-472"><span class="menu-title">University Chorus</span></a></li>
+</ul>
+</li>
+<li class="menu-13313 mt-694  even  last  depth-1"><a href="/pitzercenter" title="pitzercenter" class=" menu-link depth-1 tid-694"><span class="menu-title">Pitzer Center</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-4" class=" icp-carousel ip-above pod-mode simple-pods te-t-f2 te-sub-100 te-st-f2  dd block block-views_blocks region-odd odd region-count-5 count-5  views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-5009-teaser" class="node node-teaser node-type-post node-5009 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 t113 wt113 wt0 access-normal has-image no-more pt339 has-2-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/news-release/gutierrez-earns-2015-chancellors-award-excellence-undergraduate-research" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/_mg_0564_0.jpg" alt="Image of Chancellor’s Awards|for Excellence" title="" width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news-release/gutierrez-earns-2015-chancellors-award-excellence-undergraduate-research" title="Chancellor’s Awards for Excellence"><span class="title">Chancellor’s Awards<br>for Excellence</span>
+      <br class="accessible-break"><span class="subtitle">Undergraduate research, Music student</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">June 10, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news-release/gutierrez-earns-2015-chancellors-award-excellence-undergraduate-research"><span class="read-more-text">   </span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4453-teaser" class="node node-teaser node-type-post node-4453 pt-show-social-block has-video no-event-date t339 wt339 wt0 t77 wt77 wt0 access-normal no-more pt339 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-video field-image-preset-carousel  c1  c-1"><a href="https://www.youtube.com/embed/0TOm70_16dA?autoplay=1&amp;rel=0" class="video-lightframe provider-youtube" rel="lightframe"><span class="video-play"></span><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/2015-06-22_11.43.30.jpg" alt="Pitzer Center Construction" title="" class="imagecache imagecache-carousel"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/pitzercenter" title="Pitzer Center Construction"><span class="title">Pitzer Center Construction</span>
+      <br class="accessible-break"><span class="subtitle">Pre-fabricated walls move into place</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">November 14, 2014</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/pitzercenter"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-3112-teaser" class="node node-teaser node-type-post node-3112 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 access-normal has-image no-more pt339 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/university-chorus" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/teresatamstudio_120601_6563.jpg" alt="Image of University Chorus" title="Teresa Tam Studio" width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/university-chorus" title="University Chorus"><span class="title">University Chorus</span>
+      <br class="accessible-break"><span class="subtitle">Meets Tuesdays and Thursdays</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">July 23, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/university-chorus"><span class="read-more-text">Read more</span></a></span></li>
+<li class="link link-related link-related-uc-davis-university-chorus-website last"><span><a href="http://chorus.ucdavis.edu/"><span class="link-text">UC Davis University Chorus website</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-3100-teaser" class="node node-teaser node-type-post node-3100 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 access-normal has-image no-more pt339 has-1-nt is-current">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/gamelan" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/20120924_convocation_4976.jpg" alt="Image of Gamelan Ensemble" title="" width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/gamelan" title="Gamelan Ensemble"><span class="title">Gamelan Ensemble</span>
+      <br class="accessible-break"><span class="subtitle">Meets Tuesdays</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">July 19, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/gamelan"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-3091-teaser" class="node node-teaser node-type-post node-3091 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 access-normal has-image no-more pt339 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/concertband" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/dsc_0698-web.jpg" alt="Image of Concert Band" title="" width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/concertband" title="Concert Band"><span class="title">Concert Band</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">July 18, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/concertband"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-3109-teaser" class="node node-teaser node-type-post node-3109 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 access-normal has-image no-more pt339 has-1-nt is-current">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/korean-percussion-ensemble" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/dsc_7308_0.jpg" alt="Image of Korean | Percussion Ensemble" title="Katherine In-Young Lee and the Korean Percussion Ensemble on its first-ever concert in the Mondavi Center lobby on May 30, 2013." width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/korean-percussion-ensemble" title="Korean   Percussion Ensemble"><span class="title">Korean <br> Percussion Ensemble</span>
+      <br class="accessible-break"><span class="subtitle">Meets Wednesdays</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">July 23, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/korean-percussion-ensemble"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-3111-teaser" class="node node-teaser node-type-post node-3111 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 t113 wt113 wt0 access-normal has-image has-more pt339 has-2-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/symphony-orchestra" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/teresatamstudio_120601_6466_burn.jpg" alt="Image of Symphony Orchestra" title="" width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/symphony-orchestra" title="Symphony Orchestra"><span class="title">Symphony Orchestra</span>
+      <br class="accessible-break"><span class="subtitle">Meets Tuesdays and Thursdays</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">July 23, 2013</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/faculty-profile/christian-baldini">Christian Baldini</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>The UC Davis Symphony Orchestra was founded in 1959, and has since established itself as a major campus and community arts offering. The UC Davis Symphony has toured California, Canada, and Australia and French Polynesia.In June 2003 the orchestra traveled to France to participate in the Berlioz bicentenary over the course of a series of five concerts.It regularly serves as the pit orchestra for UCD Mainstage productions and appears at major campus events and ceremonies, including Fall Convocation and Commencements.The UC Davis Symphony is a principal resident ensemble at the </p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/symphony-orchestra"><span class="read-more-text">Read more</span></a></span></li>
+<li class="link link-related link-related-robert-and-margrit-mondavi-center-for-the-performing-arts last"><span><a href="http://www.mondaviarts.org/"><span class="link-text">Robert and Margrit Mondavi Center for the Performing Arts</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even views-row-last">
+    <div id="node-3110-teaser" class="node node-teaser node-type-post node-3110 pt-show-social-block no-event-date t339 wt339 wt0 t77 wt77 wt0 access-normal has-image no-more pt339 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/samba-school" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/dsc_2714-web.jpg" alt="Image of Samba School" title="" width="490" height="325"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Carousel Posts">Carousel Post</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/samba-school" title="Samba School"><span class="title">Samba School</span>
+      <br class="accessible-break"><span class="subtitle">Meets Thursdays</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">July 23, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/samba-school"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div> <!-- /#header-blocks -->
+          </div></div> <!-- /#header-inner, /#header -->
+    <div id="main" class=""><div id="main-inner" class="region-main clear-block">
+      <div id="content"><div id="content-inner" class="region-content">
+                  <div id="content-header">
+                          <h1 class="title">Music</h1>
+                                                          </div> <!-- /#content-header -->
+                        <div id="content-area">
+                    <div class="no-main-channel"></div>          <div id="block-views_blocks-term-block_1-7" class="  nhlc-c4 nhlh-c4 three-col-wide te-bpad-0 te-bm-0 te-rm-0 icp-micro-home-pod te-img-pad-b-10 i100pw te-title-112 te-t-f2 te-hide-related-profiles te-hide-related-links te-hide-attachments  dd block block-views_blocks region-odd even region-count-1 count-6  views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-5065-teaser" class="node node-mine node-teaser node-type-post node-5065 pt-show-social-block no-event-date t6 wt6 wt0 t77 wt77 wt0 access-normal has-image has-more pt6 has-1-nt is-current">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Pods">Pod</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/pod/broadway-musical" title="The Broadway Musical"><span class="title">The Broadway Musical</span>
+      <br class="accessible-break"><span class="subtitle">Music 126</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-micro-home-pod croppable  c1  c-1"><a href="/pod/broadway-musical" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/micro-home-pod/main-images/broadway-lights.jpg" alt="Image of The Broadway Musical" title="" width="194" height="125"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">June 30, 2015</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/alexstalarow">Alexander Stalarow</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>Lectures: Tuesdays and Thursdays, 9:00–10:20 am<br>
+	Section 1: Mondays, 1:10–2:00 pm [CRN: 73296]   <br>
+	Section 2: Wednesdays, 12:10–1:00 pm [CRN: 73294]</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/pod/broadway-musical"><span class="read-more-text">Read more about the course...</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-5019-teaser" class="node node-mine node-teaser node-type-post node-5019 pt-show-social-block no-event-date t6 wt6 wt0 t77 wt77 wt0 access-normal has-image no-more pt6 has-1-nt is-current">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Pods">Pod</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.cambridge.org/us/academic/subjects/music/medieval-and-renaissance-music/cambridge-history-fifteenth-century-music?format=HB" title="Cambridge History of Fifteenth Century Music"><span class="title">Cambridge History of Fifteenth Century Music</span>
+      <br class="accessible-break"><span class="subtitle"><br></span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-micro-home-pod croppable  c1  c-1"><a href="http://www.cambridge.org/us/academic/subjects/music/medieval-and-renaissance-music/cambridge-history-fifteenth-century-music?format=HB" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/micro-home-pod/main-images/15th-century-music.jpg" alt="Image of Cambridge History of Fifteenth Century Music" title="" width="194" height="125"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="meta-item post-date">June 16, 2015</span> <span class="last meta-item meta-profile meta-profile-link"><a href="/busseberger">Anna Maria Busse Berger</a></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>As edited by <a href="http://node/1714">Anna Maria Busse Berger</a> and Jesse Rodin, this volume’s addition to the <em>Cambridge History of Music</em> series will be available in August of 2015.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.cambridge.org/us/academic/subjects/music/medieval-and-renaissance-music/cambridge-history-fifteenth-century-music?format=HB"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-4811-teaser" class="node node-teaser node-type-post node-4811 pt-show-social-block no-event-date t6 wt6 wt0 t174 wt174 wt173 wt77 wt0 t77 wt77 wt0 access-normal has-image no-more pt6 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Pods">Pod</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://www.youtube.com/user/musicatucdavis" title="Select Video Recordings of UC Davis Concerts"><span class="title">Select Video Recordings of UC Davis Concerts</span>
+      <br class="accessible-break"><span class="subtitle">YouTube</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-micro-home-pod croppable  c1  c-1"><a href="https://www.youtube.com/user/musicatucdavis" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/micro-home-pod/main-images/youtubelogoblack.jpg" alt="Image of Select Video Recordings of UC Davis Concerts" title="" width="194" height="125"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">April 7, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>Selected performances from the music department’s film archives can be viewed on the department’s YouTube channel.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://www.youtube.com/user/musicatucdavis"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-4120-teaser" class="node node-teaser node-type-post node-4120 pt-show-social-block no-event-date t6 wt6 wt0 t442 wt442 wt180 wt171 wt77 wt0 t183 wt183 wt171 wt77 wt0 t573 wt573 wt442 wt180 wt171 wt77 wt0 t180 wt180 wt171 wt77 wt0 t171 wt171 wt77 wt0 t538 wt538 wt171 wt77 wt0 t77 wt77 wt0 access-normal has-image no-more pt6 has-7-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Pods">Pod</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/course-description/music-2a6a16a" title="Theory Placement Tests (Fall 2015)"><span class="title">Theory Placement Tests (Fall 2015)</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-micro-home-pod croppable  c1  c-1"><a href="/course-description/music-2a6a16a" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/micro-home-pod/main-images/steinway_0.jpg" alt="Image of Theory Placement Tests (Fall 2015)" title="" width="194" height="125"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">July 8, 2014</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p><strong>Music 6A</strong><br>
+	Tuesday, September 22, at 10:00 am in Room 115, Music Building.</p>
+
+<p><strong>Music 2A</strong><br>
+	Time and date to be announced, Music Building.</p>
+
+<p><a href="http://arts.ucdavis.edu/course-description/music-2a6a16a">Sample tests, chord progressions, and syllabi</a> are available for Music 2A, 6A, and 16A.</p>    </div>
+    
+  
+      <div class="node-contact node-item">
+      <div class="node-contact-wrapper">
+<div class="field field-address"><div class="field-item count-1">Music Bldg., Davis, CA</div></div>
+<div class="field field-map"><span><a href="http://maps.google.com/?q=Music%20Bldg.%2C%20Davis%2C%20CA">View map</a></span></div>
+
+</div>    </div>
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/course-description/music-2a6a16a"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+    <div id="node-4360-teaser" class="node node-teaser node-type-post node-4360 pt-show-social-block no-event-date t6 wt6 wt0 t396 wt396 wt169 wt77 wt0 t174 wt174 wt173 wt77 wt0 t183 wt183 wt171 wt77 wt0 t172 wt172 wt169 wt77 wt0 t534 wt534 wt171 wt77 wt0 t694 wt694 wt77 wt0 t444 wt444 wt175 wt173 wt77 wt0 t449 wt449 wt175 wt173 wt77 wt0 t77 wt77 wt0 access-normal has-image no-more pt6 has-9-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Pods">Pod</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://soundcloud.com/ucdavismusic" title="Select Concert Recordings from UC Davis"><span class="title">Select Concert Recordings from UC Davis</span>
+      <br class="accessible-break"><span class="subtitle">From its Soundcloud</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-micro-home-pod croppable  c1  c-1"><a href="https://soundcloud.com/ucdavismusic" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/micro-home-pod/main-images/soundcloud.png" alt="Image of Select Concert Recordings from UC Davis" title="" width="194" height="125"></a></span></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">October 20, 2014</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>Selected performances from the music department’s audio vault can be heard on the department’s Soundcloud.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://soundcloud.com/ucdavismusic"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-10" class=" nhlc-c9 nhlh-c9 mc-c9 one-col-wide one-col-n ml-20 mb-10 bt-f2 btlc-c4 te-bpad-0 te-bm-0 te-bw-1b te-bb-s te-bb-c4 ip-none pod-mode simple-pods te-title-100 te-t-f3 te-hide-subtitle m-f1 te-show-only-event-date  dd block block-views_blocks region-even odd region-count-2 count-7  views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Upcoming Events</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-4934-teaser" class="node node-teaser node-type-post node-4934 pt-show-date pt-show-post-type pt-show-social-block has-event-date t60 wt60 wt2 wt0 t175 wt175 wt173 wt77 wt0 t173 wt173 wt77 wt0 t447 wt447 wt175 wt173 wt77 wt0 t77 wt77 wt0 access-normal has-more pt60 has-4-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Events">Event</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/event/stephen-blumbergs-compositions" title="Stephen Blumberg’s Compositions"><span class="title">Stephen Blumberg’s Compositions</span>
+      <br class="accessible-break"><span class="subtitle">Room 266, Everson Hall</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date event-date upcoming first-upcoming"><span class="date-display-single">October 1, 2015 - <span class="date-display-start">4:00pm</span><span class="date-display-separator"> - </span><span class="date-display-end">5:30pm</span></span></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p><strong>Stephen Blumberg</strong> is a composer of music primarily for acoustic instruments who has also collaborated with visual artists to create soundtracks for video and installation work, sometimes including digital electronics. His music is vivid and colorful, with multilayered textures and intricate rhythmic structures, driven by an underlying instinct for emotion and drama, and shaped by an intuitive sense of form.</p>    </div>
+    
+  
+      <div class="node-contact node-item">
+      <div class="node-contact-wrapper">
+<div class="field field-address"><div class="field-item count-1">Everson Hall., Davis, CA</div></div>
+<div class="field field-map"><span><a href="http://maps.google.com/?q=Everson%20Hall.%2C%20Davis%2C%20CA">View map</a></span></div>
+
+</div>    </div>
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/event/stephen-blumbergs-compositions"><span class="read-more-text">   </span></a></span></li>
+<li class="link link-related link-related-stephen-blumberg-s-website last"><span><a href="http://stephenblumberg.com/"><span class="link-text">Stephen Blumberg's Website</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+    <div id="node-5066-teaser" class="node node-mine node-teaser node-type-post node-5066 pt-show-date pt-show-post-type pt-show-social-block has-event-date t60 wt60 wt2 wt0 t175 wt175 wt173 wt77 wt0 t173 wt173 wt77 wt0 t620 wt620 wt357 wt533 wt77 wt0 t445 wt445 wt175 wt173 wt77 wt0 t77 wt77 wt0 access-normal no-more pt60 has-5-nt is-current">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Events">Event</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/event/uc-davis-symphony-orchestrarising-stars-opera-0" title="UC Davis Symphony Orchestra: ”Rising Stars of Opera”"><span class="title">UC Davis Symphony Orchestra:<br>”Rising Stars of Opera”</span>
+      <br class="accessible-break"><span class="subtitle">Jackson Hall, Mondavi Center</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date event-date upcoming first-upcoming"><span class="date-display-single">October 4, 2015 - <span class="date-display-start">4:00pm</span><span class="date-display-separator"> - </span><span class="date-display-end">6:00pm</span></span></span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p><strong>UC Davis Symphony Orchestra</strong><br>
+	Christian Baldini, music director and conductor</p>
+
+<p><strong>San Francisco Opera Adler Fellows</strong><br>
+	Mark Morash, director of music studies</p>
+
+<p><a href="http://www.mondaviarts.org/events/event.cfm?event_id=1626&amp;season=2015">Free, ticketed; limit 4 per household</a></p>    </div>
+    
+  
+      <div class="node-contact node-item">
+      <div class="node-contact-wrapper">
+<div class="field field-address"><div class="field-item count-1">Mondavi Center for the Performing Arts, Davis, CA</div></div>
+<div class="field field-map"><span><a href="http://maps.google.com/?q=Mondavi%20Center%20for%20the%20Performing%20Arts%2C%20Davis%2C%20CA">View map</a></span></div>
+
+</div>    </div>
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/event/uc-davis-symphony-orchestrarising-stars-opera-0"><span class="read-more-text">   </span></a></span></li>
+<li class="link link-related link-related-tickets last"><span><a href="http://www.mondaviarts.org/events/event.cfm?event_id=1626&amp;season=2015"><span class="link-text">Tickets</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-block-1" class="block block-block region-odd even region-count-3 count-8"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <a href="http://arts.ucdavis.edu/calendar">See All Arts Events</a>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div>
+                      </div></div> <!-- /#content-inner, /#content -->
+      <a id="navigation"></a>
+                      </div></div> <!-- /#main-inner, /#main -->
+          <div id="footer"><div id="footer-inner" class="region region-footer">
+                <div id="block-views_blocks-term-block_1-9" class=" nhlc-c5 nhlh-c5 full-width auto-col-n mt-20 te-bpad-0 te-bm-0 te-rm-0 pod-mode te-light-title te-title-89 te-hide-subtitle  dd block block-views_blocks region-odd odd region-count-1 count-9 footer-links views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-1731-teaser" class=" te-bw-1r te-bb-s te-bb-c5  dd node node-teaser node-type-post node-1731 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://ucdavis.edu/" title="University of California, Davis"><span class="title">University of California, Davis</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 18, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-1732-teaser" class=" te-bw-1r te-bb-s te-bb-c5  dd node node-teaser node-type-post node-1732 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://ucdavis.edu/" title="One Shields Avenue"><span class="title">One Shields Avenue</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 18, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-1733-teaser" class="node node-teaser node-type-post node-1733 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://ucdavis.edu/" title="Davis, CA 95616"><span class="title">Davis, CA 95616</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 18, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-1742-teaser" class=" te-bw-1r te-bb-s te-bb-c5  dd node node-teaser node-type-post node-1742 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://ucdavis.edu/" title="© The Regents of the University of California, 2015. All rights reserved."><span class="title">© The Regents of the University of California, 2015. All rights reserved.</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 18, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-1744-teaser" class="node node-teaser node-type-post node-1744 pt-show-social-block no-event-date t56 wt56 wt0 access-normal no-more pt56 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://accessibility.ucdavis.edu/" title="Accessibility"><span class="title">Accessibility</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 18, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://accessibility.ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even views-row-last">
+    <div id="node-4559-teaser" class="node node-teaser node-type-post node-4559 pt-show-social-block no-event-date t56 wt56 wt0 t113 wt113 wt0 access-normal has-more pt56 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Footer links">Footer link</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/footer-link/questions-or-comments" title="Questions or Comments"><span class="title">Questions or Comments</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">January 5, 2015</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+            <p>Send us a message or leave a comment.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/footer-link/questions-or-comments"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+      </div></div> <!-- /#footer-inner, /#footer -->
+      </div></div> <!-- /#page-inner, /#page -->
+      <div id="closure-blocks"><div class="region region-closure">
+<div id="block-views_blocks-term-block_1-6" class=" nhlc-c8 nhlh-c8 te-bpad-0 te-bm-0 icp-entity ip-above simple-pods te-title-100 te-t-f2  dd block block-views_blocks region-odd even region-count-1 count-10  views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+        <div class="view-header">
+      <p>View all UCD Arts departments and programs</p>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-2270-teaser" class="node node-teaser node-type-post node-2270 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/art-history" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/art-history.png" alt="Image of Art |History" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/art-history" title="Art  History"><span class="title">Art <br>History</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/art-history"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-2271-teaser" class="node node-teaser node-type-post node-2271 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/art-studio" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/art-studio_rg.gif" alt="Image of Art |Studio" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/art-studio" title="Art  Studio"><span class="title">Art <br>Studio</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/art-studio"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-2272-teaser" class="node node-teaser node-type-post node-2272 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/cinema-and-digital-media" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/cinema-and-techno-cultural-studies.png" alt="Image of Cinema and Digital Media" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/cinema-and-digital-media" title="Cinema and Digital Media"><span class="title">Cinema and Digital Media</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/cinema-and-digital-media"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-2273-teaser" class="node node-teaser node-type-post node-2273 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/design" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/design.png" alt="Image of Design" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/design" title="Design"><span class="title">Design</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/design"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-2274-teaser" class="node node-teaser node-type-post node-2274 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/music" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/music.png" alt="Image of Music" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/music" title="Music"><span class="title">Music</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/music"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-2275-teaser" class="node node-teaser node-type-post node-2275 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/theatre-and-dance" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/theatre-and-dance.png" alt="Image of Theatre |and Dance" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/theatre-and-dance" title="Theatre  and Dance"><span class="title">Theatre <br>and Dance</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/theatre-and-dance"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-2277-teaser" class="node node-teaser node-type-post node-2277 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image has-images no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="http://performancestudies.ucdavis.edu/" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/performance_square_2.jpg" alt="Image of Performance Studies" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://performancestudies.ucdavis.edu/" title="Performance Studies"><span class="title">Performance Studies</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://performancestudies.ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-3336-teaser" class="node node-teaser node-type-post node-3336 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="http://www.mondaviarts.org/" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/mondavi_square4.jpg" alt="Image of Mondavi | Center" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.mondaviarts.org/" title="Mondavi   Center"><span class="title">Mondavi <br> Center</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">August 30, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.mondaviarts.org/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-2280-teaser" class="node node-teaser node-type-post node-2280 pt-show-social-block no-event-date t365 wt365 wt0 t113 wt113 wt0 access-normal has-image no-more pt365 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/galleries-and-museums" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/museums_square_1.jpg" alt="Image of C.N. Gorman Museum || Design Museum || Nelson Gallery || Shrem Museum || TANA" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/galleries-and-museums" title="C.N. Gorman Museum    Design Museum    Nelson Gallery    Shrem Museum    TANA"><span class="title">C.N. Gorman Museum <br><br> Design Museum <br><br> Nelson Gallery <br><br> Shrem Museum <br><br> TANA</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/galleries-and-museums"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-3341-teaser" class="node node-teaser node-type-post node-3341 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image has-images no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/administrative-services-and-resources" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/arts_admin_square.jpg" alt="Image of ARTS ADMINISTRATIVE GROUP" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/administrative-services-and-resources" title="ARTS ADMINISTRATIVE GROUP"><span class="title">ARTS ADMINISTRATIVE GROUP</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">September 4, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/administrative-services-and-resources"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-11 views-row-odd views-row-last">
+    <div id="node-2276-teaser" class="node node-teaser node-type-post node-2276 pt-show-social-block no-event-date t365 wt365 wt0 access-normal has-image has-images no-more pt365 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-entity not-croppable  c1  c-1"><a href="/" rel=""><img src="http://arts.ucdavis.edu/sites/main/files/imagecache/entity/main-images/arts_home_page_square3.jpg" alt="Image of Home: | UC Davis Arts" title="" width="163" height="163"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="last meta-item post-type" data-plural="Entities">Entity</span>  </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/" title="Home:   UC Davis Arts"><span class="title">Home: <br> UC Davis Arts</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+        <div class="node-meta meta node-item">
+      <div class="meta-inner submitted">
+        <span class="last meta-item post-date">February 28, 2013</span>          </div>
+    </div>
+        <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-command_menu" class="block block-digitaldcore region-even odd region-count-2 count-11"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Commands</span></h2>
+  
+  <div class="block-content content">
+    <div class="menu-block-dcore menu-name-dd-cmd parent-mlid-0 menu-level-1">
+  <ul class="menu">
+<li class="leaf first menu-mlid-7992"><a href="/help" title="" class=" menu-help-center help depth-1">Help</a></li>
+<li class="leaf last menu-mlid-7993"><a href="/user/login" title="" class=" menu-login user-login depth-1">Log in</a></li>
+</ul>
+</div>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-dd_login-login" class="block block-dd_login region-odd even region-count-3 count-12"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Log in</span></h2>
+  
+  <div class="block-content content">
+    <form action="/music?destination=taxonomy%2Fterm%2F77" accept-charset="UTF-8" method="post" id="user-login-form">
+<div>
+<div class=" form-item type-textfield" id="edit-name-wrapper">
+ <label for="edit-name">E-mail or username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" tabindex="1" class="form-text required">
+</div>
+<div class=" form-item type-password" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" tabindex="2" class="form-text required">
+</div>
+<div class=" form-item type-checkbox" id="edit-remember-me-wrapper">
+ <label class="option" for="edit-remember-me"><input type="checkbox" name="remember_me" id="edit-remember-me" value="1" checked tabindex="3" class="form-checkbox"> Remember me</label>
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="Log in" tabindex="4" class="form-submit"><div class="item-list"><ul>
+<li class="first"><a href="/user/register" title="Create a new user account.">Create new account</a></li>
+<li class="last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div>
+<input type="hidden" name="form_build_id" id="form-RaS1yCXzh-HWKs7Og7Rbg2VXcY2DzJZmZM39l29QMD0" value="form-RaS1yCXzh-HWKs7Og7Rbg2VXcY2DzJZmZM39l29QMD0"><input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block">
+</div>
+</form>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+</div></div>
+    <script type="text/javascript" src="/sites/main/files/advagg_js/js_19ecf24c5368f0cb90e1e64dcac885b4_30.js"></script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-37397955-1"]);_gaq.push(["_setDomainName",".arts.ucdavis.edu"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.type="text/javascript";ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()
+//--><!]]>
+</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"51e9ee0927","applicationID":"3044101","transactionName":"bwBRZUoEC0NXUEEKXlZKcERLEQpdGX1UFWVdF14eSAQCVQ==","queueTime":0,"applicationTime":574,"atts":"Q0dGEwIeR15XRWEGQ1UxVlxICQREUxEPQXxRBkFeSwwRVRZbWg5USARUVBpJR0VFVkcwRVkRRkIaX0dRWFxbGlxXEEATFEcWUVhXVwxJcQERCxoEF0RFbEURXlwQUEVRCgsSSx8XAhMCHk5M","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com/nr-515.min.js"}</script>
+</body>
+</html>

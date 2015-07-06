@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>UC Davis School of Education - Integrating research and practice</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQMFV1NVGwAAUFVTBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:19,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:19,2:20,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:20,2:19,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:20,2:19,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:20,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&u&&u.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=l.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document,f="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};u[f]?(u[f]("DOMContentLoaded",o,!1),c[f]("load",n,!1)):(u[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:18,handle:"D5DuLP"}],18:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],19:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],20:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:19,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">// Add way back to mobile.
+var ddMobileGetBackToMobile = false;
+
+/**
+ * Quickly redirect to mobile if a mobile browser is detected.
+ */
+(function() {
+  // TODO: Somehow move this logic into dd_webwrap, it doesn't belong here.
+  // Never engage mobile on WebWrapped pages.
+  if (typeof ddWebWrap != 'undefined' && ddWebWrap.enabled) {
+    return;
+  }
+
+  // Never engage when #skipmobile is appended, useful when you want to force
+  // the desktop site without changing the cookies.
+  if (window.location.hash === '#skipmobile') {
+    return;
+  }
+
+  // Cookie reader.
+  function readCookie(key) {
+    var result;
+    return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+  }
+
+  // Cookie creator.
+  function createCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toGMTString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+
+  // Mobile device detection.
+  // @ref http://www.useragentstring.com/pages/Mobile%20Browserlist/
+  var isMobileDevice = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
+
+  //  Show view in mobile btn.
+  if (isMobileDevice) {
+    ddMobileGetBackToMobile = true;
+  }
+
+  // If viewmobile hash is set, unset nomobile cookie.
+  if (window.location.hash === '#viewmobile') {
+    createCookie('nomobile', 0, -5);
+  }
+
+  // If nomobile hash is set, set nomobile cookie.
+  if (window.location.hash === '#nomobile') {
+    createCookie('nomobile', 1, 30);
+  }
+  else if (isMobileDevice && readCookie('nomobile') != '1') {
+    // TODO: Remove hardcoded mobile path.
+    var uri = '/m';
+    if (window.location.pathname != '/') {
+      uri += '#' + window.location.pathname;
+    }
+    if (window.location.search) {
+      uri += window.location.search;
+    }
+    // Switch user to mobile site at this uri.
+    window.location = uri;
+  }
+})();
+</script><link rel="shortcut icon" href="/sites/default/themes/dtheme/favicon.ico" type="image/x-icon">
+<meta name="og:site_name" content="UC Davis School of Education">
+<meta name="og:title" content="UC Davis School of Education - Integrating research and practice">
+<meta name="og:description" content="The School of Education at UC Davis is committed to working for the individual fulfillment of all learners through public education.">
+<meta name="og:type" content="article">
+<meta name="og:image" content="http://education.ucdavis.edu/">
+<meta name="og:url" content="http://education.ucdavis.edu/home">
+<link rel="canonical" href="http://education.ucdavis.edu/">
+<meta name="description" content="The School of Education at UC Davis is committed to working for the individual fulfillment of all learners through public education.">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_2a228025768e313d9fd167b38865d41b_53.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_cbab193ae603649952e779e7ae6cb9a4_0.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/main/files/advagg_css/css_c8c6faf7664b62dcdb3b33fa8e6ce502_1.css">
+<link type="text/css" rel="stylesheet" media="print" href="/sites/main/files/advagg_css/css_3b631012d353679adf0458c71f1b431b_0.css">
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/dtheme/dtheme-direct.css?N">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/ie.css?N" />
+<![endif]--><!--[if IE 8]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie8.css?N" />
+<![endif]--><!--[if IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/dmodel/dmodel-ie7.css?N" />
+<![endif]--><script type="text/javascript" src="/sites/main/files/advagg_js/js_9a994d83e02be9eb43d4f0f360456432_3.js"></script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"/","googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"lightbox2":{"rtl":0,"file_path":"/(\w\w/)sites/main/files","default_image":"/sites/all/modules/lightbox2/images/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":1,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":1,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press <a href="#" onclick="hideLightbox(); return FALSE;"><kbd>x to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":640,"iframe_height":385,"iframe_border":0,"enable_video":0},"nice_menus_options":{"delay":800,"speed":"fast"},"ddCaptcha":1971,"ddMobile":{"path":"m","enabled":1},"ddPoll":{"resultsURI":"/sites/all/modules/_dd/dd_poll/dd_poll_results.php"},"ddTwitterFeed":{"getTweetsURI":"/dd_twitter_feed/get_tweets"},"extlink":{"extTarget":"_blank","extClass":"ext","extSubdomains":1,"extExclude":"","extInclude":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto"},"cssInit":{"node.css":true,"defaults.css":true,"system.css":true,"system-menus.css":true,"user.css":true,"content-module.css":true,"ctools.css":true,"date.css":true,"datepicker.css":true,"jquery.timeentry.css":true,"filefield.css":true,"lightbox_alt.css":true,"logintoboggan.css":true,"nice_menus.css":true,"nice_menus_default.css":true,"dd_captcha.css":true,"dd_classes.experimental.css":true,"dd_classes.do_timeout.css":true,"dd_classes.infinity_carousel.css":true,"dd_classes.gallery.css":true,"dd_classes.calfilters.css":true,"dd_create.css":true,"compiled-classes.css":true,"dd_login.css":true,"dd_mobile.view_mobile.css":true,"dd_poll.css":true,"dd_twitter_feed.css":true,"dd_user_roles.css":true,"farbtastic.css":true,"calendar.css":true,"extlink.css":true,"fieldgroup.css":true,"views.css":true,"dtheme-direct.css":true,"html-elements.css":true,"tabs.css":true,"messages.css":true,"block-editing.css":true,"wireframes.css":true,"zen.css":true,"dmodel-layout.css":true,"dmodel.css":true},"jsInit":{"misc/jquery.js":true,"misc/drupal.js":true,"sites/all/modules/google_analytics/googleanalytics.js":true,"sites/all/modules/nice_menus/superfish/js/superfish.js":true,"sites/all/modules/nice_menus/superfish/js/jquery.bgiframe.min.js":true,"sites/all/modules/nice_menus/superfish/js/jquery.hoverIntent.minified.js":true,"sites/all/modules/nice_menus/nice_menus.js":true,"sites/all/modules/_dd/dd_captcha/dd_captcha.js":true,"sites/all/modules/_dd/dd_classes/dd_classes.js":true,"sites/all/modules/_dd/dd_classes/plugins/do_timeout/dd_classes.do_timeout.js":true,"sites/all/modules/_dd/dd_classes/plugins/infinity_carousel/dd_classes.infinity_carousel.js":true,"sites/all/modules/_dd/dd_classes/plugins/gallery/dd_classes.gallery.js":true,"sites/all/modules/_dd/dd_classes/plugins/calfilters/dd_classes.calfilters.js":true,"sites/all/modules/_dd/dd_create/dd_create.js":true,"sites/all/modules/_dd/dd_login/dd_login.js":true,"sites/all/modules/_dd/dd_mobile/js/dd_mobile.js":true,"sites/all/modules/_dd/dd_poll/dd_poll.js":true,"sites/all/modules/_dd/dd_twitter_feed/dd_twitter_feed.js":true,"sites/all/modules/extlink/extlink.js":true,"sites/all/modules/_dd/digitaldcore/digitaldcore.js":true,"sites/all/modules/_dd/digitaldcore/modernizr.js":true,"sites/all/modules/_dd/digitaldcore/browser-detect.js":true,"sites/all/modules/_dd/digitaldcore/dd-search.js":true,"sites/all/modules/jquery_ui/jquery.ui/ui/minified/ui.core.min.js":true,"sites/all/modules/jquery_ui/jquery.ui/ui/minified/ui.dialog.min.js":true,"sites/all/modules/_dd/digitaldcore/digitaldcore.monkey-patch.js":true,"sites/all/modules/ctools/js/jump-menu.js":true,"sites/all/themes/dmodel/dmodel.js":true,"sites/default/themes/dtheme/dtheme.js":true}});
+//--><!]]>
+</script><link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/2d324161-2920-4a66-ad3c-9dd447e89d7e.css">
+<script data-main="/sites/default/themes/dtheme/js/theme.min" src="/sites/default/themes/dtheme/bower_components/requirejs/require.js"></script>
+</head>
+<body class="front not-logged-in no-sidebars dd-cache user-not-admin live launched tt51 t51 wt51 wt0 has-content-top ttv2 ttv-front t role-anonymous-user role-not-admin">
+        <div class="accessibility-utility-links">
+<a id="navigation-top"></a>
+          </div>
+        <div id="page" class="region-page no-sidebars"><div id="page-inner">
+    <div id="header"><div id="header-inner" class="clear-block">
+              <div id="theme-logo">
+                      <div class="logo"><a href="/" title="Home" rel="home"><img src="/sites/default/themes/dtheme/logo.png" alt="Home"></a></div>
+                                              <div class="site-name">
+                <a href="/" title="Home" rel="home">UC Davis School of Education</a>
+              </div>
+                                            <div class="site-slogan">Integrating research and practice</div>
+                            </div> <!-- /#page-logo -->
+                    <div id="header-blocks" class="region region-header">
+          <div id="block-views_blocks-term-block_1-0" class=" ip-above  dd block block-views_blocks region-odd odd region-count-1 count-1 header-links views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-2333-teaser" class="node node-teaser node-type-post node-2333 pt-show-social-block no-event-date t102 wt102 wt0 access-normal no-more pt102 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Header links">Header link</span> <span class="last meta-item post-date">September 19, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/calendar" title="Calendar"><span class="title">Calendar</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/calendar"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-658-teaser" class="node node-teaser node-type-post node-658 pt-show-social-block no-event-date t102 wt102 wt0 access- no-more pt102 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Header links">Header link</span> <span class="meta-item post-date">January 1, 2011</span> <span class="last meta-item meta-access meta-access-anonymous-user">For Anonymous users</span>    </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/academic-programs" title="Prospective Students"><span class="title">Prospective Students</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/academic-programs"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-2281-teaser" class="node node-teaser node-type-post node-2281 pt-show-social-block no-event-date t102 wt102 wt0 access-normal no-more pt102 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Header links">Header link</span> <span class="last meta-item post-date">September 12, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/alumni" title="Alumni"><span class="title">Alumni</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/alumni"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    <div id="node-2243-teaser" class="node node-teaser node-type-post node-2243 pt-show-social-block no-event-date t102 wt102 wt0 access-normal no-more pt102 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Header links">Header link</span> <span class="last meta-item post-date">August 15, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.ucdavis.edu/" title="UC Davis"><span class="title">UC Davis</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views-jumpmenu-block_1" class="block block-views region-even even region-count-2 count-2"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-jumpmenu view-id-jumpmenu view-display-id-block_1 view-dom-id-jumpmenu-block-1-1">
+    
+  
+  
+      <div class="view-content">
+      <form action="/" accept-charset="UTF-8" method="post" id="ctools-jump-menu">
+<div>
+<div class="container-inline">
+<div class=" form-item type-select" id="edit-jump-wrapper">
+ <select name="jump" class="form-select ctools-jump-menu-select ctools-jump-menu-change" id="edit-jump"><option value="" selected>I want to ...</option>
+<optgroup label="Order: "><option value="/pod/credential-information-sessions">  
+  
+                Attend a credential program info session
+  
+</option></optgroup>
+<optgroup label="Order: 1"><option value="/pod/course-equivalency-website">  
+  
+                Know if my courses meet the prerequisite requirements for the teaching credential
+  
+</option></optgroup>
+<optgroup label="Order: 2"><option value="/jumpmenu-link/make-gift-school-education">  
+  
+                Make a Gift to the School of Education
+  
+</option></optgroup>
+<optgroup label="Order: 3"><option value="/course-schedules">  
+  
+                Find course schedules
+  
+</option></optgroup>
+<optgroup label="Order: 4"><option value="/credentialma-program-info/applying-uc-davis-teacher-credential-program">  
+  
+                Know more about applying to the teaching credential program
+  
+</option></optgroup>
+<optgroup label="Order: 5"><option value="/credentialma-program-info/faq-about-ma-portion-credentialma-program">  
+  
+                Learn more about the MA part of the Credential/MA program
+  
+</option></optgroup>
+<optgroup label="Order: 6"><option value="/credentialma-program-info/structure-uc-davis-credential-program">  
+  
+                Know if the School offers a part-time, night or summer teaching credential program?
+  
+</option></optgroup>
+<optgroup label="Order: 7"><option value="/credentialma-program-info/credentialma-program-costs">  
+  
+                Know the cost of Credential/MA program
+  
+</option></optgroup>
+<optgroup label="Order: 8"><option value="/news">  
+  
+                See all News
+  
+</option></optgroup>
+<optgroup label="Order: 9"><option value="/staff-events">  
+  
+                See all events
+  
+</option></optgroup></select>
+</div>
+<input type="submit" name="op" id="edit-go" value="Go" class="form-submit ctools-jump-menu-button ctools-jump-menu-hide">
+</div>
+<input type="hidden" name="form_build_id" id="form-uBPY00-yegwCoTCk0ncHA-azR4i024QBzdNsnH-NKBk" value="form-uBPY00-yegwCoTCk0ncHA-azR4i024QBzdNsnH-NKBk"><input type="hidden" name="form_id" id="edit-ctools-jump-menu" value="ctools_jump_menu">
+</div>
+</form>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-search" class="block block-digitaldcore region-odd odd region-count-3 count-3  search-keywords  "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div id="dd-search" class="dd-search">
+<form action="/" accept-charset="UTF-8" method="post" id="faceted-search-ui-form-1" class=" dd-search-clear">
+<div>
+<div class="dd-search-keywords">
+<div title="Search keywords" class=" form-item type-textfield" id="edit-keywords-wrapper">
+ <input type="text" maxlength="255" name="keywords" id="edit-keywords" size="20" value="" title="Search keywords" class="form-text">
+</div>
+</div>
+<input type="hidden" name="stage" id="edit-stage" value="results"><input type="hidden" name="facet-key" id="edit-facet-key" value=""><input type="hidden" name="facet-id" id="edit-facet-id" value=""><input type="hidden" name="facet-sort" id="edit-facet-sort" value=""><div class="dd-search-submit">
+<button class="dd-search-submit-button" type="submit"></button><div class="legacy-button"><input type="submit" name="op" id="edit-submit" value="" class="form-submit"></div>
+</div>
+<div class="dd-search-more"><a href="/find/" class="faceted-search-more">More options</a></div>
+<input type="hidden" name="form_build_id" id="form-ioe8InnzxuH9I0ZedOdA8IU-A7JD2ym2bb8ZyW0cw3g" value="form-ioe8InnzxuH9I0ZedOdA8IU-A7JD2ym2bb8ZyW0cw3g"><input type="hidden" name="form_id" id="edit-faceted-search-ui-form-1" value="faceted_search_ui_form_1"><input type="hidden" name="box_text" id="edit-box-text" value="SEARCH">
+</div>
+</form>
+</div>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-logo" class="block block-digitaldcore region-even even region-count-4 count-4"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <a href="/" title="UC Davis School of Education home page" id="block-logo" class="active"><span class="logo-text">UC Davis School of Education</span></a>  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-nice_menus-1" class="block block-nice_menus region-odd odd region-count-5 count-5 navbar "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <ul class="nice-menu nice-menu-down" id="nice-menu-1">
+<li class="menu-8486 active-trail menuparent mt-51  first  odd  depth-1"><ul class="depth-2">
+<li class="menu-8487 mt-297  first  odd  depth-2">
+<li class="menu-8489 mt-299  even  depth-2">
+<li class="menu-8490 mt-300  odd  depth-2">
+<li class="menu-13359 mt-618  even  depth-2">
+<li class="menu-8488 mt-298  odd  last  depth-2">
+</ul></li>
+<li class="menu-13250 menuparent mt-515  even  depth-1">
+<a href="/academic-programs" title="Academic Programs" class=" menu-link depth-1 tid-515"><span class="menu-title">Academic Programs</span></a><ul class="depth-2">
+<li class="menu-13255 mt-520  first  odd  depth-2"><a href="/teaching-credentialma" title="Teaching Credential/MA" class=" menu-link depth-2 tid-520"><span class="menu-title">Teaching Credential/MA</span></a></li>
+<li class="menu-13267 mt-532  even  depth-2"><a href="/phd-education" title="PhD in Education" class=" menu-link depth-2 tid-532"><span class="menu-title">PhD in Education</span></a></li>
+<li class="menu-13266 mt-531  odd  depth-2"><a href="/edd-doctorate-educational-leadership" title="EdD: Doctorate in Educational Leadership" class=" menu-link depth-2 tid-531"><span class="menu-title">EdD: Doctorate in Educational Leadership</span></a></li>
+<li class="menu-13265 mt-530  even  depth-2"><a href="/master-arts-education-policy" title="Master of Arts in Education Policy" class=" menu-link depth-2 tid-530"><span class="menu-title">Master of Arts</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13256 mt-521  odd  depth-2"><a href="/undergraduate-minor-education" title="Undergraduate / Minor in Education" class=" menu-link depth-2 tid-521"><span class="menu-title">Undergraduate/Minor</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-8533 mt-193  even  last  depth-2"><a href="/course-schedules" title="Course Schedules" class=" menu-link depth-2 tid-193"><span class="menu-title">Course Schedules</span></a></li>
+</ul>
+</li>
+<li class="menu-13251 menuparent mt-516  odd  depth-1">
+<a href="/admissions-financial-aid" title="Admissions &amp; Financial Aid" class=" menu-link depth-1 tid-516"><span class="menu-title">Admissions &amp; Financial Aid</span></a><ul class="depth-2">
+<li class="menu-13328 mt-586  first  odd  depth-2"><a href="/teaching-credential-admissions-and-financial-aid" title="Teaching Credential Admissions and Financial Aid" class=" menu-link depth-2 tid-586"><span class="menu-title">For Teaching Credential</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13342 mt-600  even  depth-2"><a href="/phd-program" title="For PhD Program" class=" menu-link depth-2 tid-600"><span class="menu-title">For PhD Program</span></a></li>
+<li class="menu-13283 mt-541  odd  depth-2"><a href="/candel-admissions-financial-aid" title="CANDEL Admissions &amp; Financial Aid" class=" menu-link depth-2 tid-541"><span class="menu-title">For CANDEL (EdD) Program</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+<li class="menu-13349 mt-607  even  last  depth-2"><a href="/ma-admissions-financial-aid" title="MA Admissions &amp; Financial Aid" class=" menu-link depth-2 tid-607"><span class="menu-title">For Master of Arts</span><span class="menu-description"><br class="accessible-break"></span></a></li>
+</ul>
+</li>
+<li class="menu-13252 menuparent mt-517  even  depth-1">
+<a href="/research-expertise" title="Research &amp; Expertise" class=" menu-link depth-1 tid-517"><span class="menu-title">Research &amp; Expertise</span></a><ul class="depth-2">
+<li class="menu-13284 mt-542  first  odd  depth-2"><a href="/research-innovation-centers" title="Research &amp; Innovation Centers" class=" menu-link depth-2 tid-542"><span class="menu-title">Research &amp; Innovation Centers</span></a></li>
+<li class="menu-13565 mt-740  even  depth-2"><a href="/current-research-projects" title="Current Research Projects" class=" menu-link depth-2 tid-740"><span class="menu-title">Current Research Projects</span></a></li>
+<li class="menu-13426 mt-688  odd  last  depth-2"><a href="/areas-expertise" title="Areas of Expertise" class=" menu-link depth-2 tid-688"><span class="menu-title">Areas of Expertise</span></a></li>
+</ul>
+</li>
+<li class="menu-13253 menuparent mt-518  odd  depth-1">
+<a href="/programs-educators-and-youth" title="Programs for Educators and Youth" class=" menu-link depth-1 tid-518"><span class="menu-title">Educators &amp; Youth</span><span class="menu-description"><br class="accessible-break"></span></a><ul class="depth-2">
+<li class="menu-13290 mt-548  first  odd  depth-2"><a href="/resources-educators" title="Resources for Educators" class=" menu-link depth-2 tid-548"><span class="menu-title">Resources for Educators</span></a></li>
+<li class="menu-13291 mt-549  even  last  depth-2"><a href="/resources-youth" title="Resources for Youth" class=" menu-link depth-2 tid-549"><span class="menu-title">Resources for Youth</span></a></li>
+</ul>
+</li>
+<li class="menu-13254 menuparent mt-519  even  last  depth-1">
+<a href="/our-school" title="Our School" class=" menu-link depth-1 tid-519"><span class="menu-title">Our School</span></a><ul class="depth-2">
+<li class="menu-13300 mt-558  first  odd  depth-2"><a href="/deans-office" title="Dean's Office" class=" menu-link depth-2 tid-558"><span class="menu-title">Dean's Office</span></a></li>
+<li class="menu-8519 mt-155  even  depth-2"><a href="/staff-and-faculty-directory" title="Staff and Faculty Directory" class=" menu-link depth-2 tid-155"><span class="menu-title">Staff and Faculty Directory</span></a></li>
+<li class="menu-13313 mt-571  odd  depth-2"><a href="/alumni" title="Alumni" class=" menu-link depth-2 tid-571"><span class="menu-title">Alumni</span></a></li>
+<li class="menu-13311 mt-569  even  depth-2"><a href="/faculty" title="Faculty" class=" menu-link depth-2 tid-569"><span class="menu-title">Faculty</span></a></li>
+<li class="menu-13312 mt-570  odd  depth-2"><a href="/staff" title="Staff" class=" menu-link depth-2 tid-570"><span class="menu-title">Staff</span></a></li>
+<li class="menu-13314 mt-572  even  depth-2"><a href="/students" title="Students" class=" menu-link depth-2 tid-572"><span class="menu-title">Students</span></a></li>
+<li class="menu-13304 mt-562  odd  depth-2"><a href="/join-our-team" title="Join our Team" class=" menu-link depth-2 tid-562"><span class="menu-title">Join our Team</span></a></li>
+<li class="menu-13306 mt-564  even  depth-2"><a href="/support-school" title="Support the School" class=" menu-link depth-2 tid-564"><span class="menu-title">Support the School</span></a></li>
+<li class="menu-13302 mt-560  odd  depth-2"><a href="/news" title="News" class=" menu-link depth-2 tid-560"><span class="menu-title">News</span></a></li>
+<li class="menu-13431 mt-693  even  depth-2"><a href="/events" title="Events" class=" menu-link depth-2 tid-693"><span class="menu-title">Events</span></a></li>
+<li class="menu-13438 mt-718  odd  depth-2"><a href="/calendar" title="Calendar" class=" menu-link depth-2 tid-718"><span class="menu-title">Calendar</span></a></li>
+<li class="menu-9727 mt-482  even  last  depth-2"><a href="/videos-podcasts" title="Videos &amp; Podcasts" class=" menu-link depth-2 tid-482"><span class="menu-title">Videos &amp; Podcasts</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-1" class=" icp-carousel ip-above  dd block block-views_blocks region-even even region-count-6 count-6 carousel home-carousel views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-1642-teaser" class="node node-teaser node-type-post node-1642 no-event-date t123 wt123 wt0 t297 wt297 wt51 wt0 access-normal has-image no-more pt123 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/teaching-credentialma" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/gts_fund2_or_overview_splash_page.jpg" alt="Image of Make a difference: Teach" title="" width="1400" height="550"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Carousels">Carousel</span> <span class="last meta-item post-date">December 8, 2009</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/teaching-credentialma" title="Make a difference: Teach"><span class="title">Make a difference: Teach</span>
+      <br class="accessible-break"><span class="subtitle">Learn about our teaching credential program</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/teaching-credentialma"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-3875-teaser" class="node node-teaser node-type-post node-3875 no-event-date t123 wt123 wt0 t297 wt297 wt51 wt0 access-normal has-image no-more pt123 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/master-arts-education-policy" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/_tju4573.jpg" alt="Image of Influence Education Policy" title="" width="1400" height="550"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Carousels">Carousel</span> <span class="last meta-item post-date">November 5, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/master-arts-education-policy" title="Influence Education Policy"><span class="title">Influence Education Policy</span>
+      <br class="accessible-break"><span class="subtitle">Learn more about our MA in policy</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/master-arts-education-policy"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-2721-teaser" class="node node-teaser node-type-post node-2721 no-event-date t123 wt123 wt0 t297 wt297 wt51 wt0 access-normal has-image no-more pt123 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/phd-education" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/rebecca_ambrose.jpg" alt="Image of Catalyze change through scholarship" title="" width="1400" height="550"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Carousels">Carousel</span> <span class="last meta-item post-date">August 29, 2012</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/phd-education" title="Catalyze change through scholarship"><span class="title">Catalyze change through scholarship</span>
+      <br class="accessible-break"><span class="subtitle">Learn about our PhD in education</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p>Earn a PhD in Education</p>
+
+<p>Lead change through scholarship</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/phd-education"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-2716-teaser" class="node node-teaser node-type-post node-2716 no-event-date t123 wt123 wt0 t297 wt297 wt51 wt0 access-normal has-image no-more pt123 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/edd-doctorate-educational-leadership" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/carousel/main-images/candel_graduates.2015_3.jpg" alt="Image of Lead for equity and achievement" title="" width="1400" height="550"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Carousels">Carousel</span> <span class="last meta-item post-date">August 28, 2012</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/edd-doctorate-educational-leadership" title="Lead for equity and achievement"><span class="title">Lead for equity and achievement</span>
+      <br class="accessible-break"><span class="subtitle">Learn about our doctorate in educational leadership</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p> </p>
+
+<p> </p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/edd-doctorate-educational-leadership"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+    <div id="node-1672-teaser" class="node node-teaser node-type-post node-1672 no-event-date t123 wt123 wt0 t297 wt297 wt51 wt0 access-normal has-image no-more pt123 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-carousel croppable  c1  c-1"><a href="/resourcing-excellence-education-reed" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/carousel/CRESS_Meeting016.jpg" alt="Image of Resourcing Excellence in Education (REEd)" title="" width="1400" height="550"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Carousels">Carousel</span> <span class="last meta-item post-date">December 10, 2009</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/resourcing-excellence-education-reed" title="Resourcing Excellence in Education (REEd)"><span class="title">Resourcing Excellence in Education (REEd)</span>
+      <br class="accessible-break"><span class="subtitle">Learn more about REEd (formerly the CRESS Center)</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p> </p>
+
+<div> </div>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/resourcing-excellence-education-reed"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div> <!-- /#header-blocks -->
+          </div></div> <!-- /#header-inner, /#header -->
+    <div id="main" class=""><div id="main-inner" class="region-main clear-block">
+      <div id="content"><div id="content-inner" class="region-content">
+                  <div id="content-header">
+                          <h1 class="title">Home</h1>
+                                                          </div> <!-- /#content-header -->
+                          <div id="content-top" class="region region-content-top">
+            <div id="block-views_blocks-term-block_1-5" class="block block-views_blocks region-odd odd region-count-1 count-7 home-overview views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <div id="node-3515-teaser" class="node node-teaser node-type-post node-3515 pt-show-contact-info pt-show-social-block no-event-date t1 wt1 wt0 t299 wt299 wt51 wt0 access-normal has-more pt1 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Overviews">Overview</span> <span class="last meta-item post-date">August 30, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/taxonomy/term/581" title="Welcome"><span class="title">Welcome</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p>The UC Davis School of Education is transforming education through preparation of the best education leaders, researchers, and teachers in the country. We are committed to eliminating inequities in schooling and learning opportunities for diverse learners using the power of knowledge and the promise of education.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/taxonomy/term/581"><span class="read-more-text">Read more</span></a></span></li>
+<li class="link link-related link-related-teaching-credential"><span><a href="/how-apply-teaching-credential"><span class="link-text">Teaching Credential</span></a></span></li>
+<li class="link link-related link-related-phd"><span><a href="/phd-program"><span class="link-text">PhD</span></a></span></li>
+<li class="link link-related link-related-edd"><span><a href="/edd-doctorate-educational-leadership"><span class="link-text">EdD</span></a></span></li>
+<li class="link link-related link-related-get-updates last"><span><a href="https://app.e2ma.net/app2/audience/signup/53978/31884/?v=a"><span class="link-text">Get Updates</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-6" class="  icp-pod ip-above  dd block block-views_blocks region-even even region-count-2 count-8 home-pods views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-4223-teaser" class="node node-teaser node-type-post node-4223 pt-show-social-block no-event-date t6 wt6 wt0 t300 wt300 wt51 wt0 access-normal has-image no-more pt6 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/event/school-education-graduation-1" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/_dsc8172.jpg" alt="Image of School of Education Graduation Ceremony" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Pods">Pod</span> <span class="last meta-item post-date">May 18, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/event/school-education-graduation-1" title="School of Education Graduation Ceremony"><span class="title">School of Education Graduation Ceremony</span>
+      <br class="accessible-break"><span class="subtitle">June 10, 2015</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/event/school-education-graduation-1"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4123-teaser" class="node node-teaser node-type-post node-4123 pt-show-social-block no-event-date t6 wt6 wt0 t554 wt554 wt549 wt518 wt0 t300 wt300 wt51 wt0 t693 wt693 wt519 wt0 access-normal has-image no-more pt6 has-3-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/video/adventures-enrichment-camps" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/camp_video.jpg" alt="Image of Adventures in Enrichment Camps" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Pods">Pod</span> <span class="last meta-item post-date">February 25, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/video/adventures-enrichment-camps" title="Adventures in Enrichment Camps"><span class="title">Adventures in Enrichment Camps</span>
+      <br class="accessible-break"><span class="subtitle">Learn more about the 2015 summer camps. Registration now open.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/video/adventures-enrichment-camps"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-4142-teaser" class="node node-teaser node-type-post node-4142 pt-show-social-block no-event-date t6 wt6 wt0 t300 wt300 wt51 wt0 access-normal has-image no-more pt6 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/video/struggle-soul-teaching-and-teacher-education-imagining-more-democratic-future-teacher" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/soe__zeichner_022.jpg" alt="Image of “The Struggle for the Soul of Teaching and Teacher Education”" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Pods">Pod</span> <span class="last meta-item post-date">March 16, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/video/struggle-soul-teaching-and-teacher-education-imagining-more-democratic-future-teacher" title="“The Struggle for the Soul of Teaching and Teacher Education”"><span class="title">“The Struggle for the Soul of Teaching and Teacher Education”</span>
+      <br class="accessible-break"><span class="subtitle">Watch the March 11 talk by Kenneth Zeichner, University of Washington</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/video/struggle-soul-teaching-and-teacher-education-imagining-more-democratic-future-teacher"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    <div id="node-3994-teaser" class="node node-teaser node-type-post node-3994 pt-show-social-block no-event-date t6 wt6 wt0 t568 wt568 wt564 wt519 wt0 t586 wt586 wt516 wt0 t300 wt300 wt51 wt0 t572 wt572 wt519 wt0 access-normal has-image no-more pt6 has-4-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/video/annual-gifts-make-difference" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/destiny_teaching.jpg" alt="Image of Your Annual Gift Makes a Difference" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Pods">Pod</span> <span class="last meta-item post-date">December 3, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/video/annual-gifts-make-difference" title="Your Annual Gift Makes a Difference"><span class="title">Your Annual Gift Makes a Difference</span>
+      <br class="accessible-break"><span class="subtitle">Watch this special video thank you from scholarship student Destiny Ramos</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/video/annual-gifts-make-difference"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+          </div> <!-- /#content-top -->
+                <div id="content-area">
+                    <div class="no-main-channel"></div>          <div id="block-views_blocks-term-block_1-7" class="block block-views_blocks region-odd odd region-count-1 count-9 home-centers views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Centers</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-3516-teaser" class="node node-teaser node-type-post node-3516 pt-show-social-block no-event-date t156 wt156 wt2 wt0 t618 wt618 wt51 wt0 access-normal no-more pt156 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Departments">Department</span> <span class="last meta-item post-date">August 30, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/center-applied-policy-education" title="CAP-ED"><span class="title">CAP-ED</span>
+      <br class="accessible-break"><span class="subtitle">Center for Applied Policy in Education</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/center-applied-policy-education"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4173-teaser" class="node node-teaser node-type-post node-4173 pt-show-social-block no-event-date t156 wt156 wt2 wt0 t618 wt618 wt51 wt0 access-normal no-more pt156 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Departments">Department</span> <span class="last meta-item post-date">April 5, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/california-institute-school-improvement" title="CISI"><span class="title">CISI</span>
+      <br class="accessible-break"><span class="subtitle">California Institute for School Improvement</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/california-institute-school-improvement"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-3520-teaser" class="node node-teaser node-type-post node-3520 pt-show-social-block no-event-date t156 wt156 wt2 wt0 t618 wt618 wt51 wt0 access-normal no-more pt156 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Departments">Department</span> <span class="last meta-item post-date">August 30, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/edforward" title="EDFORWARD"><span class="title">EDFORWARD</span>
+      <br class="accessible-break"><span class="subtitle">Innovation in Education</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/edforward"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    <div id="node-3521-teaser" class="node node-teaser node-type-post node-3521 pt-show-social-block no-event-date t156 wt156 wt2 wt0 t618 wt618 wt51 wt0 access-normal no-more pt156 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Departments">Department</span> <span class="last meta-item post-date">August 30, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/resourcing-excellence-education-reed" title="REEd"><span class="title">REEd</span>
+      <br class="accessible-break"><span class="subtitle">Resourcing Excellence in Education</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/resourcing-excellence-education-reed"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-8" class="block block-views_blocks region-even even region-count-2 count-10 home-news-and-events views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">News &amp; Events</span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-4230-teaser" class="node node-teaser node-type-post node-4230 pt-show-date pt-show-social-block no-event-date t127 wt127 wt2 wt0 t298 wt298 wt51 wt0 access-normal has-more pt127 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="News">News</span> <span class="meta-item post-date">June 9, 2015</span>   <span class="last meta-item meta-profile meta-profile-link"><a href="/faculty-profile/emily-j-solari">Emily J. Solari</a></span>   </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news/35-million-grant-will-help-study-early-reading-instruction" title="$3.5 million grant will help study early reading instruction"><span class="title">$3.5 million grant will help study early reading instruction</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p>A $3.5 million grant to <a href="http://education.ucdavis.edu/faculty-profile/emily-j-solari">Emily Solari</a>, assistant professor of education, will bring reading instruction to 100 first-grade classrooms in Sacramento, Yolo and other counties in the region as well as in Houston, Texas, by next fall.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news/35-million-grant-will-help-study-early-reading-instruction"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4228-teaser" class="node node-teaser node-type-post node-4228 pt-show-date pt-show-social-block no-event-date t127 wt127 wt2 wt0 t298 wt298 wt51 wt0 access-normal has-image has-more pt127 has-1-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="News">News</span> <span class="meta-item post-date">May 22, 2015</span>   <span class="last meta-item meta-profile meta-profile-link"><a href="/faculty-profile/steven-athanases">Steven Athanases</a></span>   </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news/steven-athanases-honored-faculty-citation-award" title="Steven Athanases Honored with Faculty Citation Award"><span class="title">Steven Athanases Honored with Faculty Citation Award</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/news/steven-athanases-honored-faculty-citation-award" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/sa_web__074_0_0.jpg" alt="Image of Steven Athanases Honored with Faculty Citation Award" title="" width="120" height="181"></a></span></div>
+          <div class="node-content content node-item">
+            <p><a href="http://education.ucdavis.edu/faculty-profile/steven-athanases">Steven Athanases</a>, professor of education, has received a 2015 UC Davis Diversity and Principles of Community Faculty Citation Award in special recognition of career achievement and distinguished leadership and vision in advancing the equal opportunity and diversity objectives within the UC Davis community.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news/steven-athanases-honored-faculty-citation-award"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-4225-teaser" class="node node-teaser node-type-post node-4225 pt-show-post-type pt-show-social-block no-event-date t103 wt103 wt2 wt0 t561 wt561 wt560 wt519 wt0 t298 wt298 wt51 wt0 access-normal has-image has-more has-file pt103 has-2-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Publications">Publication</span> <span class="last meta-item post-date">May 19, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/publication/spring-2015-catalyst" title="Spring 2015 CATALYST"><span class="title">Spring 2015 CATALYST</span>
+      <br class="accessible-break"><span class="subtitle">News, Research and Program Updates from the UC Davis School of Education</span></a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="/publication/spring-2015-catalyst" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/catalyst_spring_2015_cover.jpg" alt="Image of Spring 2015 CATALYST" title="" width="120" height="155"></a></span></div>
+          <div class="node-content content node-item">
+            <p>This Spring 2015 issue of the UC Davis School of Education’s biannual <em>Catalyst</em> magazine highlights research news, updates on faculty and alumni, and includes a special report detailing the impact of scholarships on our 2014-15 student recipients. <a href="http://education.ucdavis.edu/sites/main/files/file-attachments/catalyst_spring_2015_web.pdf">Download the magazine here</a>.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first"><span><a href="/publication/spring-2015-catalyst"><span class="read-more-text">Read more</span></a></span></li>
+<li class="link link-file link-file-catalyst-spring-2015-web-pdf link-file-application-pdf link-file-35772 last"><span><span class="file fid-35772 file-catalyst-spring-2015-web-pdf file-application-pdf  c1  c-1"><a href="/sites/main/files/file-attachments/catalyst_spring_2015_web.pdf" style=" background-image: url('http://education.ucdavis.edu/sites/all/modules/filefield/icons/application-pdf.png'); "><span class="link-text">SPRING 2015 CATALYST</span></a></span></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-4195-teaser" class="node node-teaser node-type-post node-4195 pt-show-date pt-show-social-block no-event-date t127 wt127 wt2 wt0 t298 wt298 wt51 wt0 t560 wt560 wt519 wt0 t690 wt690 wt688 wt517 wt0 access-normal has-more pt127 has-3-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="News">News</span> <span class="meta-item post-date">April 28, 2015</span>   <span class="meta-item meta-profile meta-profile-link"><a href="/faculty-profile/cassandra-md-hart">Cassandra M.D. Hart</a></span> <span class="last meta-item meta-profile meta-profile-link"><a href="/student-profile/michael-s-hill">Michael S. Hill</a></span>   </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news/five-studies-find-online-courses-are-not-working-well-community-colleges" title="Five studies find online courses are not working well at community colleges"><span class="title">Five studies find online courses are not working well at community colleges</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p>A <a href="http://education.ucdavis.edu/research/online-courses-cure-all-think-again">study written by Cassandra Hart</a>, assistant professor of education, and education doctoral students Michael Hill and Elizabeth Friedmann, is placed in the context of other studies on the efficacy of online learning in community colleges.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news/five-studies-find-online-courses-are-not-working-well-community-colleges"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+    <div id="node-4182-teaser" class="node node-teaser node-type-post node-4182 pt-show-date pt-show-social-block no-event-date t127 wt127 wt2 wt0 t298 wt298 wt51 wt0 t584 wt584 wt688 wt517 wt0 t560 wt560 wt519 wt0 access-normal has-more pt127 has-3-nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="News">News</span> <span class="meta-item post-date">April 13, 2015</span>   <span class="last meta-item meta-profile meta-profile-link"><a href="/faculty-profile/harold-levine">Harold Levine</a></span>   </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/news/why-colleges-should-care-about-common-core" title="Why Colleges Should Care About the Common Core"><span class="title">Why Colleges Should Care About the Common Core</span>
+      <br class="accessible-break"><span class="subtitle">Education Week Commentary</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p>Dean Harold Levine and Michael Kirst, president of the California State Board of Education, co-wrote “Why Colleges Should Care About the Common Core” for <em>Education Week</em>.</p>
+
+<p>In the piece, Levine and Kirst lay out their concerns that colleges and universities may not be prepared to educate the students who will soon be entering their institutions armed with a “more inquiry-based” and “collaborative problem-solving” approach to learning.</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/news/why-colleges-should-care-about-common-core"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <p><a class="button first" href="http://education.ucdavis.edu/news">See All News</a><a class="button last" href="http://education.ucdavis.edu/events">See All Events</a></p>    </div>
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+        </div>
+                      </div></div> <!-- /#content-inner, /#content -->
+      <a id="navigation"></a>
+                      </div></div> <!-- /#main-inner, /#main -->
+          <div id="footer"><div id="footer-inner" class="region region-footer">
+                <div id="block-views_blocks-term-block_1-9" class="block block-views_blocks region-odd odd region-count-1 count-11 social-links views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-4158-teaser" class="node node-teaser node-type-post node-4158 no-event-date t617 wt617 wt0 access-normal has-image no-more pt617 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social links">Social link</span> <span class="last meta-item post-date">March 23, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.youtube.com/UCDSchoolofEducation" title="YouTube"><span class="title">YouTube</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://www.youtube.com/UCDSchoolofEducation" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_youtube.png" alt="Image of YouTube" title="" width="120" height="120"></a></span></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.youtube.com/UCDSchoolofEducation"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4155-teaser" class="node node-teaser node-type-post node-4155 no-event-date t617 wt617 wt0 access-normal has-image no-more pt617 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social links">Social link</span> <span class="last meta-item post-date">March 23, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://pinterest.com/UCDeducation/" title="Pinterest"><span class="title">Pinterest</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://pinterest.com/UCDeducation/" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_pintrest.png" alt="Image of Pinterest" title="" width="120" height="120"></a></span></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://pinterest.com/UCDeducation/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-4156-teaser" class="node node-teaser node-type-post node-4156 no-event-date t617 wt617 wt0 access-normal has-image no-more pt617 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social links">Social link</span> <span class="last meta-item post-date">March 23, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.linkedin.com/groups?gid=1794779%26trk=myg_ugrp_ovr" title="LinkedIn"><span class="title">LinkedIn</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://www.linkedin.com/groups?gid=1794779%26trk=myg_ugrp_ovr" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_linkedin.png" alt="Image of LinkedIn" title="" width="120" height="120"></a></span></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.linkedin.com/groups?gid=1794779%26trk=myg_ugrp_ovr"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-4157-teaser" class="node node-teaser node-type-post node-4157 no-event-date t617 wt617 wt0 access-normal has-image no-more pt617 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social links">Social link</span> <span class="last meta-item post-date">March 23, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://twitter.com/UCDEducation" title="Twitter"><span class="title">Twitter</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://twitter.com/UCDEducation" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_twitter.png" alt="Image of Twitter" title="" width="120" height="120"></a></span></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://twitter.com/UCDEducation"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+    <div id="node-2329-teaser" class="node node-teaser node-type-post node-2329 no-event-date t617 wt617 wt0 access-normal has-image no-more pt617 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social links">Social link</span> <span class="last meta-item post-date">September 16, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.facebook.com/pages/Davis-CA/UC-Davis-School-of-Education/46192033240" title="Facebook"><span class="title">Facebook</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://www.facebook.com/pages/Davis-CA/UC-Davis-School-of-Education/46192033240" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_facebook.png" alt="Image of Facebook" title="" width="120" height="120"></a></span></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.facebook.com/pages/Davis-CA/UC-Davis-School-of-Education/46192033240"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-10" class=" icp-pod ip-above  dd block block-views_blocks region-even even region-count-2 count-12 term-highlights views-block channel context-template "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-4179-teaser" class="node node-teaser node-type-post node-4179 no-event-date t716 wt716 wt0 t519 wt519 wt0 access-normal has-image no-more pt716 has-1-nt is-current">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/support-school" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/garcia_yolanda_plascencia_050.jpg" alt="Image of Make Your Gift to the School Today" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">April 10, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/support-school" title="Make Your Gift to the School Today"><span class="title">Make Your Gift to the School Today</span>
+      <br class="accessible-break"><span class="subtitle">Giving to the School of Education makes a difference. Every gift counts.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/support-school"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-4121-teaser" class="node node-teaser node-type-post node-4121 no-event-date t716 wt716 wt0 t518 wt518 wt0 access-normal has-image no-more pt716 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/shakespeare-works-when-shakespeare-plays" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/swwsp.jpg" alt="Image of Shakespeare Works when Shakespeare Plays" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">February 23, 2015</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/shakespeare-works-when-shakespeare-plays" title="Shakespeare Works when Shakespeare Plays"><span class="title">Shakespeare Works when Shakespeare Plays</span>
+      <br class="accessible-break"><span class="subtitle">Register now for the fourth annual conference that brings together teaching artists from some of the world’s most respected Shakespeare companies and festivals to present active and playful approaches to enliven the teaching of Shakespeare.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/shakespeare-works-when-shakespeare-plays"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-3915-teaser" class="node node-teaser node-type-post node-3915 no-event-date t716 wt716 wt0 t519 wt519 wt0 access-normal has-image no-more pt716 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/undergraduate-minor-education" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/timar_0.jpg" alt="Image of Interested in Learning More about Education?" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">November 18, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/undergraduate-minor-education" title="Interested in Learning More about Education?"><span class="title">Interested in Learning More about Education?</span>
+      <br class="accessible-break"><span class="subtitle">Check out our undergraduate courses and minor in education</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/undergraduate-minor-education"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-3914-teaser" class="node node-teaser node-type-post node-3914 no-event-date t716 wt716 wt0 access-normal has-image no-more pt716 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/undergraduate-minor-education" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/timar.jpg" alt="Image of Interested in Learning More about Education" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">November 18, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/undergraduate-minor-education" title="Interested in Learning More about Education"><span class="title">Interested in Learning More about Education</span>
+      <br class="accessible-break"><span class="subtitle">Check out our undergraduate courses and minor in education</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/undergraduate-minor-education"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-3913-teaser" class="node node-teaser node-type-post node-3913 no-event-date t716 wt716 wt0 access-normal has-image no-more pt716 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/words-take-wing" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/wtw15_prelim_artwork.jpg" alt="Image of Words Take Wing" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">November 18, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/words-take-wing" title="Words Take Wing"><span class="title">Words Take Wing</span>
+      <br class="accessible-break"><span class="subtitle">Learn more about this annual event that brings a renowned children’s literature author to our region.</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/words-take-wing"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-3912-teaser" class="node node-teaser node-type-post node-3912 no-event-date t716 wt716 wt0 t542 wt542 wt517 wt0 access-normal has-image no-more pt716 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/resourcing-excellence-education-reed" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/reed_id_art-lg1_0.jpg" alt="Image of Resourcing Excellence in Education" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">November 18, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/resourcing-excellence-education-reed" title="Resourcing Excellence in Education"><span class="title">Resourcing Excellence in Education</span>
+      <br class="accessible-break"><span class="subtitle">Learn more about the CRESS Center’s transition to REEd</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/resourcing-excellence-education-reed"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-3911-teaser" class="node node-teaser node-type-post node-3911 no-event-date t716 wt716 wt0 t516 wt516 wt0 access-normal has-image no-more pt716 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="http://gradstudies.ucdavis.edu/prospective-students/admissions-application" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/teaching_credential.jpg" alt="Image of Want to Make a Difference in Education?" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">November 18, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://gradstudies.ucdavis.edu/prospective-students/admissions-application" title="Want to Make a Difference in Education?"><span class="title">Want to Make a Difference in Education?</span>
+      <br class="accessible-break"><span class="subtitle">Apply for one of our programs today</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://gradstudies.ucdavis.edu/prospective-students/admissions-application"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even views-row-last">
+    <div id="node-3645-teaser" class="node node-teaser node-type-post node-3645 no-event-date t716 wt716 wt0 t515 wt515 wt0 access-normal has-image no-more pt716 has-1-nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-pod croppable  c1  c-1"><a href="/teaching-credentialma" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/pod/main-images/benjamin_michelle_023.jpg" alt="Image of Make a difference: Teach" title="" width="600" height="440"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Term highlights">Term highlight</span> <span class="last meta-item post-date">September 24, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/teaching-credentialma" title="Make a difference: Teach"><span class="title">Make a difference: Teach</span>
+      <br class="accessible-break"><span class="subtitle">Learn about our teaching credential program</span></a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/teaching-credentialma"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-views_blocks-term-block_1-13" class=" ip-above  dd block block-views_blocks region-odd odd region-count-3 count-13 superfooter views-block channel context-global "><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text"></span></h2>
+  
+  <div class="block-content content">
+    <div class="view view-term view-id-term view-display-id-block_1 view-dom-id-term-block-1-1">
+        <div class="view-header">
+      <a href="http://education.ucdavis.edu/" title="UC Davis School of Education logo"><span>UC Davis School of Education</span></a>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-3578-teaser" class="node node-teaser node-type-post node-3578 pt-show-social-block no-event-date t56 wt56 wt0 access-normal has-more pt56 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Footer links">Footer link</span> <span class="last meta-item post-date">September 4, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/footer-link/contact-us" title="Contact Us"><span class="title">Contact Us</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p><strong>UC Davis School of Education</strong><br>
+	One Shields Ave,<br>
+	Davis, CA 95616</p>
+
+<p><strong>Student Inquiries:</strong><br><a href="mailto:eduadvising@ucdavis.edu">eduadvising@ucdavis.edu</a><br>
+	(530) 752-5887</p>
+
+<p><strong>General Inquiries:</strong><br><a href="mailto:edschool@ucdavis.edu">edschool@ucdavis.edu</a></p>
+
+<p><strong>Media Inquiries</strong>:<br><a href="mailto:kmnikos@ucdavis.edu">Karen Nikos Rose</a> <br>
+	Associate Director, News &amp; Media Relations, UC Davis Strategic Communications</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/footer-link/contact-us"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-2812-teaser" class="node node-teaser node-type-post node-2812 no-event-date t620 wt620 wt56 wt0 access-normal has-image no-more pt620 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://pinterest.com/UCDeducation/" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_pintrest.png" alt="Image of Pinterest" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social footer link s">Social footer link </span> <span class="last meta-item post-date">November 27, 2012</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://pinterest.com/UCDeducation/" title="Pinterest"><span class="title">Pinterest</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://pinterest.com/UCDeducation/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-2241-teaser" class="node node-teaser node-type-post node-2241 no-event-date t620 wt620 wt56 wt0 access-normal has-image no-more pt620 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://www.linkedin.com/groups?gid=1794779&amp;trk=myg_ugrp_ovr" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_linkedin.png" alt="Image of LinkedIn" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social footer link s">Social footer link </span> <span class="last meta-item post-date">August 15, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.linkedin.com/groups?gid=1794779&amp;trk=myg_ugrp_ovr" title="LinkedIn"><span class="title">LinkedIn</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.linkedin.com/groups?gid=1794779&amp;trk=myg_ugrp_ovr"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-2240-teaser" class="node node-teaser node-type-post node-2240 no-event-date t620 wt620 wt56 wt0 access-normal has-image no-more pt620 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://twitter.com/UCDEducation" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_twitter.png" alt="Image of Twitter" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social footer link s">Social footer link </span> <span class="last meta-item post-date">August 15, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://twitter.com/UCDEducation" title="Twitter"><span class="title">Twitter</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://twitter.com/UCDEducation"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-2239-teaser" class="node node-teaser node-type-post node-2239 no-event-date t620 wt620 wt56 wt0 access-normal has-image no-more pt620 has--nt">
+  <div class="node-inner">  
+            <div class="node-upper-image node-item"><span class="field-image field-not-video field-image-preset-thumbnail croppable  c1  c-1"><a href="http://www.facebook.com/pages/Davis-CA/UC-Davis-School-of-Education/46192033240" rel=""><img src="http://education.ucdavis.edu/sites/main/files/imagecache/thumbnail/main-images/icon_facebook.png" alt="Image of Facebook" title="" width="120" height="120"></a></span></div>
+        <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Social footer link s">Social footer link </span> <span class="last meta-item post-date">August 15, 2011</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.facebook.com/pages/Davis-CA/UC-Davis-School-of-Education/46192033240" title="Facebook"><span class="title">Facebook</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.facebook.com/pages/Davis-CA/UC-Davis-School-of-Education/46192033240"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-1746-teaser" class="node node-teaser node-type-post node-1746 no-event-date t261 wt261 wt56 wt0 access-normal has-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 8, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/footer-quick-link/location-and-contacts" title="Location and Contacts"><span class="title">Location and Contacts</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <h4>Campus Location</h4>
+
+<p>The School of Education is located in the School of Education Building on the corner of First and A Streets in Davis.</p>
+
+<h4>Mailing Address</h4>
+
+<p>School of Education<br>
+	UC Davis<br>
+	One Shields Avenue<br>
+	Davis, CA 95616</p>    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/footer-quick-link/location-and-contacts"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-1751-teaser" class="node node-teaser node-type-post node-1751 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 11, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://gradstudies.ucdavis.edu/prospective/admissions_application.html" title="Apply Online"><span class="title">Apply Online</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://gradstudies.ucdavis.edu/prospective/admissions_application.html"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-1772-teaser" class="node node-teaser node-type-post node-1772 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 18, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/post/student-services" title="Student Services"><span class="title">Student Services</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p> </p>
+<div> </div>
+    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/post/student-services"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-1748-teaser" class="node node-teaser node-type-post node-1748 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 11, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/teaching-credentialma" title="Teacher Education"><span class="title">Teacher Education</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/teaching-credentialma"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-1762-teaser" class="node node-teaser node-type-post node-1762 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 12, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/phd-education" title="PhD Program"><span class="title">PhD Program</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/phd-education"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-1761-teaser" class="node node-teaser node-type-post node-1761 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 12, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/edd-doctorate-educational-leadership" title="CANDEL Program (EdD)"><span class="title">CANDEL Program (EdD)</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/edd-doctorate-educational-leadership"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-1747-teaser" class="node node-teaser node-type-post node-1747 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 11, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/course-schedules" title="Course Schedules"><span class="title">Course Schedules</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+            <p> </p>
+<div> </div>
+<div> </div>
+    </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/course-schedules"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-13 views-row-odd">
+    <div id="node-3878-teaser" class="node node-teaser node-type-post node-3878 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">November 6, 2014</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/master-arts-education-policy" title="MA in Education Policy"><span class="title">MA in Education Policy</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/master-arts-education-policy"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-14 views-row-even">
+    <div id="node-1752-teaser" class="node node-teaser node-type-post node-1752 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 11, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="/catalyst-magazine" title="Catalyst Magazine"><span class="title">Catalyst Magazine</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="/catalyst-magazine"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-15 views-row-odd">
+    <div id="node-1750-teaser" class="node node-teaser node-type-post node-1750 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 11, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://campusmap.ucdavis.edu/" title="Campus Map"><span class="title">Campus Map</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://campusmap.ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-16 views-row-even">
+    <div id="node-1749-teaser" class="node node-teaser node-type-post node-1749 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 11, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="http://www.ucdavis.edu/" title="UC Davis Site"><span class="title">UC Davis Site</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="http://www.ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-17 views-row-odd views-row-last">
+    <div id="node-1765-teaser" class="node node-teaser node-type-post node-1765 no-event-date t261 wt261 wt56 wt0 access-normal no-more pt261 has--nt">
+  <div class="node-inner">  
+              <div class="node-upper-meta meta node-item"><div class="meta-inner">
+<span class="meta-item post-type" data-plural="Site links">Site link</span> <span class="last meta-item post-date">January 13, 2010</span>     </div></div>
+          
+      <h2 class="node-header node-item">
+      <a href="https://edu.ucdavis.edu/" title="School’s Intranet"><span class="title">School’s Intranet</span>
+      </a>
+    </h2>
+        <div class="node-image node-item"></div>
+          <div class="node-content content node-item">
+                </div>
+    
+  
+  
+      <div class="node-links node-item"><ul class="links inline">
+<li class="link link-read-more first last"><span><a href="https://edu.ucdavis.edu/"><span class="read-more-text">Read more</span></a></span></li>
+</ul></div>
+  
+    
+  
+
+
+</div>
+</div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <p><span class="copyright">Copyright © 2014 the Regents of the University of California, Davis Campus. All Rights Reserved.</span></p>    </div>
+  
+  
+</div>   </div>
+
+</div></div> <!-- /block-inner, /block -->
+      </div></div> <!-- /#footer-inner, /#footer -->
+      </div></div> <!-- /#page-inner, /#page -->
+      <div id="closure-blocks"><div class="region region-closure">
+<div id="block-dd_login-login" class="block block-dd_login region-odd even region-count-1 count-14"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Log in</span></h2>
+  
+  <div class="block-content content">
+    <form action="/home?destination=taxonomy%2Fterm%2F51" accept-charset="UTF-8" method="post" id="user-login-form">
+<div>
+<div class=" form-item type-textfield" id="edit-name-wrapper">
+ <label for="edit-name">E-mail or username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" tabindex="1" class="form-text required">
+</div>
+<div class=" form-item type-password" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass" maxlength="60" size="15" tabindex="2" class="form-text required">
+</div>
+<div class=" form-item type-checkbox" id="edit-remember-me-wrapper">
+ <label class="option" for="edit-remember-me"><input type="checkbox" name="remember_me" id="edit-remember-me" value="1" checked tabindex="3" class="form-checkbox"> Remember me</label>
+</div>
+<input type="submit" name="op" id="edit-submit-1" value="Log in" tabindex="4" class="form-submit"><div class="item-list"><ul>
+<li class="first"><a href="/user/register" title="Create a new user account.">Create new account</a></li>
+<li class="last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div>
+<input type="hidden" name="form_build_id" id="form-ask6gO1fn8kJLsVRCaatepkwsvvOpjc7B-DI6ColSJI" value="form-ask6gO1fn8kJLsVRCaatepkwsvvOpjc7B-DI6ColSJI"><input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block">
+</div>
+</form>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+<div id="block-digitaldcore-command_menu" class="block block-digitaldcore region-even odd region-count-2 count-15"><div class="block-inner">
+
+    
+   
+  
+      <h2 class="block-title"><span class="block-title-text">Commands</span></h2>
+  
+  <div class="block-content content">
+    <div class="menu-block-dcore menu-name-dd-cmd parent-mlid-0 menu-level-1">
+  <ul class="menu">
+<li class="leaf first menu-mlid-13238"><a href="/help" title="" class=" menu-help-center help depth-1">Help</a></li>
+<li class="leaf last menu-mlid-13239"><a href="/user/login" title="" class=" menu-login user-login depth-1">Log in</a></li>
+</ul>
+</div>
+  </div>
+
+</div></div> <!-- /block-inner, /block -->
+</div></div>
+    <script type="text/javascript" src="/sites/main/files/advagg_js/js_19ecf24c5368f0cb90e1e64dcac885b4_53.js"></script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-4722177-1"]);_gaq.push(["_setDomainName",".education.ucdavis.edu"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.type="text/javascript";ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})()
+//--><!]]>
+</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"51e9ee0927","applicationID":"3044101","transactionName":"bwBRZUoEC0NXUEEKXlZKcERLEQpdGX1UFWVdF14eSAQCVQ==","queueTime":0,"applicationTime":596,"atts":"Q0dGEwIeR15XRWEGQ1UxVlxICQREUxEPQXdKCl1FGBUEV1MRGUFESwBBYkwEEUVFEQ9BUFYKXUhVChBDFB8XEFBWAVFeQCwBEgwRRgxUZxVBXlwQBkRfXFtBTBRHUhMCHhhN","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com/nr-515.min.js"}</script>
+</body>
+</html>
