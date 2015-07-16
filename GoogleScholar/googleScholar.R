@@ -36,12 +36,19 @@ function(txt, doc = htmlParse(txt))
 processArticle =
 function(node)
 {
-  ti = xmlValue(getNodeSet(node, ".//h3[@class = 'gs_rt']")[[1]])
+  tiNode =  getNodeSet(node, ".//h3[@class = 'gs_rt']")[[1]]
+  ti = xmlValue(tiNode)
+  a = getNodeSet(tiNode, ".//a")
+  if(length(a))
+      link = xmlGetAttr(a[[1]], "href")
+  else
+      link = ""
+  
   authors = getNodeSet(node, ".//div[@class = 'gs_a']")[[1]]
 
   authors = separateAuthors(authors)
   
-  list(title = ti, authors = authors)
+  list(title = ti, authors = authors, link = link)
 }
 
 separateAuthors =
