@@ -1,10 +1,11 @@
 library(RCurl)
 library(XML)
 
-GoogleScholarBaseURL = "http://scholar.google.com/scholar"
+GoogleScholarBaseURL = "https://scholar.google.com/scholar"
 googleScholar = 
 function(q, max = NA, url = GoogleScholarBaseURL, curl = getCurlHandle(...), ...)
-{    
+{
+      #XXX Should set the referer to "https://scholar.google.com/"
    o = getForm(url, hl = "en", q = q, btnG= "", as_sdt = "1%2C5", as_sdtp = "", binary = TRUE, curl = curl)
 
    articles = list()
@@ -19,7 +20,7 @@ function(q, max = NA, url = GoogleScholarBaseURL, curl = getCurlHandle(...), ...
      u = nextPage(doc)
      if(length(u) == 0)
         break
-     
+      #XXX We should set the referer field to the page we are just on and going to the next page from  
      o = getURLContent(u, curl = curl, binary = TRUE)
    }
 
