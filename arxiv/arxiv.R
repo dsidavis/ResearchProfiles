@@ -19,13 +19,6 @@ getArxivCollaborators = function(name, removeMiddleInitial = TRUE)
 }
 
 
-gh = getCurlHandle(cookiejar = "", useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:39.0) Gecko/20100101 Firefox/39.0",
-                   verbose = TRUE, followlocation = TRUE,
-                   httpheader = c(Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                                  'Accept-Language' = "en-US,en;q=0.5"  # ,'Accept-Encoding' = "gzip, deflate"
-                   ))
-invisible(getURLContent("http://www.google.com/search", curl = gh))
-
 getArxivCollabAndInst = function(name, ...)
 {
   col = getArxivCollaborators(name, ...)
@@ -35,6 +28,13 @@ getArxivCollabAndInst = function(name, ...)
 
 if(FALSE)
 {
+  gh = getCurlHandle(cookiejar = "", useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:39.0) Gecko/20100101 Firefox/39.0",
+                     verbose = TRUE, followlocation = TRUE,
+                     httpheader = c(Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                                    'Accept-Language' = "en-US,en;q=0.5"  # ,'Accept-Encoding' = "gzip, deflate"
+                     ))
+  invisible(getURLContent("http://www.google.com/search", curl = gh))
+
   source("affiliation/googleAffiliation.R")
   dtl = getArxivCollabAndInst("duncan temple lang")
   coop = getArxivCollabAndInst("graham coop")
