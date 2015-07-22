@@ -14,7 +14,7 @@ function(node)
   url = getNodeSet(node, ".//a[@href and not(starts-with(@href, 'mailto'))]/@href")[[1]]
   nxt = getNodeSet(node, ".//following-sibling::div[1]")[[1]]
   name = xpathSApply(nxt, ".//strong", xmlValue)[[1]]
-  c(who = name, url = as.character(url), title = NA)
+  c(name = name, url = as.character(url), title = NA)
 }
 
 
@@ -32,4 +32,3 @@ fac = lapply(us, function(u) {
 
 landAir = do.call(rbind, fac)
 landAir$Dept = rep(c("Atmospheric Science", "Hydrology", "Soils & BioGeochemistry", "Cooperative Extension"), sapply(fac, nrow))
-         
