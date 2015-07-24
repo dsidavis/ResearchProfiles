@@ -20,5 +20,9 @@ txt = getForm("http://api.elsevier.com/content/search/scopus", query = "visualiz
 
 
 Affiliation search
-getForm("http://api.elsevier.com/documentation/AFFILIATIONSearchAPI.wadl", 
+#getForm("http://api.elsevier.com/documentation/AFFILIATIONSearchAPI.wadl", 
+
+
+
+
 

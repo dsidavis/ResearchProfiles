@@ -19,14 +19,29 @@ function(q, key = getOption("ScopusKey", stop("need the scopus API key")), curl 
 }
 
 scoAffiliation =
-function(query, ..., key = getOption("ScopusKey", stop("need the scopus API key")),  url = "http://api.elsevier.com/content/search/affiliation", curl = getCurlHandle())
+function(query, ..., max = NA, key = getOption("ScopusKey", stop("need the scopus API key")),  url = "http://api.elsevier.com/content/search/affiliation", curl = getCurlHandle())
 {
-   scopusQuery(q = query, ..., key = key, curl = curl, url = url)
+  ans = scopusQuery(query = sprintf("affil(%s)", query), ..., key = key, curl = curl, url = url)
+
+  numResults = as.integer(ans[[1]][[1]]) # totalResults
+  if((!is.na(max) && numResults < max)  || numResults <= length(ans[[1]]$entry))
+    return(ans)
+
+  c(ans, getNextPages(as.integer(ans[[1]][[2]]), query, ..., key = key, url = url, curl = curl, max = max))
+
 }
 
 scopusQuery =
 function(..., url, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
 {
   .opts$httpheader = c('X-ELS-APIKey' = key)
-  getForm(url, .params = list(...), .opts = .opts, curl = curl)
+  ans = getForm(url, .params = list(...), .opts = .opts, curl = curl)
+  fromJSON(ans)
+}
+
+
+getNextPages = 
+function(start, ..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
+{
+
 }
