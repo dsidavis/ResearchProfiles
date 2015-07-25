@@ -1,3 +1,4 @@
+
 source("scopus.R")
 
 if(!length(getOption("ScopusKey")))
@@ -5,6 +6,8 @@ if(!length(getOption("ScopusKey")))
 
 
 o = scoAffiliation("Davis")     #  , .opts = list(verbose = TRUE))
+
+o = scoAffiliation("60014439")
 
 names(o)
 names(o[[1]])
@@ -15,3 +18,6 @@ names(o[[1]])
 
 length(o[[1]]$entry)
 
+
+
+ http://api.elsevier.com/content/affiliation/AFFILIATION_ID:60014439?start=1&count=25&view=DOCUMENTS 

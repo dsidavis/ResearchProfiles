@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<abstracts-retrieval-response xmlns="http://www.elsevier.com/xml/svapi/abstract/dtd" xmlns:ait="http://www.elsevier.com/xml/ani/ait" xmlns:ce="http://www.elsevier.com/xml/ani/common" xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:xocs="http://www.elsevier.com/xml/xocs/dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coredata>
+    <prism:url>http://api.elsevier.com/content/abstract/scopus_id:84923652118</prism:url>
+    <dc:identifier>SCOPUS_ID:84923652118</dc:identifier>
+    <eid>2-s2.0-84923652118</eid>
+    <prism:doi>10.1088/1475-7516/2015/02/038</prism:doi>
+    <article-number>038</article-number>
+    <dc:title>The bullet cluster is not a cosmological anomaly</dc:title>
+    <prism:aggregationType>Journal</prism:aggregationType>
+    <srctype>j</srctype>
+    <citedby-count>2</citedby-count>
+    <prism:publicationName>Journal of Cosmology and Astroparticle Physics</prism:publicationName>
+    <dc:publisher>
+Institute of Physics Publishing
+custserv@iop.org
+</dc:publisher>
+    <source-id>130032</source-id>
+    <prism:issn>14757516</prism:issn>
+    <prism:volume>2015</prism:volume>
+    <prism:issueIdentifier>2</prism:issueIdentifier>
+    <prism:coverDate>2015-01-01</prism:coverDate>
+    <dc:creator>
+      <author auid="56149160900" seq="1">
+        <ce:initials>C.</ce:initials>
+        <ce:indexed-name>Lage C.</ce:indexed-name>
+        <ce:surname>Lage</ce:surname>
+        <ce:given-name>Craig</ce:given-name>
+        <preferred-name>
+          <ce:initials>C.</ce:initials>
+          <ce:indexed-name>Lage C.</ce:indexed-name>
+          <ce:surname>Lage</ce:surname>
+          <ce:given-name>Craig</ce:given-name>
+        </preferred-name>
+        <author-url>http://api.elsevier.com/content/author/author_id:56149160900</author-url>
+        <affiliation href="http://api.elsevier.com/content/affiliation/affiliation_id:60014439" id="60014439"/>
+      </author>
+    </dc:creator>
+    <dc:description>
+      <abstract original="y" xml:lang="eng">
+        <publishercopyright>&#xA9; 2015 IOP Publishing Ltd and Sissa Medialab srl .</publishercopyright>
+        <ce:para>The Bullet Cluster (1E0657-56) merger is of exceptional interest for testing the standard cold-dark-matter plus cosmological constant cosmological model, and for investigating the possible existence of a long- or short-range ''fifth-force'' in the dark sector and possible need for modifications of general relativity or even of Newtonian gravity. The most recent previous simulations of the Bullet Cluster merger required an initial infall velocity far in excess of what would be expected within the standard cosmological model, at least in the absence of additional forces or modifications to gravity. We have recently carried out much more detailed simulations than previously had been done, making pixel-by-pixel fits to 2D data-maps of the mass distribution and X-ray emission, allowing for triaxial initial configurations and including MHD and cooling. Here, we compare the initial conditions of the Bullet Cluster merger as found in our new simulations to the initial conditions in similar-mass merging clusters in the Horizon cosmological simulation. We conclude that our initial infall velocity, 2900 km/s at a separation of 2.5 Mpc, is consistent with &#x39B;CDM, given the inferred main cluster mass of 2 &#xD7; 10<sup>15</sup> M<inf>o</inf>. The initial concentration and shape found for the smaller (Bullet) cluster are typical for clusters of this mass range, but both quantities seem somewhat low for the larger (Main) cluster. Due to the paucity of examples of clusters with such a high mass in simulations, these features of the main cluster cannot presently be used to test &#x39B;CDM.</ce:para>
+      </abstract>
+    </dc:description>
+    <intid>35014582</intid>
+    <link href="http://api.elsevier.com/content/abstract/scopus_id:84923652118" rel="self"/>
+    <link href="http://www.scopus.com/inward/record.url?partnerID=HzOxMe3b&amp;scp=84923652118&amp;origin=inward" rel="scopus"/>
+    <link href="http://api.elsevier.com/content/search/index:scopus?query=refeid%282-s2.0-84923652118%29" rel="cited-by"/>
+  </coredata>
+  <affiliation href="http://api.elsevier.com/content/affiliation/affiliation_id:60021784" id="60021784">
+    <affilname>New York University</affilname>
+    <affiliation-city>New York</affiliation-city>
+    <affiliation-country>United States</affiliation-country>
+  </affiliation>
+  <affiliation href="http://api.elsevier.com/content/affiliation/affiliation_id:60014439" id="60014439">
+    <affilname>UC Davis</affilname>
+    <affiliation-city>Davis</affiliation-city>
+    <affiliation-country>United States</affiliation-country>
+  </affiliation>
+  <authors>
+    <author auid="56149160900" seq="1">
+      <ce:initials>C.</ce:initials>
+      <ce:indexed-name>Lage C.</ce:indexed-name>
+      <ce:surname>Lage</ce:surname>
+      <ce:given-name>Craig</ce:given-name>
+      <preferred-name>
+        <ce:initials>C.</ce:initials>
+        <ce:indexed-name>Lage C.</ce:indexed-name>
+        <ce:surname>Lage</ce:surname>
+        <ce:given-name>Craig</ce:given-name>
+      </preferred-name>
+      <author-url>http://api.elsevier.com/content/author/author_id:56149160900</author-url>
+      <affiliation href="http://api.elsevier.com/content/affiliation/affiliation_id:60014439" id="60014439"/>
+    </author>
+    <author auid="7102939944" seq="2">
+      <ce:initials>G.R.</ce:initials>
+      <ce:indexed-name>Farrar G.R.</ce:indexed-name>
+      <ce:surname>Farrar</ce:surname>
+      <ce:given-name>Glennys R.</ce:given-name>
+      <preferred-name>
+        <ce:initials>G.R.</ce:initials>
+        <ce:indexed-name>Farrar G.</ce:indexed-name>
+        <ce:surname>Farrar</ce:surname>
+        <ce:given-name>Glennys R.</ce:given-name>
+      </preferred-name>
+      <author-url>http://api.elsevier.com/content/author/author_id:7102939944</author-url>
+      <affiliation href="http://api.elsevier.com/content/affiliation/affiliation_id:60021784" id="60021784"/>
+    </author>
+  </authors>
+  <subject-areas>
+    <subject-area abbrev="PHYS" code="3103">Astronomy and Astrophysics</subject-area>
+  </subject-areas>
+  <item xmlns="">
+    <ait:process-info>
+      <ait:date-delivered day="05" month="03" timestamp="2015-03-05T15:47:14.000014+00:00" year="2015"/>
+      <ait:date-sort day="01" month="01" year="2015"/>
+      <ait:status stage="S300" state="new" type="core"/>
+    </ait:process-info>
+    <bibrecord>
+      <item-info>
+        <copyright type="Elsevier">Copyright 2015 Elsevier B.V., All rights reserved.</copyright>
+        <itemidlist>
+          <ce:doi>10.1088/1475-7516/2015/02/038</ce:doi>
+          <itemid idtype="PUI">602525872</itemid>
+          <itemid idtype="CAR-ID">633108904</itemid>
+          <itemid idtype="SNPHYS">2015119983</itemid>
+          <itemid idtype="SCP">84923652118</itemid>
+          <itemid idtype="SGR">84923652118</itemid>
+        </itemidlist>
+        <history>
+          <date-created day="04" month="03" year="2015"/>
+        </history>
+        <dbcollection>SNPHYS</dbcollection>
+        <dbcollection>Scopusbase</dbcollection>
+      </item-info>
+      <head>
+        <citation-info>
+          <citation-type code="ar"/>
+          <citation-language xml:lang="eng"/>
+          <abstract-language xml:lang="eng"/>
+          <author-keywords>
+            <author-keyword>cosmological simulations</author-keyword>
+            <author-keyword>galaxy clusters</author-keyword>
+            <author-keyword>gravitational lensing</author-keyword>
+          </author-keywords>
+        </citation-info>
+        <citation-title>
+          <titletext original="y" xml:lang="eng">The bullet cluster is not a cosmological anomaly</titletext>
+        </citation-title>
+        <author-group>
+          <author auid="56149160900" seq="1" type="auth">
+            <ce:initials>C.</ce:initials>
+            <ce:indexed-name>Lage C.</ce:indexed-name>
+            <ce:surname>Lage</ce:surname>
+            <ce:given-name>Craig</ce:given-name>
+            <preferred-name>
+              <ce:initials>C.</ce:initials>
+              <ce:indexed-name>Lage C.</ce:indexed-name>
+              <ce:surname>Lage</ce:surname>
+              <ce:given-name>Craig</ce:given-name>
+            </preferred-name>
+            <ce:e-address type="email">cslage@ucdavis.edu</ce:e-address>
+          </author>
+          <affiliation afid="60014439" country="usa" dptid="113127430">
+            <organization>Department of Physics, UC Davis</organization>
+            <address-part>One Shields Avenue</address-part>
+            <city>Davis</city>
+            <state>CA</state>
+            <postal-code>95616</postal-code>
+          </affiliation>
+        </author-group>
+        <author-group>
+          <author auid="7102939944" seq="2" type="auth">
+            <ce:initials>G.R.</ce:initials>
+            <ce:indexed-name>Farrar G.R.</ce:indexed-name>
+            <ce:surname>Farrar</ce:surname>
+            <ce:given-name>Glennys R.</ce:given-name>
+            <preferred-name>
+              <ce:initials>G.R.</ce:initials>
+              <ce:indexed-name>Farrar G.</ce:indexed-name>
+              <ce:surname>Farrar</ce:surname>
+              <ce:given-name>Glennys R.</ce:given-name>
+            </preferred-name>
+            <ce:e-address type="email">gf25@nyu.edu</ce:e-address>
+          </author>
+          <affiliation afid="60021784" country="usa" dptid="112077957">
+            <organization>Department of Physics, New York University</organization>
+            <address-part>4 Washington Place</address-part>
+            <city>New York</city>
+            <state>NY</state>
+            <postal-code>10003</postal-code>
+          </affiliation>
+        </author-group>
+        <abstracts>
+          <abstract original="y" xml:lang="eng">
+            <publishercopyright>&#xA9; 2015 IOP Publishing Ltd and Sissa Medialab srl .</publishercopyright>
+            <ce:para>The Bullet Cluster (1E0657-56) merger is of exceptional interest for testing the standard cold-dark-matter plus cosmological constant cosmological model, and for investigating the possible existence of a long- or short-range ''fifth-force'' in the dark sector and possible need for modifications of general relativity or even of Newtonian gravity. The most recent previous simulations of the Bullet Cluster merger required an initial infall velocity far in excess of what would be expected within the standard cosmological model, at least in the absence of additional forces or modifications to gravity. We have recently carried out much more detailed simulations than previously had been done, making pixel-by-pixel fits to 2D data-maps of the mass distribution and X-ray emission, allowing for triaxial initial configurations and including MHD and cooling. Here, we compare the initial conditions of the Bullet Cluster merger as found in our new simulations to the initial conditions in similar-mass merging clusters in the Horizon cosmological simulation. We conclude that our initial infall velocity, 2900 km/s at a separation of 2.5 Mpc, is consistent with &#x39B;CDM, given the inferred main cluster mass of 2 &#xD7; 10<sup>15</sup> M<inf>o</inf>. The initial concentration and shape found for the smaller (Bullet) cluster are typical for clusters of this mass range, but both quantities seem somewhat low for the larger (Main) cluster. Due to the paucity of examples of clusters with such a high mass in simulations, these features of the main cluster cannot presently be used to test &#x39B;CDM.</ce:para>
+          </abstract>
+        </abstracts>
+        <source country="gbr" srcid="130032" type="j">
+          <sourcetitle>Journal of Cosmology and Astroparticle Physics</sourcetitle>
+          <sourcetitle-abbrev>J. Cosmol. Astroparticle Phys.</sourcetitle-abbrev>
+          <translated-sourcetitle xml:lang="eng">Journal of Cosmology and Astroparticle Physics</translated-sourcetitle>
+          <issn type="electronic">14757516</issn>
+          <volisspag>
+            <voliss issue="2" volume="2015"/>
+          </volisspag>
+          <article-number>038</article-number>
+          <publicationyear first="2015"/>
+          <publicationdate>
+            <year>2015</year>
+            <date-text>February 2015</date-text>
+          </publicationdate>
+          <website>
+            <ce:e-address type="email">http://iopscience.iop.org/1475-7516/2015/02/038/pdf/1475-7516_2015_02_038.pdf</ce:e-address>
+          </website>
+          <publisher>
+            <publishername>Institute of Physics Publishing</publishername>
+            <ce:e-address type="email">custserv@iop.org</ce:e-address>
+          </publisher>
+        </source>
+        <enhancement>
+          <classificationgroup>
+            <classifications type="ASJC">
+              <classification>3103</classification>
+            </classifications>
+          </classificationgroup>
+        </enhancement>
+      </head>
+      <tail>
+        <bibliography refcount="17">
+          <reference id="1">
+            <ref-info>
+              <refd-itemidlist>
+                <itemid idtype="SGR">65649114945</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:indexed-name>Milgrom M</ce:indexed-name>
+                  <ce:surname>Milgrom M</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>The MOND Paradigm</ref-sourcetitle>
+            </ref-info>
+            <ref-fulltext>M. Milgrom, The MOND paradigm, [0801.3133]</ref-fulltext>
+          </reference>
+          <reference id="2">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Bullet Cluster 1E0657-558 evidence shows Modified Gravity in the absence of Dark Matter</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">36048936911</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>J.R.</ce:initials>
+                  <ce:indexed-name>Brownstein J.R.</ce:indexed-name>
+                  <ce:surname>Brownstein</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>J.W.</ce:initials>
+                  <ce:indexed-name>Moffat J.W.</ce:indexed-name>
+                  <ce:surname>Moffat</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Mon. Not. Roy. Astron. Soc.</ref-sourcetitle>
+              <ref-publicationyear first="2007"/>
+              <ref-volisspag>
+                <voliss volume="382"/>
+                <pagerange first="29"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>J.R. Brownstein and J.W. Moffat, 2007 The Bullet Cluster 1E0657-558 evidence shows Modified Gravity in the absence of Dark Matter, Mon. Not. Roy. Astron. Soc. 382 29 [astro-ph/0702146]</ref-fulltext>
+          </reference>
+          <reference id="3">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>Bullet Cluster: A Challenge to &#x39B;cDM Cosmology</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">77956933426</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>J.</ce:initials>
+                  <ce:indexed-name>Lee J.</ce:indexed-name>
+                  <ce:surname>Lee</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>E.</ce:initials>
+                  <ce:indexed-name>Komatsu E.</ce:indexed-name>
+                  <ce:surname>Komatsu</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2010"/>
+              <ref-volisspag>
+                <voliss issue="1" volume="718"/>
+                <pagerange first="60"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>J. Lee and E. Komatsu, 2010 Bullet Cluster: A Challenge to &#x39B;CDM Cosmology, Astrophys. J. 718 60 [1003.0939]</ref-fulltext>
+          </reference>
+          <reference id="4">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Cluster-Merger Shock in 1E 0657-56: Faster than the Speeding Bullet?</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">34250834291</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>M.</ce:initials>
+                  <ce:indexed-name>Milosavljevic M.</ce:indexed-name>
+                  <ce:surname>Milosavljevi&#x107;</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>J.</ce:initials>
+                  <ce:indexed-name>Koda J.</ce:indexed-name>
+                  <ce:surname>Koda</ce:surname>
+                </author>
+                <author seq="3">
+                  <ce:initials>D.</ce:initials>
+                  <ce:indexed-name>Nagai D.</ce:indexed-name>
+                  <ce:surname>Nagai</ce:surname>
+                </author>
+                <author seq="4">
+                  <ce:initials>E.</ce:initials>
+                  <ce:indexed-name>Nakar E.</ce:indexed-name>
+                  <ce:surname>Nakar</ce:surname>
+                </author>
+                <author seq="5">
+                  <ce:initials>P.R.</ce:initials>
+                  <ce:indexed-name>Shapiro P.R.</ce:indexed-name>
+                  <ce:surname>Shapiro</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2007"/>
+              <ref-volisspag>
+                <voliss issue="2" volume="661"/>
+                <pagerange first="131"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>M. Milosavljevi&#x107;, J. Koda, D. Nagai, E. Nakar and P.R. Shapiro, 2007 The Cluster-Merger Shock in 1E 0657-56: Faster than the Speeding Bullet?, Astrophys. J. 661 L131 [astro-ph/0703199]</ref-fulltext>
+          </reference>
+          <reference id="5">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Speed of the bullet in the merging galaxy cluster 1E0657-56</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">34548619273</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>V.</ce:initials>
+                  <ce:indexed-name>Springel V.</ce:indexed-name>
+                  <ce:surname>Springel</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>G.R.</ce:initials>
+                  <ce:indexed-name>Farrar G.R.</ce:indexed-name>
+                  <ce:surname>Farrar</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Mon. Not. Roy. Astron. Soc.</ref-sourcetitle>
+              <ref-publicationyear first="2007"/>
+              <ref-volisspag>
+                <voliss volume="380"/>
+                <pagerange first="911"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>V. Springel and G.R. Farrar, 2007 The Speed of the bullet in the merging galaxy cluster 1E0657-56, Mon. Not. Roy. Astron. Soc. 380 911 [astro-ph/0703232]</ref-fulltext>
+          </reference>
+          <reference id="6">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>Simulating the Bullet Cluster</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">51149116070</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>C.</ce:initials>
+                  <ce:indexed-name>Mastropietro C.</ce:indexed-name>
+                  <ce:surname>Mastropietro</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>A.</ce:initials>
+                  <ce:indexed-name>Burkert A.</ce:indexed-name>
+                  <ce:surname>Burkert</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Mon. Not. Roy. Astron. Soc.</ref-sourcetitle>
+              <ref-publicationyear first="2008"/>
+              <ref-volisspag>
+                <voliss volume="389"/>
+                <pagerange first="967"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>C. Mastropietro and A. Burkert, 2008 Simulating the Bullet Cluster, Mon. Not. Roy. Astron. Soc. 389 967 [0711.0967]</ref-fulltext>
+          </reference>
+          <reference id="7">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>Constrained Simulation of the Bullet Cluster</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">84901014568</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>C.</ce:initials>
+                  <ce:indexed-name>Lage C.</ce:indexed-name>
+                  <ce:surname>Lage</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>G.R.</ce:initials>
+                  <ce:indexed-name>Farrar G.R.</ce:indexed-name>
+                  <ce:surname>Farrar</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2014"/>
+              <ref-volisspag>
+                <voliss issue="2" volume="787"/>
+                <pagerange first="144"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>C. Lage and G.R. Farrar, 2014 Constrained Simulation of the Bullet Cluster, Astrophys. J. 787 144 [1312.0959]</ref-fulltext>
+          </reference>
+          <reference id="8">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>Constraints on the Self-Interaction Cross-Section of Dark Matter from Numerical Simulations of the Merging Galaxy Cluster 1E 0657-56</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">46349110187</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>S.W.</ce:initials>
+                  <ce:indexed-name>Randall S.W.</ce:indexed-name>
+                  <ce:surname>Randall</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>M.</ce:initials>
+                  <ce:indexed-name>Markevitch M.</ce:indexed-name>
+                  <ce:surname>Markevitch</ce:surname>
+                </author>
+                <author seq="3">
+                  <ce:initials>D.</ce:initials>
+                  <ce:indexed-name>Clowe D.</ce:indexed-name>
+                  <ce:surname>Clowe</ce:surname>
+                </author>
+                <author seq="4">
+                  <ce:initials>A.H.</ce:initials>
+                  <ce:indexed-name>Gonzalez A.H.</ce:indexed-name>
+                  <ce:surname>Gonzalez</ce:surname>
+                </author>
+                <author seq="5">
+                  <ce:initials>M.</ce:initials>
+                  <ce:indexed-name>Bradac M.</ce:indexed-name>
+                  <ce:surname>Brada&#x10D;</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2008"/>
+              <ref-volisspag>
+                <voliss issue="2" volume="679"/>
+                <pagerange first="1173"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>S.W. Randall, M. Markevitch, D. Clowe, A.H. Gonzalez and M. Brada&#x10D;, 2008 Constraints on the Self-Interaction Cross-Section of Dark Matter from Numerical Simulations of the Merging Galaxy Cluster 1E 0657-56, Astrophys. J. 679 1173 [0704.0261]</ref-fulltext>
+          </reference>
+          <reference id="9">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Dynamics of Merging Clusters: A Monte Carlo Solution Applied to the Bullet and Musket Ball Clusters</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">84880615751</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>W.A.</ce:initials>
+                  <ce:indexed-name>Dawson W.A.</ce:indexed-name>
+                  <ce:surname>Dawson</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2013"/>
+              <ref-volisspag>
+                <voliss issue="2" volume="772"/>
+                <pagerange first="131"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>W.A. Dawson, 2013 The Dynamics of Merging Clusters: A Monte Carlo Solution Applied to the Bullet and Musket Ball Clusters, Astrophys. J. 772 131 [1210.0014]</ref-fulltext>
+          </reference>
+          <reference id="10">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Horizon Run N-body Simulation: Baryon Acoustic Oscillations and Topology of Large Scale Structure of the Universe</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">70350043226</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>J.</ce:initials>
+                  <ce:indexed-name>Kim J.</ce:indexed-name>
+                  <ce:surname>Kim</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>C.</ce:initials>
+                  <ce:indexed-name>Park C.</ce:indexed-name>
+                  <ce:surname>Park</ce:surname>
+                </author>
+                <author seq="3">
+                  <ce:initials>J.R.</ce:initials>
+                  <ce:indexed-name>Gott J.R.</ce:indexed-name>
+                  <ce:surname>Gott</ce:surname>
+                  <ce:suffix>III</ce:suffix>
+                </author>
+                <author seq="4">
+                  <ce:initials>J.</ce:initials>
+                  <ce:indexed-name>Dubinski J.</ce:indexed-name>
+                  <ce:surname>Dubinski</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2009"/>
+              <ref-volisspag>
+                <voliss issue="2" volume="701"/>
+                <pagerange first="1547"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>J. Kim, C. Park, J.R. Gott III and J. Dubinski, 2009 The Horizon Run N-body Simulation: Baryon Acoustic Oscillations and Topology of Large Scale Structure of the Universe, Astrophys. J. 701 1547 [0812.1392]</ref-fulltext>
+          </reference>
+          <reference id="11">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Observed Concentration-Mass Relation for Galaxy Clusters</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">34547167382</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>J.M.</ce:initials>
+                  <ce:indexed-name>Comerford J.M.</ce:indexed-name>
+                  <ce:surname>Comerford</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>P.</ce:initials>
+                  <ce:indexed-name>Natarajan P.</ce:indexed-name>
+                  <ce:surname>Natarajan</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Mon. Not. Roy. Astron. Soc.</ref-sourcetitle>
+              <ref-publicationyear first="2007"/>
+              <ref-volisspag>
+                <voliss volume="379"/>
+                <pagerange first="190"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>J.M. Comerford and P. Natarajan, 2007 The Observed Concentration-Mass Relation for Galaxy Clusters, Mon. Not. Roy. Astron. Soc. 379 190 [astro-ph/0703126]</ref-fulltext>
+          </reference>
+          <reference id="12">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>LoCuSS: Subaru Weak Lensing Study of 30 Galaxy Clusters</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">77954800060</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>N.</ce:initials>
+                  <ce:indexed-name>Okabe N.</ce:indexed-name>
+                  <ce:surname>Okabe</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>M.</ce:initials>
+                  <ce:indexed-name>Takada M.</ce:indexed-name>
+                  <ce:surname>Takada</ce:surname>
+                </author>
+                <author seq="3">
+                  <ce:initials>K.</ce:initials>
+                  <ce:indexed-name>Umetsu K.</ce:indexed-name>
+                  <ce:surname>Umetsu</ce:surname>
+                </author>
+                <author seq="4">
+                  <ce:initials>T.</ce:initials>
+                  <ce:indexed-name>Futamase T.</ce:indexed-name>
+                  <ce:surname>Futamase</ce:surname>
+                </author>
+                <author seq="5">
+                  <ce:initials>G.P.</ce:initials>
+                  <ce:indexed-name>Smith G.P.</ce:indexed-name>
+                  <ce:surname>Smith</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Publ. Astron. Soc. Jap.</ref-sourcetitle>
+              <ref-publicationyear first="2010"/>
+              <ref-volisspag>
+                <voliss volume="62"/>
+                <pagerange first="811"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>N. Okabe, M. Takada, K. Umetsu, T. Futamase and G.P. Smith, 2010 LoCuSS: Subaru Weak Lensing Study of 30 Galaxy Clusters, Publ. Astron. Soc. Jap. 62 811 [0903.1103]</ref-fulltext>
+          </reference>
+          <reference id="13">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>Internal and external alignment of the shapes and angular momenta of &#x39B;cDM halos</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">25144500900</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>J.</ce:initials>
+                  <ce:indexed-name>Bailin J.</ce:indexed-name>
+                  <ce:surname>Bailin</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>M.</ce:initials>
+                  <ce:indexed-name>Steinmetz M.</ce:indexed-name>
+                  <ce:surname>Steinmetz</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Astrophys. J.</ref-sourcetitle>
+              <ref-publicationyear first="2005"/>
+              <ref-volisspag>
+                <voliss issue="2" volume="627"/>
+                <pagerange first="647"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>J. Bailin and M. Steinmetz, 2005 Internal and external alignment of the shapes and angular momenta of &#x39B;CDM halos, Astrophys. J. 627 647 [astro-ph/0408163]</ref-fulltext>
+          </reference>
+          <reference id="14">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>The Shapes and Alignments of Dark Matter Halos</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">84861793437</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>M.D.</ce:initials>
+                  <ce:indexed-name>Schneider M.D.</ce:indexed-name>
+                  <ce:surname>Schneider</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>C.S.</ce:initials>
+                  <ce:indexed-name>Frenk C.S.</ce:indexed-name>
+                  <ce:surname>Frenk</ce:surname>
+                </author>
+                <author seq="3">
+                  <ce:initials>S.</ce:initials>
+                  <ce:indexed-name>Cole S.</ce:indexed-name>
+                  <ce:surname>Cole</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>J. Cosmol. Astropart. Phys.</ref-sourcetitle>
+              <ref-publicationyear first="2012"/>
+              <ref-volisspag>
+                <voliss issue="5" volume="2012"/>
+                <pagerange first="030"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>M.D. Schneider, C.S. Frenk and S. Cole, 2012 The Shapes and Alignments of Dark Matter Halos J. Cosmol. Astropart. Phys. 2012 05 030 [1111.5616]</ref-fulltext>
+          </reference>
+          <reference id="15">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>Chandra observation of the most interesting cluster in the universe</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">33645511874</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>M.</ce:initials>
+                  <ce:indexed-name>Markevitch M.</ce:indexed-name>
+                  <ce:surname>Markevitch</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>ESA Spec. Publ.</ref-sourcetitle>
+              <ref-publicationyear first="2006"/>
+              <ref-volisspag>
+                <voliss volume="604"/>
+                <pagerange first="723"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>M. Markevitch, 2006 Chandra observation of the most interesting cluster in the universe ESA Spec. Publ. 604 723 [astro-ph/0511345]</ref-fulltext>
+          </reference>
+          <reference id="16">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>A New Force in the Dark Sector?</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">34247337700</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>G.R.</ce:initials>
+                  <ce:indexed-name>Farrar G.R.</ce:indexed-name>
+                  <ce:surname>Farrar</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>R.A.</ce:initials>
+                  <ce:indexed-name>Rosen R.A.</ce:indexed-name>
+                  <ce:surname>Rosen</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Phys. Rev. Lett.</ref-sourcetitle>
+              <ref-publicationyear first="2007"/>
+              <ref-volisspag>
+                <voliss volume="98"/>
+                <pagerange first="171302"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>G.R. Farrar and R.A. Rosen, 2007 A New Force in the Dark Sector?, Phys. Rev. Lett. 98 171302 [astro-ph/0610298]</ref-fulltext>
+          </reference>
+          <reference id="17">
+            <ref-info>
+              <ref-title>
+                <ref-titletext>How Rare is the Bullet Cluster?</ref-titletext>
+              </ref-title>
+              <refd-itemidlist>
+                <itemid idtype="SGR">33845886542</itemid>
+              </refd-itemidlist>
+              <ref-authors>
+                <author seq="1">
+                  <ce:initials>E.</ce:initials>
+                  <ce:indexed-name>Hayashi E.</ce:indexed-name>
+                  <ce:surname>Hayashi</ce:surname>
+                </author>
+                <author seq="2">
+                  <ce:initials>S.D.M.</ce:initials>
+                  <ce:indexed-name>White S.D.M.</ce:indexed-name>
+                  <ce:surname>White</ce:surname>
+                </author>
+              </ref-authors>
+              <ref-sourcetitle>Mon. Not. Roy. Astron. Soc. Lett.</ref-sourcetitle>
+              <ref-publicationyear first="2006"/>
+              <ref-volisspag>
+                <voliss volume="370"/>
+                <pagerange first="38"/>
+              </ref-volisspag>
+            </ref-info>
+            <ref-fulltext>E. Hayashi and S.D.M. White, 2006 How Rare is the Bullet Cluster?, Mon. Not. Roy. Astron. Soc. Lett. 370 L38 [astro-ph/0604443]</ref-fulltext>
+          </reference>
+        </bibliography>
+      </tail>
+    </bibrecord>
+  </item>
+</abstracts-retrieval-response>

@@ -1,0 +1,22 @@
+http://dev.elsevier.com/tecdoc_ir_cris_vivo.html
+  Doesn't seem to work.
+   Bad Request.   Seems to be now!
+
+
+When we use getArticlesByAffiliation(), the details for each article is in
+XML at the URL given by the `prism:url` element of the result.
+  References
+  abstract
+  authors & affiliations, country
+  keywords
+
+
+
+
+How many papers are authored with the same co-author? and how many co-authors do each of these have?
+
+
+
+Examples
+
+system.time( {  art = getArticlesByAffiliation(60014439, max = 20000) } )
