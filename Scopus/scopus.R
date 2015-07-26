@@ -19,16 +19,14 @@ function(q, key = getOption("ScopusKey", stop("need the scopus API key")), curl 
 }
 
 scoAffiliation =
-function(query, ..., max = NA, key = getOption("ScopusKey", stop("need the scopus API key")),  url = "http://api.elsevier.com/content/search/affiliation", curl = getCurlHandle())
+function(query, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")),  url = "http://api.elsevier.com/content/search/affiliation", curl = getCurlHandle())
 {
-  ans = scopusQuery(query = sprintf("affil(%s)", query), ..., key = key, curl = curl, url = url)
+  ans = scopusQuery(query = sprintf("affil(%s)", query), ..., key = key, curl = curl, url = url, max = max)
 
-#  numResults = as.integer(ans[[1]][[1]]) # totalResults
-#  if((!is.na(max) && numResults < max)  || numResults <= length(ans[[1]]$entry))
-#    return(ans)
- 
-# c(ans, getNextPages(as.integer(ans[[1]][[2]]), query, ..., key = key, url = url, curl = curl, max = max))
-
+  ids = gsub("AFFILIATION_ID:", "", sapply(ans, `[[`, "dc:identifier"))
+  name = sapply(ans, `[[`, "affiliation-name")
+  names(ids) = name
+  ids
 }
 
 scopusQuery =
@@ -53,9 +51,9 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
     page = 1L
     while(is.na(max) || length(results) < max) {
         u = do.call(rbind, info[["link"]])
-        i = match("next", u[, "@ref"])
-        if(!is.na(i)) {
-             u = u[i, "@href"]
+        i = match(c("next", "last"), u[, "@ref"])
+        if(any(!is.na(i))) {
+              u = u[i[ !is.na(i) ][1], "@href"]
              page = page + 1L
 	     if(verbose)
                  cat("querying page", page, "\n")
@@ -65,8 +63,11 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
 
  	     if(!is.na( .varName ) && nchar(.varName) > 0)
                 assign(.varName, results, globalenv())
+
+             if(is.na(i)[1])
+                break
         } else {
-      	   browser()
+#      	   browser()
            break
         }
     }
