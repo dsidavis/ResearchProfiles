@@ -42,10 +42,13 @@ function(..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey"
 
 
 getNextPages = 
-function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list(), .varName = "scopusResults")
+function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list(), 
+         .varName = "scopusResults", verbose = TRUE)
 {
     info = ans[[1]]
     results = info$entry
+
+    totalNum = as.integer(info[[1]])
 
     page = 1L
     while(is.na(max) || length(results) < max) {
@@ -62,11 +65,13 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
 
  	     if(!is.na( .varName ) && nchar(.varName) > 0)
                 assign(.varName, results, globalenv())
-        } else
+        } else {
+      	   browser()
            break
+        }
     }
 
-    results
+    structure(results, totalNumResults = totalNum)
 }
 
 
@@ -98,9 +103,6 @@ function(affil, max = NA, ..., curl = getCurlHandle(), key = getOption("ScopusKe
 {
    q = sprintf("af-id(%s)", as.character(affil))
    ans = scopusQuery(query = q, max = max, url = 'http://api.elsevier.com/content/search/index:SCOPUS', curl = curl, key = key, .opts = .opts) 
-
-   
-
 }
 
 
