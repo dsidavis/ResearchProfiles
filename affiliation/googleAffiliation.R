@@ -1,4 +1,4 @@
-affiliationByGoogle = function(q, returnMode = TRUE, curl = gh) 
+affiliationByGoogle = function(q, returnMode = TRUE, curl = getCurlHandle(...)) 
 {
   # q is a character string, or vector thereof, to send to google search
   # Returns a vector of the .edu urls returned on google's first page for that query
@@ -7,7 +7,7 @@ affiliationByGoogle = function(q, returnMode = TRUE, curl = gh)
     q = paste(q, collapse = "+")
   q = gsub(" ", "+", q)
   qURL = paste0("http://www.google.com/search?hl=en&lr=&ie=ISO-8859-1&q=", q, "&btnG=Search")
-  doc = htmlParse(getURLContent(qURL, curl = gh), asText = TRUE)
+  doc = htmlParse(getURLContent(qURL, curl = curl), asText = TRUE)
   eduLinks = grep(".edu", getHTMLLinks(doc), value = TRUE)
   if(length(eduLinks) == 0)  # Note that this will miss some international scholars
       return(NA)
