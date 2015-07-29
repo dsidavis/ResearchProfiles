@@ -20,5 +20,16 @@ txt = getForm("http://api.elsevier.com/content/search/scopus", query = "visualiz
 
 
 Affiliation search
-getForm("http://api.elsevier.com/documentation/AFFILIATIONSearchAPI.wadl", 
+#getForm("http://api.elsevier.com/documentation/AFFILIATIONSearchAPI.wadl", 
 
+
+
+
+
+
+o = getForm("http://api.elsevier.com/content/search/author",  query = "authlastname(Temple Lang)",  curl  = curl)
+
+o = getForm("http://api.elsevier.com/content/search/author",  .params = list(query = "authlastname(Temple Lang) AND af-id(60014439)"),  curl  = curl)
+
+
+z = getArticlesByAffiliation(60014439, curl = curl)
