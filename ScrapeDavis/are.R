@@ -32,3 +32,4 @@ tmp = cbind(are, as.data.frame(do.call(rbind, info), stringsAsFactors = FALSE))
 year = as.integer(gsub(".*([0-9]{4}).*", "\\1", tmp$phdYear))
 are = subset(tmp, select = -phdYear)
 are$year = year
+save(are, file = "are.rda")
