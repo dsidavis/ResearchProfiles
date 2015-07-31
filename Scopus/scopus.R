@@ -155,8 +155,22 @@ scoGetAuthor =
 # debashis = scoGetAuthor(c("Paul", "Debashis"))
 # hans = scoGetAuthor(c("Muller", "Hans"))
 # thomas = scoGetAuthor(c("Lee", "Thomas"))  # 5
+# ben = scoGetAuthor(c("Houlton"))
+# vlad = scoGetAuthor(c("Filkov"))
+# norm = scoGetAuthor(c("Matloff")) 
+# patrice = scoGetAuthor(c("Koehl")) # 2 not the same
+# prasad = scoGetAuthor(c("Naik", "Prasad"))
+# jdo = scoGetAuthor(c("Owens", "John"))  # 5 but 1st is the one I know.
+# bertram = scoGetAuthor(c("Ludaescher"))
+# prasant = scoGetAuthor(c("Mohapatra", "Prasant"))
+# louise = scoGetAuthor(c("Kellogg", "Louise")) # 3 or 5 w/o Louise
+# dawn = scoGetAuthor(c("Sumner"))  # 8
+# colin = scoGetAuthor(c("Cameron")) # 13
+# joe = scoGetAuthor(c("Dumit"))
+# jiming = scoGetAuthor(c("Block"))
 
 
+# block = scoGetAuthor(c("Block"))
 
 #
 function(last, affil = 60014439, first = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
