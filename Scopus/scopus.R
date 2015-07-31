@@ -2,6 +2,56 @@ library(RCurl)
 library(XML)
 library(RJSONIO)
 
+buildQuery =
+function(parameters)
+{
+  query = sprintf("%s(%s)", names(parameters), parameters)
+  paste0(query, collapse = " AND ")
+}
+
+getAuthorID = 
+function(..., key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
+  # Get author IDs matching the specified query parameters.
+  #
+  # Query parameters include authfirst, authlast, affil, and any others listed
+  # in the Scopus Author Search API.
+{
+  query = buildQuery(list(...))
+
+  # TODO: Fetch all relevant author IDs up to max retrievable, not just 25.
+
+  # Query Scopus to get author ID.
+  response = scopusAuthorSearch(query = query, key = key, curl = curl)
+  response = fromJSON(response)
+
+  results = response[["search-results"]]
+
+  n_entries = results[["opensearch:totalResults"]]
+
+  if (n_entries > 0) {
+    # Extract author ID from each entry.
+    entries = results$entry
+
+    vapply(entries, function(entry) {
+      sub("AUTHOR_ID:", "", entry[["dc:identifier"]])
+    }, "")
+  } else {
+    # No authors found.
+    character(0)
+  }
+}
+
+scopusAuthorSearch =
+function(..., url,
+  key = getOption("ScopusKey", stop("need the scopus API key")),
+  curl = getCurlHandle(), .opts = list())
+  # Query the Scopus Author Search API.
+{
+  .opts$httpheader = c("X-ELS-APIKey" = key)
+  url = "http://api.elsevier.com/content/search/author"
+  getForm(url, .params = list(...), .opts = .opts, curl = curl)
+}
+
 getDoc =
 function(doi, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
 {
