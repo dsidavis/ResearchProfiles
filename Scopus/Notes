@@ -1,0 +1,16 @@
+
+Given a person's name (last and possibly first), we 
+
+docs = getAuthorDocs(c("D'Souza", "Raissa"))
+
+
+get their author identifier 
+
+
+r.id = scoGetAuthor(c("D'Souza", "Raissa"), idOnly = TRUE)
+
+Given the author id, we can get the identifiers for their publications
+
+doc.ids = getAuthorDocsIds (r.id[1])
+
+docs =  lapply(doc.ids[,2], getDocInfo)

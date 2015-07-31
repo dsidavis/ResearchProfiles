@@ -62,11 +62,41 @@ function(doi, key = getOption("ScopusKey", stop("need the scopus API key")), cur
 
 
 searchScopus =
-function(q, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
+function(q, field, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
 {
      #http://api.elsevier.com/content/search/scopus
     
 }
+
+getAuthorDocsIds = 
+function(id, field = "dc:identifier", key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
+{
+  u = "http://api.elsevier.com/content/search/scopus"
+  q = sprintf("AU-ID(%s)", as.character(id))
+  ans = scopusQuery(query = q, field = field, url = u, key = key, curl = curl, .opts = list(...))
+  as.data.frame(do.call(rbind, ans), stringsAsFactors = FALSE)
+}
+
+
+DocInfoFields = c("authors", "title", "publicationName", "volume", "issueIdentifier",
+                  "prism:pageRange" , "coverDate", "article-number",  "doi", "citedby-count", "prism:aggregationType")
+
+getDocInfo = 
+function(id, fields = DocInfoFields, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
+{
+  u = paste0("http://api.elsevier.com/content/abstract/scopus_id/", id)
+  ans = scopusQuery(field = paste(fields, collapse = ","),  httpAccept = "application/json",  url = u, key = key, curl = curl, .opts = list(...))
+  ans[[1]]
+}
+
+getAuthorDocs = 
+function(name, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
+{
+    r.id = scoGetAuthor(name, idOnly = TRUE, key = key, curl = curl)
+    doc.ids = getAuthorDocsIds (r.id[1], curl = curl)
+    docs =  lapply(doc.ids[,2], getDocInfo, curl = curl)
+}
+
 
 scoAffiliation =
 function(query, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")),  url = "http://api.elsevier.com/content/search/affiliation", curl = getCurlHandle())
@@ -94,13 +124,16 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
          .varName = "scopusResults", verbose = TRUE)
 {
     info = ans[[1]]
+    if(!("opensearch:totalResults" %in% names(info)))
+        return(ans)
+
     results = info$entry
 
     totalNum = as.integer(info[[1]])
 
     page = 1L
     while(is.na(max) || length(results) < max) {
-        if(is.character(info$link)) # not a list of links
+        if(is.null(info$link) || is.character(info$link)) # not a list of links
              break
         u = do.call(rbind, info[["link"]])
         i = match(c("next", "last"), u[, "@ref"])
@@ -173,7 +206,7 @@ scoGetAuthor =
 # block = scoGetAuthor(c("Block"))
 
 #
-function(last, affil = 60014439, first = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
+function(last, affil = 60014439, first = NA, idOnly = FALSE, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
 {
     if(length(last) == 2 && is.na(first)) {
         first = last[2]
@@ -187,13 +220,12 @@ function(last, affil = 60014439, first = NA, curl = getCurlHandle(), key = getOp
     if(!is.na(first))
        q = sprintf("%s AND authfirst(%s)", q, as.character(first))
 
-    scopusQuery(query = q, url = "http://api.elsevier.com/content/search/author", curl = curl, key = key, .opts = .opts)
+    ans = scopusQuery(query = q, url = "http://api.elsevier.com/content/search/author", curl = curl, key = key, .opts = .opts)
 
-#    num = as.integer(ans[[1]][[1]])
-#    if(num > length(ans[[1]]$entry))  
-#       ans = getNextPages(ans[[1]])
-#    else
-#       ans[[1]]$entry
+    if(idOnly) 
+      gsub("^AUTHOR_ID:", "", sapply(ans, `[[`, "dc:identifier"))
+    else
+       ans
 }
 
 
@@ -211,7 +243,7 @@ function(affil, max = NA, ..., curl = getCurlHandle(), key = getOption("ScopusKe
 
 
 
-getDocInfo =
+getDocInfo.xxx =
 function(u, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
 {
   .opts$httpheader = c('X-ELS-APIKey' = key)
