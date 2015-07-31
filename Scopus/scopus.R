@@ -50,6 +50,8 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
 
     page = 1L
     while(is.na(max) || length(results) < max) {
+        if(is.character(info$link)) # not a list of links
+             break
         u = do.call(rbind, info[["link"]])
         i = match(c("next", "last"), u[, "@ref"])
         if(any(!is.na(i))) {
@@ -78,13 +80,50 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
 
 #  http://api.elsevier.com/documentation/AUTHORSearchAPI.wadl
 scoGetAuthor =
-function(last, affil = NA, first = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
+#
+# scoGetAuthor("Temple Lang", "Davis")
+# scoGetAuthor("Smith", "Davis", "MacKenzie")
+# mck = scoGetAuthor("Smith", 60014439, "MacKenzie")
+# scoGetAuthor("Tomich", "Davis")
+# sz = scoGetAuthor("Sawyer", 60014439, "Suzana")
+# wp = scoGetAuthor(c("Polonik", "Wolfgang"), 60014439)
+# na = scoGetAuthor(c("Anderson", "Nicholas"), 60014439)
+# jq = scoGetAuthor(c("Quinn", "Jim"), 60014439)
+# dh = scoGetAuthor(c("Halfmann"))
+# sch = scoGetAuthor(c("Shauman"))
+# dn = scoGetAuthor(c("Niemeier"))  #  2 answers - same person?
+# nina = scoGetAuthor(c("Amenta"))
+# kwanliu = scoGetAuthor(c("Ma", "Kwan-Liu")) # 5 answers
+# joy = scoGetAuthor(c("Joy", "Ken"))
+# raissa = scoGetAuthor(c("D'Souza", "Raissa")) # 2 - Davis and SFI
+# prem = scoGetAuthor(c("Devanbu")) # 2
+# jimc = scoGetAuthor(c("Crutchfield"))
+# tony = scoGetAuthor(c("Tyson"))   # 6 and not all the same person.
+# prabir = scoGetAuthor(c("Burman"))
+# ethan = scoGetAuthor(c("Anderes"))
+# jie = scoGetAuthor(c("Peng", "Jie"))
+# debashis = scoGetAuthor(c("Paul", "Debashis"))
+# hans = scoGetAuthor(c("Muller", "Hans"))
+# thomas = scoGetAuthor(c("Lee", "Thomas"))  # 5
+
+
+
+#
+function(last, affil = 60014439, first = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
 {
+    if(length(last) == 2 && is.na(first)) {
+        first = last[2]
+        last = last[1]
+    }
+
     q = sprintf("authlastname(%s)", last)
     if(!is.na(affil))
        q = sprintf("%s AND af-id(%s)", q, as.character(affil))
 
-    ans = scopusQuery(query = q, url = "http://api.elsevier.com/content/search/author", curl = curl, key = key, .opts = .opts)
+    if(!is.na(first))
+       q = sprintf("%s AND authfirst(%s)", q, as.character(first))
+
+    scopusQuery(query = q, url = "http://api.elsevier.com/content/search/author", curl = curl, key = key, .opts = .opts)
 
 #    num = as.integer(ans[[1]][[1]])
 #    if(num > length(ans[[1]]$entry))  
