@@ -78,23 +78,34 @@ function(id, field = "dc:identifier", key = getOption("ScopusKey", stop("need th
 }
 
 
-DocInfoFields = c("authors", "title", "publicationName", "volume", "issueIdentifier",
+
+# http://api.elsevier.com/documentation/retrieval/AbstractRetrievalViews.htm
+DocInfoFields = c("authors", "title", "publicationName", "volume", "issueIdentifier", "dc:description", "subject-areas",
                   "prism:pageRange" , "coverDate", "article-number",  "doi", "citedby-count", "prism:aggregationType")
 
 getDocInfo = 
-function(id, fields = DocInfoFields, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
+function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
 {
   u = paste0("http://api.elsevier.com/content/abstract/scopus_id/", id)
-  ans = scopusQuery(field = paste(fields, collapse = ","),  httpAccept = "application/json",  url = u, key = key, curl = curl, .opts = list(...))
+  .params = if(!is.na(view))
+               list(view = view)
+            else if(length(fields) == 1 && fields %in% c("META", "META_ABS", "FULL", "REF", "ENTITLED"))
+               list(view = fields)
+            else 
+               list(field = paste(fields, collapse = ","))
+     
+  .params$httpAccept = "application/json"
+  ans = scopusQuery(.params = .params,  url = u, key = key, curl = curl, .opts = list(...))
   ans[[1]]
 }
 
 getAuthorDocs = 
 function(name, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
 {
+   # Assumes get only id back. If more, we ignore them. And this could be multiple people.
     r.id = scoGetAuthor(name, idOnly = TRUE, key = key, curl = curl)
     doc.ids = getAuthorDocsIds (r.id[1], curl = curl)
-    docs =  lapply(doc.ids[,2], getDocInfo, curl = curl)
+    docs = lapply(doc.ids[,2], getDocInfo, curl = curl)
 }
 
 
@@ -109,11 +120,42 @@ function(query, ..., max = 25, key = getOption("ScopusKey", stop("need the scopu
   ids
 }
 
+
+getArticleText = 
+# 
+#  not all articles are available.
+#
+function(id, ..., httpAccept = "text/xml", key = getOption("ScopusKey", stop("need the scopus API key")),  
+         curl = getCurlHandle(), .opts = NULL, idType = guessIDType(id))
+{
+  u = switch(idType, 
+               DOI = "http://api.elsevier.com/content/article/doi/",
+               PII = "http://api.elsevier.com/content/article/pii/",
+               EID = "http://api.elsevier.com/content/article/eid/",
+               Scopus = "http://api.elsevier.com/content/article/scopus_id/",
+               Medline = "http://api.elsevier.com/content/article/doi/"
+            )
+  
+  url = sprintf("%s%s", u, id)
+  scopusQuery(url = url, ..., httpAccept = httpAccept, curl = curl, key = key, .opts = .opts)
+}
+
+guessIDType = 
+function(id)
+{
+  if(grepl("/", id))
+    "DOI"
+  else 
+   stop("not recognized yet")
+}
+
+
 scopusQuery =
-function(..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
+function(..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list(), 
+         .params = list(...))
 {
   .opts$httpheader = c('X-ELS-APIKey' = key)
-  ans = getForm(url, .params = list(...), .opts = .opts, curl = curl)
+  ans = getForm(url, .params = .params, .opts = .opts, curl = curl)
   res = fromJSON(ans)
   getNextPages(res, res, max = max, url = url, curl = curl)
 }
