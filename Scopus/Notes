@@ -14,3 +14,28 @@ Given the author id, we can get the identifiers for their publications
 doc.ids = getAuthorDocsIds (r.id[1])
 
 docs =  lapply(doc.ids[,2], getDocInfo)
+
+
+
+
+
+
+
+
+# The search fields don't seem to be uniformly valid.
+# They are documented here:  http://api.elsevier.com/content/search/fields/scopus
+# But they don't seem to behave.
+
+books = scopusQuery(query = "af-id(60014439),pubyear=2015", url = "http://api.elsevier.com/content/search/scopus", .opts = list(verbose = TRUE), max = 20)
+
+
+
+books = scopusQuery(query = "af-id(60014439),PUBDATETXT(July 2014)", url = "http://api.elsevier.com/content/search/scopus", .opts = list(verbose = TRUE), max = 20)
+
+
+
+
+books = scopusQuery(query = "af-id(60014439),pubdatetxt(July 2014)", url = "http://api.elsevier.com/content/search/scopus", .opts = list(verbose = TRUE), max = 20)
+
+
+books = scopusQuery(query = "af-id(60014439),doctype(bk)", url = "http://api.elsevier.com/content/search/scopus", .opts = list(verbose = TRUE), max = 20)

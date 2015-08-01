@@ -163,7 +163,7 @@ function(..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey"
 
 getNextPages = 
 function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list(), 
-         .varName = "scopusResults", verbose = TRUE)
+         .varName = "scopusResults", verbose = getOption("Scopus.verbose", TRUE))
 {
     info = ans[[1]]
     if(!("opensearch:totalResults" %in% names(info)))
@@ -172,6 +172,9 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
     results = info$entry
 
     totalNum = as.integer(info[[1]])
+
+    if(verbose)
+       cat("Number of results", totalNum, "\n")
 
     page = 1L
     while(is.na(max) || length(results) < max) {
@@ -198,6 +201,9 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
            break
         }
     }
+
+   if(length(results) < totalNum)
+      warning("did not get all results from Scopus due to system limit")
 
     structure(results, totalNumResults = totalNum)
 }
@@ -244,7 +250,7 @@ scoGetAuthor =
 # joe = scoGetAuthor(c("Dumit"))
 # jiming = scoGetAuthor(c("Block"))
 
-
+# Many results returned
 # block = scoGetAuthor(c("Block"))
 
 #
@@ -280,11 +286,12 @@ getArticlesByAffiliation =
 function(affil, max = NA, ..., curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
 {
    q = sprintf("af-id(%s)", as.character(affil))
-   ans = scopusQuery(query = q, max = max, url = 'http://api.elsevier.com/content/search/index:SCOPUS', curl = curl, key = key, .opts = .opts) 
+   ans = scopusQuery(query = q, ..., max = max, url = 'http://api.elsevier.com/content/search/index:SCOPUS', curl = curl, key = key, .opts = .opts) 
 }
 
 
 
+# Not used
 getDocInfo.xxx =
 function(u, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list())
 {
@@ -293,6 +300,8 @@ function(u, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the 
   doc = xmlParse(txt, asText = TRUE)
 }
 
+
+# Not used
 processDocResults =
 function(doc)
 {
