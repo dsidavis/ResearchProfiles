@@ -4,16 +4,21 @@ Given a person's name (last and possibly first), we
 docs = getAuthorDocs(c("D'Souza", "Raissa"))
 
 
-get their author identifier 
+gives all the articles.
 
 
-r.id = scoGetAuthor(c("D'Souza", "Raissa"), idOnly = TRUE)
+This works by 
 
-Given the author id, we can get the identifiers for their publications
+a) get their author identifier 
+    r.id = scoGetAuthor(c("D'Souza", "Raissa"), idOnly = TRUE)
 
-doc.ids = getAuthorDocsIds (r.id[1])
+b) Given the author id, we can get the identifiers for their publications
 
-docs =  lapply(doc.ids[,2], getDocInfo)
+    doc.ids = getAuthorDocsIds (r.id[1])
+
+c)  Get the info. on each paper
+
+    docs =  lapply(doc.ids[,2], getDocInfo)
 
 
 
