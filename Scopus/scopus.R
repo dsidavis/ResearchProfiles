@@ -84,9 +84,20 @@ DocInfoFields = c("authors", "title", "publicationName", "volume", "issueIdentif
                   "prism:pageRange" , "coverDate", "article-number",  "doi", "citedby-count", "prism:aggregationType")
 
 getDocInfo = 
-function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), ...)
+function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), 
+          idType = guessIDType(id), ...)
 {
-  u = paste0("http://api.elsevier.com/content/abstract/scopus_id/", id)
+
+  u = switch(idType, 
+               DOI = "http://api.elsevier.com/content/abstract/doi/",
+               PII = "http://api.elsevier.com/content/abstract/pii/",
+               EID = "http://api.elsevier.com/content/abstract/eid/",
+               Scopus = "http://api.elsevier.com/content/abstract/scopus_id/",
+               Medline = "http://api.elsevier.com/content/abstract/pubmed_id/"
+            )
+  
+  u = sprintf("%s%s", u, id)
+
   .params = if(!is.na(view))
                list(view = view)
             else if(length(fields) == 1 && fields %in% c("META", "META_ABS", "FULL", "REF", "ENTITLED"))
@@ -102,8 +113,12 @@ function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey",
 getAuthorDocs = 
 function(name, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
 {
+   
    # Assumes get only id back. If more, we ignore them. And this could be multiple people.
     r.id = scoGetAuthor(name, idOnly = TRUE, key = key, curl = curl)
+    if(length(r.id) == 1 && is.na(r.id))
+      return(NULL)
+
     doc.ids = getAuthorDocsIds (r.id[1], curl = curl)
     docs = lapply(doc.ids[,2], getDocInfo, curl = curl)
 }
@@ -213,8 +228,8 @@ function(ans, ..., url, max = NA, curl = getCurlHandle(), key = getOption("Scopu
 scoGetAuthor =
 #
 # scoGetAuthor("Temple Lang", "Davis")
-# scoGetAuthor("Smith", "Davis", "MacKenzie")
-# mck = scoGetAuthor("Smith", 60014439, "MacKenzie")
+# scoGetAuthor("Smith", NA, "MacKenzie")
+# mck = scoGetAuthor("Smith", NA, "MacKenzie")
 # scoGetAuthor("Tomich", "Davis")
 # sz = scoGetAuthor("Sawyer", 60014439, "Suzana")
 # wp = scoGetAuthor(c("Polonik", "Wolfgang"), 60014439)
@@ -248,7 +263,9 @@ scoGetAuthor =
 # dawn = scoGetAuthor(c("Sumner"))  # 8
 # colin = scoGetAuthor(c("Cameron")) # 13
 # joe = scoGetAuthor(c("Dumit"))
-# jiming = scoGetAuthor(c("Block"))
+# jiming = scoGetAuthor(c("Jiang", "Jiming"))
+# jeisen = scoGetAuthor(c("Eisen", "Jonathan"))
+#
 
 # Many results returned
 # block = scoGetAuthor(c("Block"))
@@ -261,6 +278,9 @@ function(last, affil = 60014439, first = NA, idOnly = FALSE, curl = getCurlHandl
         last = last[1]
     }
 
+       # get rid of any alternative name in parenthesis.  That leads to a bad request as the Scopus engine treats () as part of the query structure.
+   first = gsub("\\([^)]+\\)", "", first)
+
     q = sprintf("authlastname(%s)", last)
     if(!is.na(affil))
        q = sprintf("%s AND af-id(%s)", q, as.character(affil))
@@ -269,6 +289,9 @@ function(last, affil = 60014439, first = NA, idOnly = FALSE, curl = getCurlHandl
        q = sprintf("%s AND authfirst(%s)", q, as.character(first))
 
     ans = scopusQuery(query = q, url = "http://api.elsevier.com/content/search/author", curl = curl, key = key, .opts = .opts)
+
+    if(attr(ans, "totalNumResults") == 0)
+       return(if(idOnly) NA else NULL)
 
     if(idOnly) 
       gsub("^AUTHOR_ID:", "", sapply(ans, `[[`, "dc:identifier"))

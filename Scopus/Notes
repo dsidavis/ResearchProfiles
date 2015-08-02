@@ -44,3 +44,19 @@ books = scopusQuery(query = "af-id(60014439),pubdatetxt(July 2014)", url = "http
 
 
 books = scopusQuery(query = "af-id(60014439),doctype(bk)", url = "http://api.elsevier.com/content/search/scopus", .opts = list(verbose = TRUE), max = 20)
+
+
+
+
+
+#######################################
+
+load("../ScrapeDavis/are.rda")
+e = strsplit(are[,1], " ")
+i = sapply(e, length) == 2
+are.docs = lapply(e[i], function(x) getAuthorDocs(rev(x)))
+
+
+
+
+table(duplicated(sapply(jdo, function(x) x$coredata["dc:title"])))
