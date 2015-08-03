@@ -11,8 +11,8 @@ source("funcs.R")
 animal_science_faculty =
 function()
 {
-  url = "http://animalscience.ucdavis.edu/faculty/"
-  response = getURLContent(url, useragent = "Firefox")
+  base_url = "http://animalscience.ucdavis.edu/faculty/"
+  response = getURLContent(base_url, useragent = "Firefox")
   document = htmlParse(response)
 
   xpath = "//td[@class = 'content']//p[b or strong or a[b or strong]]"
@@ -26,6 +26,8 @@ function()
       if (is.null(a)) NA
       else xmlGetAttr(a, "href")
     })
+  known = !is.na(urls)
+  urls[known] = getRelativeURL(urls[known], base_url, sep = "")
 
   # Break down "last, first - title" into separate variables.
   names = sanitize(names)
@@ -37,7 +39,7 @@ function()
       c(last = name[[1]], first = name[[2]], title = title)
     })
 
-  data.frame(faculty, url, stringsAsFactors = FALSE)
+  data.frame(t(faculty), urls, stringsAsFactors = FALSE)
 }
 
 main =
