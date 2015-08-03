@@ -1,5 +1,9 @@
+# Description:
+#   Utility functions for scraping faculty pages.
+
 library(XML)
 library(RCurl)
+
 getNames = 
 function(nodes, comma = TRUE, base = docName(nodes[[1]]))
 {
@@ -20,3 +24,13 @@ function(nodes, comma = TRUE, base = docName(nodes[[1]]))
 
    data.frame(name = names,  url = u, first = first, last = last, stringsAsFactors = FALSE, row.names = NULL)
 }
+
+sanitize =
+function(string)
+  # Remove unnecessary whitespace from a string.
+{
+  string = gsub("^[[:space:]]*|[[:space:]]*$", "", string)
+  string = gsub("\\t|\\r|\\n", "", string)
+  gsub("  +", " ", string)
+}
+
