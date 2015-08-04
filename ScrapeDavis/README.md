@@ -7,9 +7,9 @@ Departments scraped:
 * [x] Animal Science
 * [ ] Applied Science
 * [ ] Anthropology
-* [ ] Art
+* [x] Art
 * [ ] Art History Program
-* [ ] Art Studio Program
+* [x] Art Studio Program
 * [ ] Asian American Studies
 * [ ] Avian Science
 * [x] Biological and Agricultural Engineering
