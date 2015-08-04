@@ -24,9 +24,9 @@ function()
       #url = url_absolute(xml_attr(header, "href"), base_url)
 
       name = xml_text(xml_find_one(header, "./span[@class = 'title']"))
-      name = strsplit(name, " ")
-      first = sapply(name, `[`, 1)
-      last = sapply(name, `[`, 2)
+      name = strsplit(name, " ")[[1]]
+      first = name[[1]]
+      last = name[[2]]
       title = xml_text(xml_find_all(header, "./span[@class = 'subtitle']"))
       title = paste0(title, collapse = "; ")
 
