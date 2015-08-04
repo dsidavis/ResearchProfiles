@@ -15,7 +15,7 @@ Departments scraped:
 * [ ] [African American and African Studies](http://aas.ucdavis.edu/welcome-african-american-african-studies-uc-davis/)
 * [ ] [Agricultural and Environmental Sciences](http://caes.ucdavis.edu/)
 * [ ] [Agricultural and Resource Economics](http://www.agecon.ucdavis.edu/)
-* [ ] [American Studies](http://ams.ucdavis.edu/welcome/)
+* [x] [American Studies](http://ams.ucdavis.edu/welcome/)
 * [x] [Animal Science](http://animalscience.ucdavis.edu/)
 * [ ] [Applied Science](http://www.das.ucdavis.edu/)
 * [ ] [Anthropology](http://www.anthro.ucdavis.edu/)
