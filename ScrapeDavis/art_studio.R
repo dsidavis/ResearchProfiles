@@ -24,6 +24,9 @@ function()
       #url = url_absolute(xml_attr(header, "href"), base_url)
 
       name = xml_text(xml_find_one(header, "./span[@class = 'title']"))
+      name = strsplit(name, " ")
+      first = sapply(name, `[`, 1)
+      last = sapply(name, `[`, 2)
       title = xml_text(xml_find_all(header, "./span[@class = 'subtitle']"))
       title = paste0(title, collapse = "; ")
 
@@ -42,7 +45,8 @@ function()
       url = tail(links, 1)
       url = url_absolute(xml_attr(url, "href"), base_url)
 
-      c(name = name, title = title, url = url, email = email, content = content)
+      c(first = first, last = last, title = title, url = url, email = email,
+        content = content)
     })
 
   data.frame(t(faculty), stringsAsFactors = FALSE)

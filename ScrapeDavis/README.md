@@ -1,4 +1,16 @@
 
+Information for each department is stored in the corresponding RDS file. These 
+files may have any of the following fields.
+
+| Field   | Description
+| ------- | -----------
+| first   | first name
+| last    | last name (surname)
+| title   | job title
+| url     | website url
+| email   | email address
+| content | additional information, usually newline-separated
+
 Departments scraped:
 * [ ] [African American and African Studies](http://aas.ucdavis.edu/welcome-african-american-african-studies-uc-davis/)
 * [ ] [Agricultural and Environmental Sciences](http://caes.ucdavis.edu/)
