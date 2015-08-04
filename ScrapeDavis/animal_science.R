@@ -6,9 +6,7 @@ library(XML)
 library(RCurl)
 source("funcs.R")
 
-# http://animalscience.ucdavis.edu/faculty/
-
-animal_science_faculty =
+animal_science =
 function()
 {
   base_url = "http://animalscience.ucdavis.edu/faculty/"
@@ -42,11 +40,4 @@ function()
   data.frame(t(faculty), urls, stringsAsFactors = FALSE)
 }
 
-main =
-function()
-{
-  animal_science = animal_science_faculty()
-  save(animal_science, file = "animal_science.rda")
-}
-
-main()
+saveRDS(animal_science(), file = "animal_science.rds")
