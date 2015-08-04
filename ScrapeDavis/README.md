@@ -1,132 +1,132 @@
 
 Departments scraped:
-* [ ] African American and African Studies
-* [ ] Agricultural and Environmental Sciences
-* [ ] Agricultural and Resource Economics
-* [ ] American Studies
-* [x] Animal Science
-* [ ] Applied Science
-* [ ] Anthropology
-* [x] Art
-* [ ] Art History Program
-* [x] Art Studio Program
-* [ ] Asian American Studies
-* [ ] Avian Science
-* [x] Biological and Agricultural Engineering
-* [ ] Biological Sciences, College of
-* [ ] Evolution and Ecology
-* [ ] Microbiology
-* [ ] Molecular and Cellular Biology
-* [ ] Neurobiology, Physiology and Behavior
-* [ ] Plant Biology
-* [x] Biomedical Engineering
-* [x] Chemical Engineering and Materials Science Department
-* [x] Chemistry
-* [ ] Chicano Studies Program
-* [ ] Chinese
-* [x] Civil and Environmental Engineering
-* [ ] Classics
-* [x] Communication
-* [ ] Comparative Literature
-* [x] Computer Science
-* [ ] Design Program
-* [ ] East Asian Languages and Cultures: Chinese
-* [ ] Economics
-* [x] Education, School of
-* [x] Electrical and Computer Engineering
-* [ ] Microfabrication Facility
-* [ ] Engineering, College of
-* [ ] English
-* [ ] Entomology and Nematology
-* [ ] Environmental Design (Landscape Architecture)
-* [ ] Environmental Science and Policy
-* [ ] Environmental Toxicology
-* [ ] Evolution and Ecology
-* [ ] Exercise Science
-* [ ] Film Studies Program
-* [ ] Food Science and Technology
-* [ ] French
-* [ ] German
-* [ ] Geology
-* [ ] Graduate School of Management
-* [ ] History
-* [ ] Human Ecology
-* [ ] Center for Design Research (CDR)
-* [ ] Humanities Program
-* [ ] International Relations Program
-* [ ] Italian
-* [ ] Japanese
-* [x] Land, Air, and Water Resources
-* [ ] Atmospheric Sciences
-* [ ] Hydrology
-* [ ] Soils & Biogeochemistry
-* [ ] Law, School of
-* [ ] Letters and Science
-* [ ] The University Library
-* [x] Linguistics
-* [ ] Management, Graduate School of
-* [x] Mathematics
-* [x] Mechanical and Aeronautical Engineering
-* [ ] Advanced Highway Maintenance and Construction Technology Center
-* [ ] Medical Pathology
-* [ ] Medicine, School of
-* [ ] Anesthesiology
-* [ ] Biochemistry and Molecular Medicine
-* [ ] Cardiovascular Medicine
-* [ ] Cell Biology and Human Anatomy
-* [ ] Dermatology
-* [ ] Emergency Medicine
-* [ ] Family and Community Medicine
-* [ ] Infectious Diseases
-* [ ] Internal Medicine
-* [ ] Medical Microbiology & Immunology
-* [ ] Neurological Surgery
-* [ ] Neurology
-* [ ] Obstetrics and Gynecology
-* [ ] Ophthalmology
-* [ ] Pathology
-* [ ] Pediatrics
-* [ ] Cleft and Craniofacial Reconstruction
-* [ ] Pharmacology
-* [ ] Physical Medicine and Rehabilitation
-* [ ] Physiology and Membrane Biology
-* [ ] Psychiatry
-* [ ] Public Health Sciences
-* [ ] Surgery
-* [ ] Urology
-* [ ] Medieval Studies
-* [ ] Microbiology
-* [ ] Middle East/South Asia Studies
-* [ ] Military Science
-* [ ] Molecular and Cellular Biology
-* [ ] Music
-* [ ] Native American Studies
-* [ ] Neurobiology, Physiology and Behavior
-* [ ] Neuroscience
-* [ ] Nursing,
-* [ ] Nutrition
-* [ ] Philosophy
-* [x] Physics
-* [x] Plant Biology
-* [ ] Plant Pathology
-* [x] Plant Sciences
-* [x] Political Science
-* [ ] Population Biology
-* [ ] Psychiatry
-* [ ] Psychology
-* [ ] Religious Studies
-* [ ] Russian
-* [ ] School of Law
-* [ ] School of Medicine
-* [ ] School of Nursing (Betty Irene Moore)
-* [x] Sociology
-* [ ] Spanish
-* [ ] Statistics
-* [ ] Textiles and Clothing
-* [ ] Theatre and Dance
-* [ ] Veterinary Medicine, School of
-* [ ] California National Primate Research Center
-* [ ] Molecular Biosciences
-* [ ] Viticulture & Enology
-* [ ] Wildlife, Fish and Conservation Biology
-* [ ] Women and Gender Studies
+* [ ] [African American and African Studies]:(http://aas.ucdavis.edu/welcome-african-american-african-studies-uc-davis/)
+* [ ] [Agricultural and Environmental Sciences]:(http://caes.ucdavis.edu/)
+* [ ] [Agricultural and Resource Economics]:(http://www.agecon.ucdavis.edu/)
+* [ ] [American Studies]:(http://ams.ucdavis.edu/welcome/)
+* [x] [Animal Science]:(http://animalscience.ucdavis.edu/)
+* [ ] [Applied Science]:(http://www.das.ucdavis.edu/)
+* [ ] [Anthropology]:(http://www.anthro.ucdavis.edu/)
+* [x] [Art]:(http://art.ucdavis.edu/)
+* [ ] [Art History Program]:(http://arthistory.ucdavis.edu/)
+* [x] [Art Studio Program]:(http://artstudio.ucdavis.edu/)
+* [ ] [Asian American Studies]:(http://asa.ucdavis.edu/welcome-asian-american-studies-uc-davis/)
+* [ ] [Avian Science]:(http://aviansciences.ucdavis.edu/)
+* [x] [Biological and Agricultural Engineering]:(http://bae.engineering.ucdavis.edu/)
+* [ ] [Biological Sciences, College of]:(http://biosci.ucdavis.edu/)
+* [ ] [Evolution and Ecology]:(http://www.eve.ucdavis.edu/)
+* [ ] [Microbiology]:(http://microbiology.ucdavis.edu/Home.html)
+* [ ] [Molecular and Cellular Biology]:(http://www.mcb.ucdavis.edu/)
+* [ ] [Neurobiology, Physiology and Behavior]:(http://www.npb.ucdavis.edu/)
+* [ ] [Plant Biology]:(http://www.plb.ucdavis.edu/)
+* [x] [Biomedical Engineering]:(http://www.bme.ucdavis.edu/)
+* [x] [Chemical Engineering and Materials Science Department]:(http://chms.engineering.ucdavis.edu/)
+* [x] [Chemistry]:(http://chemistry.ucdavis.edu/)
+* [ ] [Chicano Studies Program]:(http://chi.ucdavis.edu/welcome-department-chicana-and-chicano-studies/)
+* [ ] [Chinese]:(http://ealc.ucdavis.edu/chinese/)
+* [x] [Civil and Environmental Engineering]:(http://cee.engr.ucdavis.edu/)
+* [ ] [Classics]:(http://classics.ucdavis.edu/welcome-classics-uc-davis/)
+* [x] [Communication]:(http://communication.ucdavis.edu/)
+* [ ] [Comparative Literature]:(http://complit.ucdavis.edu/welcome/)
+* [x] [Computer Science]:(http://www.cs.ucdavis.edu/)
+* [ ] [Design Program]:(http://design.ucdavis.edu/)
+* [ ] [East Asian Languages and Cultures: Chinese]:(http://ealc.ucdavis.edu/chinese/)
+* [ ] [Economics]:(http://www.econ.ucdavis.edu/)
+* [x] [Education, School of]:(http://education.ucdavis.edu/)
+* [x] [Electrical and Computer Engineering]:(http://www.ece.ucdavis.edu/)
+* [ ] [Microfabrication Facility]:(http://ncnc.engineering.ucdavis.edu/)
+* [ ] [Engineering, College of]:(http://engineering.ucdavis.edu/)
+* [ ] [English]:(http://english.ucdavis.edu/)
+* [ ] [Entomology and Nematology]:(http://entomology.ucdavis.edu/)
+* [ ] [Environmental Design (Landscape Architecture)]:(http://envdes.ucdavis.edu/)
+* [ ] [Environmental Science and Policy]:(http://www.des.ucdavis.edu/)
+* [ ] [Environmental Toxicology]:(http://etox.ucdavis.edu/)
+* [ ] [Evolution and Ecology]:(http://www.eve.ucdavis.edu/)
+* [ ] [Exercise Science]:(http://www.npb.ucdavis.edu/exb/)
+* [ ] [Film Studies Program]:(http://filmstudies.ucdavis.edu/)
+* [ ] [Food Science and Technology]:(http://www-foodsci.ucdavis.edu/)
+* [ ] [French]:(http://frenchanditalian.ucdavis.edu/welcome-department-french-and-italian-uc-davis/)
+* [ ] [German]:(http://german.ucdavis.edu/welcome/)
+* [ ] [Geology]:(http://www.geology.ucdavis.edu/)
+* [ ] [Graduate School of Management]:(http://gsm.ucdavis.edu/)
+* [ ] [History]:(http://history.ucdavis.edu/)
+* [ ] [Human Ecology]:(http://hcd.ucdavis.edu/)
+* [ ] [Center for Design Research (CDR)]:(http://lda.ucdavis.edu/aboutus/cdr.html)
+* [ ] [Humanities Program]:(http://humanities.ucdavis.edu/welcome/)
+* [ ] [International Relations Program]:(http://intlrel.ucdavis.edu/)
+* [ ] [Italian]:(http://frenchanditalian.ucdavis.edu/welcome-department-french-and-italian-uc-davis/)
+* [ ] [Japanese]:(http://ealc.ucdavis.edu/japanese/)
+* [x] [Land, Air, and Water Resources]:(http://lawr.ucdavis.edu/)
+* [ ] [Atmospheric Sciences]:(http://atm.ucdavis.edu/)
+* [ ] [Hydrology]:(http://www.lawr.ucdavis.edu/program_hydrology.htm)
+* [ ] [Soils & Biogeochemistry]:(http://www.lawr.ucdavis.edu/program_soils&biogeochemistry.htm)
+* [ ] [Law, School of]:(http://www.law.ucdavis.edu/)
+* [ ] [Letters and Science]:(http://www.ls.ucdavis.edu/)
+* [ ] [The University Library]:(http://www.lib.ucdavis.edu/)
+* [x] [Linguistics]:(http://linguistics.ucdavis.edu/)
+* [ ] [Management, Graduate School of]:(http://gsm.ucdavis.edu/)
+* [x] [Mathematics]:(http://math.ucdavis.edu/)
+* [x] [Mechanical and Aeronautical Engineering]:(http://mae.ucdavis.edu/)
+* [ ] [Advanced Highway Maintenance and Construction Technology Center]:(http://ahmct.ucdavis.edu/)
+* [ ] [Medical Pathology]:(http://www.ucdmc.ucdavis.edu/pathology/)
+* [ ] [Medicine, School of]:(http://www.ucdmc.ucdavis.edu/medschool/)
+* [ ] [Anesthesiology]:(http://www.ucdmc.ucdavis.edu/anesthesiology/)
+* [ ] [Biochemistry and Molecular Medicine]:(http://www.ucdmc.ucdavis.edu/biochem/)
+* [ ] [Cardiovascular Medicine]:(http://www.ucdmc.ucdavis.edu/heart/)
+* [ ] [Cell Biology and Human Anatomy]:(http://www.ucdmc.ucdavis.edu/cellbio/)
+* [ ] [Dermatology]:(http://www.ucdmc.ucdavis.edu/dermatology/)
+* [ ] [Emergency Medicine]:(http://www.ucdmc.ucdavis.edu/emergency/)
+* [ ] [Family and Community Medicine]:(http://www.ucdmc.ucdavis.edu/famcommed/)
+* [ ] [Infectious Diseases]:(http://www.ucdmc.ucdavis.edu/internalmedicine/infectious/)
+* [ ] [Internal Medicine]:(http://www.ucdmc.ucdavis.edu/internalmedicine/)
+* [ ] [Medical Microbiology & Immunology]:(http://www.ucdmc.ucdavis.edu/medmicro/)
+* [ ] [Neurological Surgery]:(http://www.ucdmc.ucdavis.edu/neurosurg/)
+* [ ] [Neurology]:(http://www.ucdmc.ucdavis.edu/neurology/)
+* [ ] [Obstetrics and Gynecology]:(http://www.ucdmc.ucdavis.edu/obgyn/)
+* [ ] [Ophthalmology]:(http://www.ucdmc.ucdavis.edu/ophthalmology/)
+* [ ] [Pathology]:(http://www.ucdmc.ucdavis.edu/pathology/)
+* [ ] [Pediatrics]:(http://www.ucdmc.ucdavis.edu/children/)
+* [ ] [Cleft and Craniofacial Reconstruction]:(http://www.ucdmc.ucdavis.edu/children/clinical_services/cleft_craniofacial/)
+* [ ] [Pharmacology]:(http://www.ucdmc.ucdavis.edu/pharmacology/)
+* [ ] [Physical Medicine and Rehabilitation]:(http://www.ucdmc.ucdavis.edu/pmr/)
+* [ ] [Physiology and Membrane Biology]:(http://www.ucdmc.ucdavis.edu/physiology/)
+* [ ] [Psychiatry]:(http://www.ucdmc.ucdavis.edu/psychiatry/)
+* [ ] [Public Health Sciences]:(http://phs.ucdavis.edu/)
+* [ ] [Surgery]:(http://www.ucdmc.ucdavis.edu/surgery/)
+* [ ] [Urology]:(http://www.ucdmc.ucdavis.edu/urology/)
+* [ ] [Medieval Studies]:(http://mems.ucdavis.edu/)
+* [ ] [Microbiology]:(http://microbiology.ucdavis.edu/)
+* [ ] [Middle East/South Asia Studies]:(http://mesa.ucdavis.edu/)
+* [ ] [Military Science]:(http://armyrotc.com/edu/univcadavis/)
+* [ ] [Molecular and Cellular Biology]:(http://www.mcb.ucdavis.edu/)
+* [ ] [Music]:(http://music.ucdavis.edu/)
+* [ ] [Native American Studies]:(http://nas.ucdavis.edu/welcome/)
+* [ ] [Neurobiology, Physiology and Behavior]:(http://www.npb.ucdavis.edu/)
+* [ ] [Neuroscience]:(http://neuroscience.ucdavis.edu/)
+* [ ] [Nursing,]:(http://www.ucdmc.ucdavis.edu/nursing/)
+* [ ] [Nutrition]:(http://nutrition.ucdavis.edu/)
+* [ ] [Philosophy]:(http://philosophy.ucdavis.edu/)
+* [x] [Physics]:(http://www.physics.ucdavis.edu/)
+* [x] [Plant Biology]:(http://www.plb.ucdavis.edu/)
+* [ ] [Plant Pathology]:(http://plantpathology.ucdavis.edu/)
+* [x] [Plant Sciences]:(http://www.plantsciences.ucdavis.edu/plantsciences/)
+* [x] [Political Science]:(http://ps.ucdavis.edu/)
+* [ ] [Population Biology]:(http://www.eve.ucdavis.edu/eve/pbg/)
+* [ ] [Psychiatry]:(http://www.ucdmc.ucdavis.edu/psychiatry/)
+* [ ] [Psychology]:(http://psychology.ucdavis.edu/)
+* [ ] [Religious Studies]:(http://religions.ucdavis.edu/welcome/)
+* [ ] [Russian]:(http://russian.ucdavis.edu/welcome/)
+* [ ] [School of Law]:(http://www.law.ucdavis.edu/)
+* [ ] [School of Medicine]:(http://www.ucdmc.ucdavis.edu/medschool/)
+* [ ] [School of Nursing (Betty Irene Moore)]:(http://www.ucdmc.ucdavis.edu/nursing/)
+* [x] [Sociology]:(http://sociology.ucdavis.edu/)
+* [ ] [Spanish]:(http://spanish.ucdavis.edu/en/welcome-department-spanish-and-portuguese/)
+* [ ] [Statistics]:(http://www.stat.ucdavis.edu/)
+* [ ] [Textiles and Clothing]:(http://textiles.ucdavis.edu/)
+* [ ] [Theatre and Dance]:(http://theatredance.ucdavis.edu/)
+* [ ] [Veterinary Medicine, School of]:(http://www.vetmed.ucdavis.edu/)
+* [ ] [California National Primate Research Center]:(http://www.cnprc.ucdavis.edu/)
+* [ ] [Molecular Biosciences]:(http://www.vetmed.ucdavis.edu/vmb/)
+* [ ] [Viticulture & Enology]:(http://wineserver.ucdavis.edu/)
+* [ ] [Wildlife, Fish and Conservation Biology]:(http://wfcb.ucdavis.edu/)
+* [ ] [Women and Gender Studies]:(http://wgs.ucdavis.edu/welcome/)
