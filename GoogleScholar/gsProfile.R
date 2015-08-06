@@ -1,8 +1,41 @@
-####### This is unfinished ########
-
 source("googleScholar.R")
+source("../affiliation/googleAffiliation.R")
 source("../search/loadFaculty.R")
 source("run.R")  # For the curl handle
+
+getProfileArticles = function(author, maxArticles = 1e3, theCurl = gh)
+{
+  # For well-formated journal articles "other" is journal name, volume, issue, pages, and year
+  gsURL = getProfileURL(author)
+  start = 0
+  articles = list()
+  while(start < maxArticles) 
+  {
+    url = paste0(gsURL, "&cstart=", start, "&pagesize=100")
+    doc = htmlParse(getURLContent(url, curl = theCurl))
+    if(xmlValue(getNodeSet(doc, "//tbody/tr/td")[[1]]) == "There are no articles in this profile.")
+      break
+    articles = c(articles, digestProfileArticles(doc))
+    start = start + 100
+  }
+  do.call(rbind, articles)
+}
+
+getProfileURL = function(name)
+{
+  lastName = if(grepl(",", name)) { 
+    strsplit(name, ",")[[1]][1] 
+  } else {
+    x = strsplit(name, "\\s")[[1]]
+    x[length(x)]
+  }
+  gsSearchResult = gsPage1(name)
+  gsProfTest = paste0("//div[@class = 'gs_a']/a[@href and contains(.,'", lastName, "')]/@href")
+  Mode(unlist(
+    getNodeSet(gsSearchResult, gsProfTest, 
+               fun = function(x) paste0("https://scholar.google.com", as.character(x)))
+  ))
+}
 
 gsPage1 = 
   function(q, url = GoogleScholarBaseURL, curl = gh)
@@ -12,40 +45,21 @@ gsPage1 =
     htmlParse(ans, asText = TRUE)
   }
 
-gsProfile = function(name)
+digestProfileArticles = function(page)
 {
-  lastName = if(grepl(",", name)) { 
-    strsplit(name, ",")[[1]][1] 
-  } else {
-    x = strsplit(name, "\\s")[[1]]
-    x[length(x)]
-  }
-  gsProfTest = paste0("//div[@class = 'gs_a']/a[@href and contains(.,'", lastName, "')]/@href")
-  Mode(unlist(getNodeSet(gsPage1(name), gsProfTest, 
-                                  fun = function(x) paste0("https://scholar.google.com", as.character(x))
-  )))
+  articles = getNodeSet(page, "//td[@class = 'gsc_a_t']")
+    lapply(articles, function(art){
+      title = xmlValue(getNodeSet(art, "./a")[[1]])
+      info = getNodeSet(art, "./div[@class = 'gs_gray']")
+      authors = xmlValue(info[[1]])
+      otherInfo = xmlValue(info[[2]])
+      c(title = title, authors = authors, other = otherInfo)
+  })
 }
-
-getProfileArticles =
-  function(doc)
-  {
-    nodes = getNodeSet(doc, "//td[@class = 'gsc_a_t']")
-    lapply(nodes, processArticle)
-  }
 
 if(FALSE)
 {
-fac = loadFaculty()
-
-areProfiles = unlist(sapply(fac[[1]]$name, gsProfile))  # excludes faculty w/o a profile
-arePages = 
-  lapply(areProfiles, function(url) 
-    htmlParse(getURLContent(url, curl = gh)))
-sink("gsprof.txt", split = TRUE, append = FALSE)
-arePages[[1]]
-sink()
-
-test = getNodeSet(arePages[[1]], "//td[@class = 'gsc_a_t']")
-processArticle(test[[1]])
-test = getProfileArticles(arePages[[1]])
+  fac = loadFaculty()
+  are1 = getProfileArticles(fac$are$name[[1]], max = 150)
+  head(are1)
 }
