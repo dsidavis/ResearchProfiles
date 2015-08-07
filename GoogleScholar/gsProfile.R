@@ -21,14 +21,19 @@ getProfileArticles = function(author, maxArticles = 1e3, theCurl = gh)
   do.call(rbind, articles)
 }
 
-getProfileURL = function(name)
+getLastName = function(name)
 {
-  lastName = if(grepl(",", name)) { 
+  if(grepl(",", name)) { 
     strsplit(name, ",")[[1]][1] 
   } else {
     x = strsplit(name, "\\s")[[1]]
     x[length(x)]
   }
+}
+
+getProfileURL = function(name)
+{
+  lastName = getLastName(name)
   gsSearchResult = gsPage1(name)
   gsProfTest = paste0("//div[@class = 'gs_a']/a[@href and contains(.,'", lastName, "')]/@href")
   Mode(unlist(
