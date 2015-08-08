@@ -22,3 +22,7 @@ txt = getForm("http://api.elsevier.com/content/search/scopus", query = "visualiz
 Affiliation search
 getForm("http://api.elsevier.com/documentation/AFFILIATIONSearchAPI.wadl", 
 
+
+id = "60014439"        
+http://api.elsevier.com/content/affiliation/
+
