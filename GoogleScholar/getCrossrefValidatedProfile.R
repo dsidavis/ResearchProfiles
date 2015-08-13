@@ -8,4 +8,6 @@ source("run.R")  # For the curl handle
 fac = loadFaculty()
 set.seed(95616)
 oneEachFac = lapply(fac, function(x) as.character(x$name[[sample(length(x$name), 1)]]))
-lapply(oneEachFac, getConfirmedGSProfileURL)
+confirmedGSProfiles = lapply(oneEachFac, getConfirmedGSProfileURL)
+### This takes a long time, couple minutes per person. Profile.
+
