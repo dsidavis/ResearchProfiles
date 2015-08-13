@@ -3,7 +3,7 @@ library(XML)
 
 GoogleScholarBaseURL = "https://scholar.google.com/scholar"
 googleScholar = 
-function(q, max = NA, url = GoogleScholarBaseURL, curl = getCurlHandle(...), ...)
+function(q, max = NA, url = GoogleScholarBaseURL, curl = gh, ...)
 {
       #XXX Should set the referer to "https://scholar.google.com/"
    o = getForm(url, hl = "en", q = q, btnG= "", as_sdt = "1%2C5", as_sdtp = "", binary = TRUE, curl = curl)
