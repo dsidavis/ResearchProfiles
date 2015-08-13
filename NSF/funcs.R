@@ -7,10 +7,20 @@ function(filename, doc = xmlParse(filename))
   dates = xpathSApply(doc, "//AwardEffectiveDate | //AwardExpirationDate", xmlValue)
 
   directorate = xpathSApply(doc, "//Directorate", xmlValue)
+  division = xpathSApply(doc, "//Division", xmlValue)
+
+  amount = xpathSApply(doc, "//AwardAmount", xmlValue)  
 
   people = xpathApply(doc, "//Investigator", getPersonInfo)
+  title = xpathSApply(doc, "//AwardTitle", xmlValue)
+  foa = xpathSApply(doc, "//FoaInformation/Name", xmlValue)  
 
-  list(abstract = abs, dates = dates, directorate = directorate, people = people)
+  refs = xpathSApply(doc, "//ProgramReference/Text", xmlValue)
+  progType = xpathSApply(doc, "//ProgramElement/Text", xmlValue)
+  if(length(progType) == 0)
+      progType = NA
+
+  list(abstract = abs, dates = dates, directorate = directorate, division = division, people = people, amount = amount, title = title, areas = refs, programType = progType, foa = foa)
 }
 
 

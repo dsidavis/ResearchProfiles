@@ -17,4 +17,4 @@ invisible(getURLContent(u, curl = gh))
 
 curlSetOpt(curl = gh, referer = "https://scholar.google.com/")
 
-dtl = googleScholar("Duncan Temple Lang", curl = gh, max = 30)
+# dtl = googleScholar("Duncan Temple Lang", curl = gh, max = 30)

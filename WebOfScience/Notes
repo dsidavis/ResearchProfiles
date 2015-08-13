@@ -1,0 +1,15 @@
+
+
+https://gist.github.com/domoritz/2012629
+
+
+http://science.thomsonreuters.com/tutorials/wsp_docs/soap/Guide/
+
+Use the SSOAP package.  You'll need XMLSchema package also.
+Hopefully XMLSchema can handle the actual schema.
+
+processWSDL()
+
+
+get a session identifier.
+Put this in the curl handle as a Cookie.
