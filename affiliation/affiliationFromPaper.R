@@ -1,4 +1,30 @@
-source("../GoogleScholar/gsProfile.R")  # Sources everything else, including getting curl handle
+source("../GoogleScholar/googleScholar.R")
+source("../GoogleScholar/run.R")
+source("../search/loadFaculty.R")
+source("../utilityFuns.R")
+library(httr)
+
+fac = loadFaculty()
+names = lapply(fac, function(x) {
+  if('name' %in% names(x)) {
+    n = x$name } else {
+  n = paste(x$first, x$last) 
+  }
+  unique(unlist(n))
+})
+nameSample = lapply(names, sample, 1)
+googleScholar(nameSample[[1]], max = 10)
+
+#s = lapply(nameSample, function(dep) lapply(dep, googleScholar, max = 100))  # pisses Google off
+urls = lapply(s, 
+              function(dep) unlist(lapply(dep, 
+                                          function(pers) sapply(pers, 
+                                                                function(art) parse_url(art$link)$hostname))))
+
+# Sometimes we get lucky and the author's institution is in crossref's metadata:
+q = 'Aluminum-mycorrhizal interactions in the physiology of pitch pine seedlings'
+author = 'jonathan cumming'
+getAuthorInst(getDOIMeta(q = q, name = author, max = 1), verbose = TRUE)
 
 scienceDirectAffiliation = function(sdLink, author)
 {

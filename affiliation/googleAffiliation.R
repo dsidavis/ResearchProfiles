@@ -25,8 +25,3 @@ pullEduURLs = function(eduLinks)
   revd = substr(trimmed, 1, regexpr("[^a-z]", trimmed) - 1)
   sapply(revd, function(l) paste(rev(strsplit(l, NULL)[[1]]), collapse = ""))
 }
-
-Mode <- function(x) {
-  ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
-}
