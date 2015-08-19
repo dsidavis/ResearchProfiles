@@ -1,6 +1,7 @@
 source("googleScholar.R")
 source("../affiliation/googleAffiliation.R")
 source("../search/loadFaculty.R")
+source("../utilityFuns.R")
 source("run.R")  # For the curl handle
 
 getProfileArticles = function(author, maxArticles = 1e3, theCurl = gh)
@@ -19,16 +20,6 @@ getProfileArticles = function(author, maxArticles = 1e3, theCurl = gh)
     start = start + 100
   }
   do.call(rbind, articles)
-}
-
-getLastName = function(name)
-{
-  if(grepl(",", name)) { 
-    strsplit(name, ",")[[1]][1] 
-  } else {
-    x = strsplit(name, "\\s")[[1]]
-    x[length(x)]
-  }
 }
 
 getProfileURL = function(name)

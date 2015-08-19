@@ -30,9 +30,13 @@ getConfirmedGSProfileURL = function(name, depth = 50)
   NA
 }
 
-getDOIMeta = function(name, max = 50)
+getDOIMeta = function(q, name = q, max = 50)
 {
-  papers = cr_search(name, rows = max)
+  # Originally, this was written with only name and max as argument, with the idea
+  # that a name would be queried and should then stay attached to the data.
+  # Now want to use this set of functions on individual papers, so adding the q argument
+  # to distinguish the two. Author names should probably still be passed along for clarity.
+  papers = cr_search(q, rows = max)
   pages = lapply(papers$doi, function(x) try(getCrossrefMeta(x, author = name), silent = TRUE))
   pages[sapply(pages, class) == "try-error"] = NA
   pages
@@ -40,6 +44,8 @@ getDOIMeta = function(name, max = 50)
 
 getCrossrefMeta = function(doi, author)
 {
+  if(!grepl('^http', doi))
+    doi = paste0("http://dx.doi.org/", doi)
   page = try(htmlParse(doi), TRUE)
   if("try-error" %in% attr(page, "class"))
     return(NA)
@@ -51,6 +57,8 @@ getCrossrefMeta = function(doi, author)
 
 getAuthorInst = function(meta, verbose = FALSE, author = attr(meta, "author"))
 {
+  if(length(meta) == 1)
+    meta = meta[[1]]
   if(!is.character(meta))
     return(NA)
   if(!"citation_author_institution" %in% names(meta)) {
@@ -72,7 +80,7 @@ getAuthorInst = function(meta, verbose = FALSE, author = attr(meta, "author"))
 getDOIinfo = function(doc, fields = c("name", "content"))
 {
   mat = sapply(fields, function(x) xpathSApply(doc, "//head/meta", xmlGetAttr, x))
-  structure(unlist(mat[, 2]), "names" = mat[, 1])
+  structure(unlist(mat[, 2]), "names" = unlist(mat[, 1]))
 }
 
 getConfirmedUniTitles = function(name, max = 50, institution = "Davis")
