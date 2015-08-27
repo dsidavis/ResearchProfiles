@@ -122,36 +122,42 @@ read_faculty = function(file = "faculty_list.csv", ...)
 }
 
 
-query_scopus_for_faculty = function(...)
+query_scopus_for_faculty = function(first_names, last_names, file_names
+  , data_dir = "author_queries", max_per_sec = 100)
   # Query scopus using the faculty CSV file.
 {
-  faculty_list = read_faculty(...)[1:2]
+  if (!dir.exists(data_dir)) {
+    dir_was_created = dir.create(data_dir)
+    if (!dir_was_created)
+      stop(sprintf("Unable to create directory '%s'.", data_dir))
+  }
 
-  # TODO: Memory may become a problem since the list is quite long.
-  results = mapply(
-    function(first, last) {
-      # Avoid making too many queries per second.
-      Sys.sleep(0.1)
+  file_names = file.path(data_dir, paste0(file_names, ".rds"))
 
-      scoGetAuthor(last = last, first = first)
+  mapply(
+    function(first, last, file)
+      # Run a Scopus query for any faculty we haven't already run through.
+    {
+      if (!file.exists(file))
+        try({
+          entries = scoGetAuthor(last = last, first = first)
+          saveRDS(entries, file)
+        })
+
+      Sys.sleep(1 / max_per_sec)
     }
-    , faculty_list$FIRSTNAME
-    , faculty_list$LASTNAME
-    , SIMPLIFY = FALSE
-  )
+  , first_names, last_names, file_names)
 
-  names(results) = paste(faculty_list$FIRSTNAME, faculty_list$LASTNAME)
-
-  return(results)
+  invisible()
 }
 
 main = function()
 {
-  results = query_scopus_for_faculty()
+  faculty = read_faculty()
 
-  results = scopus_to_data_frame(results)
+  file_names = extract_email_username(faculty$EMAIL)
 
-  saveRDS(results, "faculty_scopus.rds")
+  query_scopus_for_faculty(faculty$FIRSTNAME, faculty$LASTNAME, file_names)
 }
 
-main()
+#main()
