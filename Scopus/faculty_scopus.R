@@ -127,7 +127,9 @@ query_scopus_for_faculty = function(first_names, last_names, file_names
   , data_dir = "author_queries", max_per_sec = 100)
   # Query scopus using the faculty CSV file.
 {
-  if (!dir.exists(data_dir)) {
+  # Older versions of R don't support dir.exists().
+  #if (!dir.exists(data_dir)) {
+  if (!file.exists(data_dir)) {
     dir_was_created = dir.create(data_dir)
     if (!dir_was_created)
       stop(sprintf("Unable to create directory '%s'.", data_dir))
