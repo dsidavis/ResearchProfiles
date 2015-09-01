@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 # Description:
 #   Attempt at using the university faculty list to query Scopus.
 
@@ -141,6 +142,7 @@ query_scopus_for_faculty = function(first_names, last_names, file_names
       if (!file.exists(file))
         try({
           entries = scoGetAuthor(last = last, first = first)
+          names(entries) = paste(first, last)
           saveRDS(entries, file)
         })
 
@@ -160,4 +162,4 @@ main = function()
   query_scopus_for_faculty(faculty$FIRSTNAME, faculty$LASTNAME, file_names)
 }
 
-#main()
+main()
