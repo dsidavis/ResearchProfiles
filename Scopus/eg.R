@@ -24,7 +24,8 @@ Affiliation search
 
 
 
-
+id = "60014439"        
+http://api.elsevier.com/content/affiliation/
 
 
 o = getForm("http://api.elsevier.com/content/search/author",  query = "authlastname(Temple Lang)",  curl  = curl)
@@ -33,3 +34,4 @@ o = getForm("http://api.elsevier.com/content/search/author",  .params = list(que
 
 
 z = getArticlesByAffiliation(60014439, curl = curl)
+
