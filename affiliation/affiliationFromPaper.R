@@ -4,16 +4,6 @@ source("../search/loadFaculty.R")
 source("../utilityFuns.R")
 library(httr)
 
-fac = loadFaculty()
-names = lapply(fac, function(x) {
-  if('name' %in% names(x)) {
-    n = x$name } else {
-  n = paste(x$first, x$last) 
-  }
-  unique(unlist(n))
-})
-nameSample = lapply(names, sample, 1)
-googleScholar(nameSample[[1]], max = 10)
 
 #s = lapply(nameSample, function(dep) lapply(dep, googleScholar, max = 100))  # pisses Google off
 urls = lapply(s, 

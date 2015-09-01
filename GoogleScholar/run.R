@@ -4,7 +4,7 @@
 # We then make a request to the GS front page. This will get us a cookie and we then pass that
 # back in each actual request
 
-u = "http://scholar.google.com"
+u = GoogleScholarBaseURL #"http://scholar.google.com"
 
 gh = getCurlHandle(cookiejar = "", useragent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:39.0) Gecko/20100101 Firefox/39.0",
                    verbose = TRUE, followlocation = TRUE,
@@ -15,6 +15,6 @@ gh = getCurlHandle(cookiejar = "", useragent = "Mozilla/5.0 (Macintosh; Intel Ma
 invisible(getURLContent(u, curl = gh))
 
 
-curlSetOpt(curl = gh, referer = "https://scholar.google.com/")
+curlSetOpt(curl = gh, referer = GoogleScholarBaseURL)
 
 # dtl = googleScholar("Duncan Temple Lang", curl = gh, max = 30)

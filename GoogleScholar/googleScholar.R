@@ -16,11 +16,17 @@ function(q, max = NA, url = GoogleScholarBaseURL, curl = gh, ...)
      doc =  htmlParse(ans, asText = TRUE)
 
      articles = c(articles, getArticles(doc = doc))
-       
+     
+     if(exists('u', parent.frame(), inherits = FALSE))
+        curlSetOpt(curl = gh, referer = u)
+     
      u = nextPage(doc)
      if(length(u) == 0)
         break
-      #XXX We should set the referer field to the page we are just on and going to the next page from  
+      #XXX We should set the referer field to the page we are just on and going to the next page from
+        #I have tried to do this with the if(exists...) above.
+     
+     Sys.sleep(runif(1, .1, 1))  # Pause to try to throw google off
      o = getURLContent(u, curl = curl, binary = TRUE)
    }
 
@@ -86,6 +92,6 @@ function(doc)
 
 
 if(FALSE) {
-dp = googleScholar(q = "Debashis Paul")
+dp = googleScholar(q = "Debashis Paul", max = 20)
 
 }
