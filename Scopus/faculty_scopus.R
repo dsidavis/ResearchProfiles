@@ -144,6 +144,7 @@ query_scopus_for_faculty = function(first_names, last_names, file_names
       if (!file.exists(file))
         try({
           entries = scoGetAuthor(last = last, first = first)
+          if (is.null(entries)) entries = list()
           names(entries) = paste(first, last)
           saveRDS(entries, file)
         })
