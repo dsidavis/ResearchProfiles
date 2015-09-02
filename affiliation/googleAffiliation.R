@@ -1,4 +1,4 @@
-affiliationByGoogle = function(q, returnMode = TRUE, curl = getCurlHandle(...)) 
+affiliationByGoogle = function(q, returnMode = TRUE, curl = gh2) 
 {
   # q is a character string, or vector thereof, to send to google search
   # Returns a vector of the .edu urls returned on google's first page for that query

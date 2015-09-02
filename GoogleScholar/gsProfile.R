@@ -1,5 +1,4 @@
 source("googleScholar.R")
-source("../affiliation/googleAffiliation.R")
 source("../utilityFuns.R")
 source("run.R")  # For the curl handle
 
@@ -28,7 +27,7 @@ getProfileArticles = function(author, maxArticles = 1e3, theCurl = gh)
       break
     articles = c(articles, digestProfileArticles(doc))
     start = start + 100
-    Sys.sleep(runif(1, .1, 1))  # Pause to try to throw google off. Maybe need longer pause?
+    Sys.sleep(runif(1, 1, 2))  # Pause to try to throw google off. Maybe need longer pause?
   }
   curlSetOpt(curl = theCurl, referer = "https://scholar.google.com/")
   do.call(rbind, articles)
