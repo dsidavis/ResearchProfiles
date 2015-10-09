@@ -78,16 +78,22 @@ function(id, field = "dc:identifier", key = getOption("ScopusKey", stop("need th
 }
 
 
+stripIdPrefix =
+function(id)
+{
+    gsub("^[A-Z_]+:", "", id)   
+}
 
 # http://api.elsevier.com/documentation/retrieval/AbstractRetrievalViews.htm
 DocInfoFields = c("authors", "title", "publicationName", "volume", "issueIdentifier", "dc:description", "subject-areas",
                   "prism:pageRange" , "coverDate", "article-number",  "doi", "citedby-count", "prism:aggregationType")
 
-getDocInfo = 
+getDocInfo =
+    #XXX    Do we get all the bibrecord items or  just one page
+    #   
 function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle(), 
           idType = guessIDType(id), ...)
 {
-
   u = switch(idType, 
                DOI = "http://api.elsevier.com/content/abstract/doi/",
                PII = "http://api.elsevier.com/content/abstract/pii/",
@@ -95,6 +101,8 @@ function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey",
                Scopus = "http://api.elsevier.com/content/abstract/scopus_id/",
                Medline = "http://api.elsevier.com/content/abstract/pubmed_id/"
             )
+
+  id = stripIdPrefix(id)
   
   u = sprintf("%s%s", u, id)
 
@@ -110,7 +118,10 @@ function(id, fields = DocInfoFields, view = "FULL", key = getOption("ScopusKey",
   ans[[1]]
 }
 
-getAuthorDocs = 
+getAuthorDocs =
+    #
+    #
+    #
 function(name, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
 {
    
@@ -119,8 +130,14 @@ function(name, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus
     if(length(r.id) == 1 && is.na(r.id))
       return(NULL)
 
+    if(length(r.id) > 1)
+        warning("multiple ", length(r.id), " author ids for person", paste(name, collapse = ", "))
+    
+
     doc.ids = getAuthorDocsIds (r.id[1], curl = curl)
-    docs = lapply(doc.ids[,2], getDocInfo, curl = curl)
+    ids = doc.ids[, "dc:identifier"]
+#    docs = mapply(getDocInfo, gsub("^[A-Z_]+:", "", ids), ids, lapply(ids, guessIDType), MoreArgs = list(curl = curl))
+    docs = lapply(ids, getDocInfo, curl = curl)    
 }
 
 
@@ -158,10 +175,12 @@ function(id, ..., httpAccept = "text/xml", key = getOption("ScopusKey", stop("ne
 guessIDType = 
 function(id)
 {
-  if(grepl("/", id))
+  if(grepl("SCOPUS_ID:", id))
+    "Scopus"
+  else if(grepl("/", id))
     "DOI"
   else 
-   stop("not recognized yet")
+     stop("not recognized yet")
 }
 
 
