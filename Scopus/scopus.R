@@ -122,16 +122,19 @@ getAuthorDocs =
     #
     #
     #
-function(name, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
+function(name, isID = FALSE, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
 {
    
    # Assumes get only id back. If more, we ignore them. And this could be multiple people.
-    r.id = scoGetAuthor(name, idOnly = TRUE, key = key, curl = curl)
-    if(length(r.id) == 1 && is.na(r.id))
-      return(NULL)
+    if(!isID) {
+        r.id = scoGetAuthor(name, idOnly = TRUE, key = key, curl = curl)
+        if(length(r.id) == 1 && is.na(r.id))
+            return(NULL)
 
-    if(length(r.id) > 1)
-        warning("multiple ", length(r.id), " author ids for person", paste(name, collapse = ", "))
+        if(length(r.id) > 1)
+            warning("multiple ", length(r.id), " author ids for person", paste(name, collapse = ", "))
+    } else
+        r.id = name 
     
 
     doc.ids = getAuthorDocsIds (r.id[1], curl = curl)
