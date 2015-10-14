@@ -1,4 +1,4 @@
-load("faculty")
+faculty = read.csv("export-researchers-20150806.csv")
 library(parallel)
 
 # Get names in correct form for input into getAuthorID.
@@ -16,13 +16,15 @@ loopGetAuthorID =
 numFac = length(facultyNames)
 cl = makeCluster(30, "FORK")
 
+# Small CSV file - researchers
 facultyID_A = parLapply(cl, 1:1000, loopGetAuthorID, facultyNames)
 facultyID_B = parLapply(cl, 1001:2000, loopGetAuthorID, facultyNames)
 facultyID_C = parLapply(cl, 2001:3000, loopGetAuthorID, facultyNames)
 facultyID_D = parLapply(cl, 3001:4000, loopGetAuthorID, facultyNames)
-# Don't have E yet. (group 4001 to 5000)
+# Don't have 4000-5001 yet. 
 facultyID_E = parLapply(cl, 4001:5000, loopGetAuthorID, facultyNames)
-facultyID_F = parLapply(cl, 5001:numFac, loopGetAuthorID, facultyNames)
+facultyID_F = parLapply(cl, 5001:6000, loopGetAuthorID, facultyNames)
+
 
 stopCluster(cl)
 
