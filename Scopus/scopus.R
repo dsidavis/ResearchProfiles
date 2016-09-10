@@ -125,7 +125,7 @@ getAuthorDocs =
 function(name, isID = FALSE, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")), curl = getCurlHandle())
 {
    
-   # Assumes get only id back. If more, we ignore them. And this could be multiple people.
+   # Assumes get only one id back. If more, we ignore them. And this could be multiple people.
     if(!isID) {
         r.id = scoGetAuthor(name, idOnly = TRUE, key = key, curl = curl)
         if(length(r.id) == 1 && is.na(r.id))
@@ -145,6 +145,11 @@ function(name, isID = FALSE, ..., max = 25, key = getOption("ScopusKey", stop("n
 
 
 scoAffiliation =
+    #
+    #  What is query ?  ScopusID?    af-id or  city, country or organization name.  And use boolean logic
+    # http://api.elsevier.com/content/search/fields/affiliation
+    #  
+    #
 function(query, ..., max = 25, key = getOption("ScopusKey", stop("need the scopus API key")),  url = "http://api.elsevier.com/content/search/affiliation", curl = getCurlHandle())
 {
   ans = scopusQuery(query = sprintf("affil(%s)", query), ..., key = key, curl = curl, url = url, max = max)
