@@ -1,0 +1,45 @@
+http://api.elsevier.com/content/search/author
+http://api.elsevier.com/content/article/DOI:%s
+http://api.elsevier.com/content/search/scopus
+http://api.elsevier.com/documentation/retrieval/AbstractRetrievalViews.htm
+http://api.elsevier.com/content/abstract/doi/
+http://api.elsevier.com/content/abstract/pii/
+http://api.elsevier.com/content/abstract/eid/
+http://api.elsevier.com/content/abstract/scopus_id/
+http://api.elsevier.com/content/abstract/pubmed_id/
+http://api.elsevier.com/content/search/affiliation
+http://api.elsevier.com/content/article/doi/
+http://api.elsevier.com/content/article/pii/
+http://api.elsevier.com/content/article/eid/
+http://api.elsevier.com/content/article/scopus_id/
+http://api.elsevier.com/content/article/doi/
+http://api.elsevier.com/content/search/author
+http://api.elsevier.com/content/search/index:SCOPUS'
+# http://api.elsevier.com/documentation/AUTHORSearchAPI.wadl
+# http://api.elsevier.com/content/search/fields/affiliation
+
+
+
+
+APIs implemented
+
+ Abstract Retrieval
+ Author Search
+ Affiliation Search
+ Scopus Search
+
+
+
+Not implemented yet
+
+Content Affiliation Retrieval
+  http://api.elsevier.com/content/affiliation/affiliation_id/{affiliation_id}
+  http://api.elsevier.com/content/affiliation/eid/{eid}
+
+
+[check] Author Retrieval
+  http://api.elsevier.com/content/author
+
+
+Abstract Citations Count
+Citation Overview

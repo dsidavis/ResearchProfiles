@@ -181,16 +181,42 @@ function(id, ..., httpAccept = "text/xml", key = getOption("ScopusKey", stop("ne
 }
 
 guessIDType = 
+#
+#  guessIDType( "AUTHOR_ID:36625988000")
+#  guessIDType( "0000-0002-9571-2312")
+#  guessIDType("9-s2.0-36625988000")
+#  guessIDType("10-s2.0-113209238") 
 function(id)
 {
+
+  if(length(attributes(id)) > 0 && length( k <- attr(id, "class")))
+     return(k)
+
   if(grepl("SCOPUS_ID:", id))
     "Scopus"
   else if(grepl("/", id))
     "DOI"
+  else if(grepl("^([0-9]{4}-){3}[0-9]{3}[0-9X]$", id) && checkORCID(id))  # Now do the checksum as described in http://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier
+    "ORCID"
+  else if(grepl("^[0-9]{1,2}-s[0-9]\\.[0-9]-[0-9]+$", id))
+    "EID"
+  else if(grepl("AUTHOR_ID:", id)) 
+    "AUID"
   else 
      stop("not recognized yet")
 }
 
+checkORCID =
+function(str)
+{
+   els = strsplit(gsub("-", "", str), "")[[1]]
+   nums = as.integer(els)
+   total = 0
+   for(i in nums)
+      total = (total + 2) * 2
+   ans = (12 - total %% 11) %% 11
+   els[length(els)] == (if(ans == 10) "X" else ans)
+}
 
 scopusQuery =
 function(..., url, max = NA, curl = getCurlHandle(), key = getOption("ScopusKey", stop("need the scopus API key")), .opts = list(), 
@@ -364,4 +390,45 @@ function(doc)
   r = xmlRoot(doc)
 
   abs = getNodeSet(doc, "//x:abstract/ce:para",  c(x = "http://www.elsevier.com/xml/svapi/abstract/dtd", ce = "http://www.elsevier.com/xml/ani/common"))
+}
+
+
+
+
+subjectClassifications =
+function(..., 
+         scopus = FALSE,
+          url = if(!scopus) 
+                   "http://api.elsevier.com/content/subject/scidir" 
+                else 
+                   "http://api.elsevier.com/content/subject/scopus")
+{
+  ans = scopusQuery(..., url = url)
+  tmp = ans[[1]][[1]]
+  as.data.frame(do.call(rbind, tmp), stringsAsFactors = FALSE)
+}
+
+
+authorRetrieval = 
+function(id, ..., idType = guessIDType(id), url = "http://api.elsevier.com/content/author", useIDURL = length(list(...)) == 0)
+{
+browser()
+  if(useIDURL) {
+     u = switch(idType, 
+                 AUID = "http://api.elsevier.com/content/author/author_id/",
+                 EID = "http://api.elsevier.com/content/author/eid/",
+                 ORCID = "http://api.elsevier.com/content/author/orcid/")
+     url = paste0(u, id)
+     params = list(...)
+  } else {
+
+    params = if(missing(id))
+                list(...)
+             else
+                 list(author_id = paste(id, collapse = ","), ...)
+                  #set the name of the first element appropriately
+  }
+
+  ans = scopusQuery(..., url = url, httpAccept = "application/json")
+  ans[[1]][[1]]   # process this to make it neater.
 }
