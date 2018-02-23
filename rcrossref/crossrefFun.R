@@ -118,7 +118,7 @@ simpleCap <- function(x) {
         sep="", collapse=" ")
 }
 
-getCrossrefMeta = function(doi, author, url = "http://doi.org/") # or dx.doi.org
+getCrossrefMeta = function(doi, author, url = "https://doi.org/") # or dx.doi.org
 {
   if(!grepl('^http', doi))
     doi = paste0(url, doi)
